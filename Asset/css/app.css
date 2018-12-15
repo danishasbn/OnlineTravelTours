@@ -1,0 +1,53 @@
+/* OnlineTravelTours CSS */
+
+/* Importing Google Fonts */
+@font-face {
+  font-family: 'Rajdhani';
+  src:url(../fonts/Rajdhani-Font.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'PT-Sans';
+  src:url(../fonts/PT-Sans.woff2.woff2) format('woff2');
+}
+/* IE 10 & 11 */
+@font-face {
+  font-family:'Rajdhani';
+  src: url(../fonts/rajdhani.light.ttf);
+}
+
+@font-face {
+  font-family:'Great Vibes';
+  src: url(../fonts/GreatVibes-Regular.otf);
+}
+
+/* Header CSS */
+.paradise-header{
+  background-color:rgba(0,131,122,0.8);
+  /* background-color: #00837A; */
+  color: #fff;
+  width: 100%;
+}
+/* Default Button  */
+  .btn-search{
+    border-radius: 0px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #339C95;
+    padding: 5px;
+    font-size: 10px;
+}
+.btn-search:hover{
+  border: 1px solid #fff;
+  background-color: #339C95;
+  color: #fff;
+  transition: 0.8s;
+
+}
+/* Text Search */
+.txt-search{
+  border-radius:0px;
+  padding: 5px;
+  font-size: 10px;
+  border:1px solid #339C95;
+
+}
