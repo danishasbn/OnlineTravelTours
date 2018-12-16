@@ -7,47 +7,111 @@
 }
 @font-face {
   font-family: 'PT-Sans';
-  src:url(../fonts/PT-Sans.woff2.woff2) format('woff2');
+  src:url(../fonts/PT-Sans.woff2) format('woff2');
 }
 /* IE 10 & 11 */
 @font-face {
   font-family:'Rajdhani';
   src: url(../fonts/rajdhani.light.ttf);
 }
-
 @font-face {
   font-family:'Great Vibes';
   src: url(../fonts/GreatVibes-Regular.otf);
+}
+@font-face {
+  font-family:'PT-Sans';
+  src: url(../fonts/PT-Sans.ttf);
 }
 
 /* Header CSS */
 .paradise-header{
   background-color:rgba(0,131,122,0.8);
-  /* background-color: #00837A; */
   color: #fff;
   width: 100%;
 }
-/* Default Button  */
-  .btn-search{
-    border-radius: 0px;
-    border: 1px solid #fff;
-    background-color: #fff;
-    color: #339C95;
-    padding: 5px;
-    font-size: 10px;
-}
-.btn-search:hover{
-  border: 1px solid #fff;
-  background-color: #339C95;
-  color: #fff;
-  transition: 0.8s;
 
-}
-/* Text Search */
+/* Search box CSS */
+
+/* Textbox Search */
 .txt-search{
   border-radius:0px;
-  padding: 5px;
   font-size: 10px;
   border:1px solid #339C95;
+  color: #339C95;
+}
+/* Search Icon */
+.search-icon{
+  border-radius: 50%;
+  border:1px solid #339C95
+}
+/* Search icon color */
+.teal{
+  color:#339C95;
+}
+/* Button Find */
+.btn-find{
+  border-radius: 0px;
+  background-color:rgba(0,131,122,0.8);
+  color: #fff;
+}
+.btn-find:hover{
+  color:#339C95;
+  background-color:#fff;
+  border:1px solid #339C95;
+  transition: 0.5s;
+}
+/* Navbar Toggler */
+.navbar-toggler{
+  border-radius: 0px;
+  border:1px solid #fff !important;
+}
+/* Default Nav-link */
+.nav-link{
+  color: #fff !important;
+  font-family: 'Rajdhani', Arial;
+  font-weight: 400;
+}
 
+/* Main Navigation Area CSS */
+.bg-teal{
+  background: #fff;
+}
+.teal-link a{
+  color:  #339C95 !important;
+  font-family:'Rajdhani',Arial;
+  letter-spacing:3px;
+  font-weight: bold;
+}
+.teal-link li a{
+  padding-right:100px !important;
+}
+.teal-link a:hover{
+  color: #000 !important;
+  transition: 0.3s;
+}
+
+/* Heading <h1> Homepage Text */
+.trending{
+  font-family: 'Great Vibes', Arial;
+  color: #339C95;
+  margin-top: 10px;
+}
+/*  Trending border image */
+.img-border{
+  height: 20px;
+  width: auto;
+}
+/* Video Background Text Card */
+/* Video Footer  */
+.video-foot {
+  background-color: #fff;
+  margin: auto;
+  margin: -120px 6% 0;
+  padding: 50px 90px;
+  position: relative;
+  text-align: center;
+  margin-top: -18%;
+  min-height: 260px;
+  padding: 60px 80px 55px;
+  border:1px solid #339C95;
 }
