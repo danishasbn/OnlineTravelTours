@@ -6,9 +6,10 @@ $dbconnect        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTo
 $imagePath        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/logo/paradise-chaser-logo.png';
 $bootstrapCssPath = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/bootstrap.min.css';
 $AppCssPath       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/app.css';
-$FontAwesomePath  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/fontawesome.css';
 $AOSPath          = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/aos.css';
 $homepage         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/index.php';
+// List of icons
+require('icons.php');
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -25,8 +26,6 @@ $homepage         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTo
   <link href="<?= $bootstrapCssPath; ?>" rel="stylesheet" type="text/css"/>
   <!-- Custom Css -->
   <link href="<?= $AppCssPath; ?>" rel="stylesheet" type="text/css"/>
-  <!-- Font Awesome -->
-  <link href="<?= $FontAwesomePath; ?>" rel="stylesheet" type="text/css"/>
   <!-- AOS Css -->
   <link href="<?= $AOSPath; ?>" rel="stylesheet" type="text/css"/>
 </head>
@@ -53,7 +52,7 @@ $homepage         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTo
                 <div class="input-group">
                   <div class="input-group-prepend ">
                     <span class="input-group-text search-icon">
-                      <i class="fa fa-search teal" aria-hidden="true"></i>
+                      <img src="<?= $search; ?>" class="icon"/>
                     </span>
                   </div>
                   <input class="form-control txt-search" type="text" placeholder="Search" aria-label="Search">
@@ -64,17 +63,17 @@ $homepage         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTo
             </div>
             <!-- Contact-Address-Email-Login information -->
             <ul class="nav navbar-nav navbar-right">
-              <li><a class="nav-link"><i class="fas fa-phone"></i> +230-123-4560 </a></li>
-              <li><a class="nav-link"><i class="fas fa-location-arrow"></i> Floreal Mauritius </a></li>
-              <li><a class="nav-link"><i class="fas fa-envelope"></i> paradiseChaser@gmail.com </a></li>
-              <li><a href="#" class="nav-link"><i class="fas fa-user"></i> Login </a></li>
+              <li><a class="nav-link"><img src="<?= $phone;?>" class="icon"> +230-123-4560 </a></li>
+              <li><a class="nav-link"><img src="<?= $address; ?>" class="icon"/> Floreal Mauritius </a></li>
+              <li><a class="nav-link"><img src="<?= $email; ?>" class="icon"/> paradiseChaser@gmail.com </a></li>
+              <li><a href="#" class="nav-link"><img src="<?= $user; ?>" class="icon"/> Login </a></li>
             </ul>
           </nav>
         </div>
       </header>
       <!-- End of Header -->
 
-      <h1 class="text-center trending"><img src="Asset/images/icons/border.png" class="img-border"/> Trending Offers <img src="Asset/images/icons/border.png" class="img-border"/></h1>
+      <h1 class="text-center trending"><img src="<?= $border; ?>" class="img-border"/> Trending Offers <img src="<?= $border; ?>" class="img-border"/></h1>
 
       <!-- Main Navigation Area -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-teal">
@@ -82,7 +81,7 @@ $homepage         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTo
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0 teal-link">
 
             <li class="nav-item active">
-              <a class="nav-link" href="#"><i class="fas fa-home"></i> <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#"><img src="<?= $home; ?>" class="icon"/> <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Travel Packages</a>
@@ -101,36 +100,3 @@ $homepage         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTo
       </nav>
       <!-- End of Main Navigation Area -->
     </div>
-
-
-    <!-- Video background -->
-    <div class="embed-responsive embed-responsive-16by9 video-background">
-
-      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-        <source src="Asset/video/ParadiseChaserVideo.mp4" type="video/mp4">
-        </video>
-
-        <div class="video-foot">
-          <p class="text-center">
-            We convert human ideologies and visual creations into productive assets
-            for any organisation who believe that big will not beat small anymore but the fast beating the slow.
-            Supported by our proprietary Creative
-            Intelligence process, unique tools and global partners,
-            we are able to convert data into visuals reaching the heart of everything we do to
-            orchestrate experiences that deliver creativity with precision and purpose.
-          </p>
-        </div>
-
-      </div>
-
-
-
-
-      <div class="container">
-        <div class="row">
-
-
-
-
-        </div>
-      </div>

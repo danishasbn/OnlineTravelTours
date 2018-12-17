@@ -30,6 +30,11 @@
   width: 100%;
 }
 
+/* Site Logo */
+.paradise-logo{
+  width:100%;
+}
+
 /* Search box CSS */
 
 /* Textbox Search */
@@ -114,4 +119,16 @@
   min-height: 260px;
   padding: 60px 80px 55px;
   border:1px solid #339C95;
+}
+/* Default icon sizes */
+.icon{
+  height: 20px;
+  width: 20px;
+}
+
+.paradise-Packages{
+  color: #339C95;
+  font-family: 'Rajdhani', Arial;
+  border:1px solid;
+
 }
