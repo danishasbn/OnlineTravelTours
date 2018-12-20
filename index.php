@@ -6,14 +6,14 @@
     </video>
     <!-- Video Footer Text -->
     <div class="video-foot">
-      <h1 class="text-center paradise-Packages">
+      <h1 class="text-center paradise-Packages" data-aos="fade-left">
         Our Packages
       </h1>
       <br>
       <img src="<?= $border; ?>" class="img-border"/>
-      <h3 class="subtext">Find your ideal paradise packages</h3>
-      <h5 class="subtext">Our Most Booked Packages</h5>
-      <h6 class="subtext">Your Dream Holidays</h6>
+      <h3 class="subtext" data-aos="fade-left">Find your ideal paradise packages</h3>
+      <h5 class="subtext" data-aos="fade-left">Our Most Booked Packages</h5>
+      <h6 class="subtext" data-aos="fade-left">Your Dream Holidays</h6>
     </div>
   </div>
   <!-- End of Video Background -->
@@ -22,7 +22,7 @@
   <div class="container">
     <div class="row">
       <!-- Card 1 -->
-      <div class="card card-Packages col-md-4">
+      <div class="card card-Packages col-md-4" data-aos="fade-up-right">
         <div class="hovereffect">
           <img class="card-img-top img-responsive" src="Asset/images/travel-packages/dk.jpg" alt="Card image cap">
           <div class="overlay">
@@ -36,7 +36,7 @@
           </div>
         </div>
       </div>
-      <div class="card card-Packages col-md-4">
+      <div class="card card-Packages col-md-4" data-aos="fade-up">
         <div class="hovereffect">
           <img class="card-img-top img-responsive" src="Asset/images/hotels/villaC.jpg" alt="Card image cap">
           <div class="overlay">
@@ -49,7 +49,7 @@
             <p class="card-text text-left">Package Price: Rs. 63,000</p>
           </div>
         </div>
-      </div>  <div class="card card-Packages col-md-4">
+      </div>  <div class="card card-Packages col-md-4" data-aos="fade-down">
         <div class="hovereffect">
           <img class="card-img-top img-responsive" src="Asset/images/activities/7cascade.jpg" alt="Card image cap">
           <div class="overlay">
