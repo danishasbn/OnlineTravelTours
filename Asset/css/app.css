@@ -125,6 +125,10 @@
   padding: 60px 80px 55px;
   border:1px solid #339C95;
 }
+.video-background{
+  background-color: #fff;
+  height: 100%;
+}
 /* Default icon sizes */
 .icon{
   height: 20px;
@@ -251,3 +255,70 @@
   transition-delay:.2s;
 }
 /* End of Card Packages Hover Effect CSS*/
+
+/* Footer CSS */
+.footer{
+  background-size: 1000%;
+  height: 100%;
+  /* background-image: linear-gradient(#fff, #339C95); /* Standard syntax (must be last) */
+
+  /* CSS3 Gradient for all browser compatibility incuding mozilla, chrome, IE 11*/
+  /* Creating cross-browser linear gradient */
+  background: #339C95;
+  background: -moz-linear-gradient(bottom, #339C95 0%, #ffffff 100%);
+  background: -o-linear-gradient(bottom, #339C95 0%, #ffffff 100%);
+  background: -webkit-linear-gradient(bottom, #339C95 0%, #ffffff 100%);
+  background: -ms-linear-gradient(bottom, #339C95 0%, #ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#339C95', endColorstr='#ffffff',GradientType=1 );
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#339C95', endColorstr='#ffffff',GradientType=1 );
+  background: linear-gradient(bottom, #339C95 0%, #ffffff 100%);
+
+
+}
+
+/* Social Links CSS */
+.social-icon{
+  height: 30px;
+  width: 30px;
+}
+.social-icon:hover{
+  /* transform: scale(1.1); -> onhover it increase image size*/
+  /* onhover social links  moves up */
+  transition: 0.3s;
+  position: relative;
+  top:-5px;
+}
+
+/* Hotel packages */
+
+.hotel-card{
+  border-radius: 0px;
+  border: 1px solid #fff;
+}
+
+.btn-book{
+  border-radius: 0px;
+  margin: 0 auto;
+  display: block;
+  border:1px solid #339c95;
+  color: #339c95;
+  background-color:#fff;
+}
+
+.btn-book:hover{
+  transition: 0.5s;
+  color: #fff;
+  border:1px solid #fff;
+  background-color:#339c95;
+}
+
+
+/* Click icon */
+.click-icon{
+  height:30px;
+  width: 30px;
+}
+.click-icon:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}

@@ -1,4 +1,5 @@
 <?php require('common/header.php');?>
+
 <!-- Video background -->
 <div class="embed-responsive embed-responsive-16by9 video-background">
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
@@ -18,53 +19,57 @@
   </div>
   <!-- End of Video Background -->
 
-  <!-- Inner Container -->
+  <!-- Main Index Container -->
   <div class="container">
-    <div class="row">
-      <!-- Card 1 -->
-      <div class="card card-Packages col-md-4" data-aos="fade-up-right">
-        <div class="hovereffect">
-          <img class="card-img-top img-responsive" src="Asset/images/travel-packages/dk.jpg" alt="Card image cap">
-          <div class="overlay">
-            <h2 class="package-title">Travel Package - Dubai & Kuala Lumpur (December 2018)</h2>
-            <a class="info" href="#">View Details</a>
-          </div>
-          <div class="card-body">
-            <p class="card-text text-left">Visit Dubai and Kuala Lumpur, Air Ticket included 3 week packages</p>
-            <p class="card-text text-left">Travel Date 16 December 2018 - 03 January 2019</p>
-            <p class="card-text text-left">Package Price: Rs. 63,000</p>
-          </div>
-        </div>
-      </div>
-      <div class="card card-Packages col-md-4" data-aos="fade-up">
-        <div class="hovereffect">
-          <img class="card-img-top img-responsive" src="Asset/images/hotels/villaC.jpg" alt="Card image cap">
-          <div class="overlay">
-            <h2 class="package-title">Hotel Package - Villa Caroline </h2>
-            <a class="info" href="#">View Details</a>
-          </div>
-          <div class="card-body">
-            <p class="card-text text-left">Visit Dubai and Kuala Lumpur, Air Ticket included 3 week packages</p>
-            <p class="card-text text-left">Travel Date 16 December 2018 - 03 January 2019</p>
-            <p class="card-text text-left">Package Price: Rs. 63,000</p>
+
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="card card-Packages col-md-4" data-aos="fade-up-right">
+          <div class="hovereffect">
+            <img class="card-img-top img-responsive" src="Asset/images/travel-packages/dk.jpg" alt="Card image cap">
+            <div class="overlay">
+              <h2 class="package-title">Travel Package - Dubai & Kuala Lumpur (December 2018)</h2>
+              <a class="info" href="#">View Details</a>
+            </div>
+            <div class="card-body">
+              <p class="card-text text-left">Visit Dubai and Kuala Lumpur, Air Ticket included 3 week packages</p>
+              <p class="card-text text-left">Travel Date 16 December 2018 - 03 January 2019</p>
+              <p class="card-text text-left">Package Price: Rs. 63,000</p>
+            </div>
           </div>
         </div>
-      </div>  <div class="card card-Packages col-md-4" data-aos="fade-down">
-        <div class="hovereffect">
-          <img class="card-img-top img-responsive" src="Asset/images/activities/7cascade.jpg" alt="Card image cap">
-          <div class="overlay">
-            <h2 class="package-title">Activity Package - 7 Cascade Lodge</h2>
-            <a class="info" href="#">View Details</a>
+        <div class="card card-Packages col-md-4" data-aos="fade-up">
+          <div class="hovereffect">
+            <img class="card-img-top img-responsive" src="Asset/images/hotels/villaC.jpg" alt="Card image cap">
+            <div class="overlay">
+              <h2 class="package-title">Hotel Package - Villa Caroline </h2>
+              <a class="info" href="#">View Details</a>
+            </div>
+            <div class="card-body">
+              <p class="card-text text-left">Visit Dubai and Kuala Lumpur, Air Ticket included 3 week packages</p>
+              <p class="card-text text-left">Travel Date 16 December 2018 - 03 January 2019</p>
+              <p class="card-text text-left">Package Price: Rs. 63,000</p>
+            </div>
           </div>
-          <div class="card-body">
-            <p class="card-text text-left">Visit Dubai and Kuala Lumpur, Air Ticket included 3 week packages</p>
-            <p class="card-text text-left">Travel Date 16 December 2018 - 03 January 2019</p>
-            <p class="card-text text-left">Package Price: Rs. 63,000</p>
+        </div>
+        <div class="card card-Packages col-md-4" data-aos="fade-down">
+          <div class="hovereffect">
+            <img class="card-img-top img-responsive" src="Asset/images/activities/7cascade.jpg" alt="Card image cap">
+            <div class="overlay">
+              <h2 class="package-title">Activity Package - 7 Cascade Lodge</h2>
+              <a class="info" href="#">View Details</a>
+            </div>
+            <div class="card-body">
+              <p class="card-text text-left">Visit Dubai and Kuala Lumpur, Air Ticket included 3 week packages</p>
+              <p class="card-text text-left">Travel Date 16 December 2018 - 03 January 2019</p>
+              <p class="card-text text-left">Package Price: Rs. 63,000</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- End of Inner Container -->
+
+
+  <!-- End of Index Container -->
   <?php require('common/footer.php');?>

@@ -8,13 +8,20 @@ $bootstrapCssPath = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTo
 $AppCssPath       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/app.css';
 $AOSPath          = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/aos.css';
 $homepage         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/index.php';
+$travelPackages   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/travel-packages/travel.php';
+$hotelPackages    = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/hotel-packages/hotel.php';
+$activityPackages = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/activities/activity.php';
+$carRental        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/car-rental/carrent.php';
+$about            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/about-us.php';
 // List of icons
 require('icons.php');
 ?>
 <!DOCTYPE html>
+<!-- Insert this line of code to disable right click in your <html> tag below -->
+<!-- oncontextmenu="return false" -->
 <html lang="en" dir="ltr">
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta charset="utf-8">
   <!-- Allow application to be responsive on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,15 +37,14 @@ require('icons.php');
   <link href="<?= $AOSPath; ?>" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-  <!-- Main Container -->
+  <!-- Main Container-Fluid-->
   <div class="container-fluid">
-
     <div class="row">
       <!-- Header -->
       <header class="paradise-header">
         <!-- Paradise Chaser Logo -->
         <nav class="navbar navbar-expand-lg navbar-dark">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="<?= $homepage;?>">
             <img src="<?= $imagePath; ?>" class="paradise-logo" alt="paradise-chaser logo">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleNav">
@@ -73,30 +79,33 @@ require('icons.php');
       </header>
       <!-- End of Header -->
 
-      <h1 class="text-center trending"><img src="<?= $border; ?>" class="img-border"/> Trending Offers <img src="<?= $border; ?>" class="img-border"/></h1>
-
       <!-- Main Navigation Area -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-teal">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-teal " style="padding:0px;">
         <div class="collapse navbar-collapse" id="toggleNav">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0 teal-link">
 
             <li class="nav-item active">
-              <a class="nav-link" href="#"><img src="<?= $home; ?>" class="icon"/> <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="<?= $homepage;?>"><img src="<?= $home; ?>" class="icon"/> <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Travel Packages</a>
+              <a class="nav-link" href="<?= $travelPackages;?>">Travel Packages</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Hotel in Mauritius</a>
+              <a class="nav-link" href="<?= $hotelPackages;?>">Our Hotels</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Car Rental</a>
+              <a class="nav-link" href="<?= $carRental;?>">Car Rental</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Activities in Mauritius</a>
+              <a class="nav-link" href="<?= $activityPackages;?>">Our Activities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= $about;?>">About us</a>
             </li>
           </ul>
         </div>
       </nav>
       <!-- End of Main Navigation Area -->
     </div>
+  </div>
+  <!-- End of Main Container-Fluid -->
