@@ -1,18 +1,6 @@
 <?php
-//Get Project folder full path
-$fullPath         =  realpath($_SERVER['DOCUMENT_ROOT']);
-$titleTabIcon     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/title-tab-icon.png';
-$dbconnect        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/database/dbconnect.php';
-$imagePath        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/logo/paradise-chaser-logo.png';
-$bootstrapCssPath = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/bootstrap.min.css';
-$AppCssPath       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/app.css';
-$AOSPath          = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/aos.css';
-$homepage         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/index.php';
-$travelPackages   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/travel-packages/travel.php';
-$hotelPackages    = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/hotel-packages/hotel.php';
-$activityPackages = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/activities/activity.php';
-$carRental        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/car-rental/carrent.php';
-$about            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/about-us.php';
+// list of links
+require('header-links.php');
 // List of icons
 require('icons.php');
 ?>
@@ -35,6 +23,7 @@ require('icons.php');
   <link href="<?= $AppCssPath; ?>" rel="stylesheet" type="text/css"/>
   <!-- AOS Css -->
   <link href="<?= $AOSPath; ?>" rel="stylesheet" type="text/css"/>
+
 </head>
 <body>
   <!-- Main Container-Fluid-->
@@ -72,7 +61,7 @@ require('icons.php');
               <li><a class="nav-link"><img src="<?= $phone;?>" class="icon"> +230-123-4560 </a></li>
               <li><a class="nav-link"><img src="<?= $address; ?>" class="icon"/> Floreal Mauritius </a></li>
               <li><a class="nav-link"><img src="<?= $email; ?>" class="icon"/> paradiseChaser@gmail.com </a></li>
-              <li><a href="#" class="nav-link"><img src="<?= $user; ?>" class="icon"/> Login </a></li>
+              <li><a href="#" class="nav-link"><img src="<?= $user; ?>" class="icon"/> User </a></li>
             </ul>
           </nav>
         </div>
