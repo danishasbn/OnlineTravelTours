@@ -11,7 +11,7 @@
         Our Packages
       </h1>
       <br>
-      <img src="<?= $border; ?>" class="img-border"/>
+      <img src="<?= $border; ?>" class="img-border" alt="Floral Border image"/>
       <h3 class="subtext" data-aos="fade-left">Find your ideal paradise packages</h3>
       <h5 class="subtext" data-aos="fade-left">Our Most Booked Packages</h5>
       <h6 class="subtext" data-aos="fade-left">Your Dream Holidays</h6>
