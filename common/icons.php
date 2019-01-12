@@ -7,5 +7,5 @@ $user     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asse
 $address  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/icon-address.png';
 $search   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/icon-search.png';
 $border   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/border.png';
-
+$test;
 ?>
