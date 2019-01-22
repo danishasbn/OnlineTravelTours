@@ -1,6 +1,6 @@
 <?php
-// list of links
-require('header-links.php');
+// Nav Links
+require('nav-links.php');
 // List of icons
 require('icons.php');
 ?>
@@ -9,21 +9,10 @@ require('icons.php');
 <!-- oncontextmenu="return false" -->
 <html lang="en" dir="ltr">
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta charset="utf-8">
-  <!-- Allow application to be responsive on mobile devices -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Title tab  -->
-  <title>Paradise Chaser</title>
-  <!-- Title tab icon -->
-  <link href="<?= $titleTabIcon; ?>" rel="icon"/>
-  <!-- Bootstrap 4.0.0 Main CSS  -->
-  <link href="<?= $bootstrapCssPath; ?>" rel="stylesheet" type="text/css"/>
-  <!-- Custom Css -->
-  <link href="<?= $AppCssPath; ?>" rel="stylesheet" type="text/css"/>
-  <!-- AOS Css -->
-  <link href="<?= $AOSPath; ?>" rel="stylesheet" type="text/css"/>
-
+  <?php
+  //head
+  require('head.php');
+  ?>
 </head>
 <body>
   <!-- Main Container-Fluid-->
@@ -69,7 +58,7 @@ require('icons.php');
       <!-- End of Header -->
 
       <!-- Main Navigation Area -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-teal " style="padding:0px;">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-teal">
         <div class="collapse navbar-collapse" id="toggleNav">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0 teal-link">
 
@@ -77,16 +66,19 @@ require('icons.php');
               <a class="nav-link" href="<?= $homepage;?>"><img src="<?= $home; ?>" class="icon"/> <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?= $travelPackages;?>">Travel Packages</a>
+              <a class="nav-link" href="<?= $travelPackages;?>">Travel</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?= $hotelPackages;?>">Our Hotels</a>
+              <a class="nav-link" href="<?= $hotelPackages;?>">Hotels</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?= $carRental;?>">Car Rental</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?= $activityPackages;?>">Our Activities</a>
+              <a class="nav-link" href="<?= $activityPackages;?>">Activities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= $restaurantPackages;?>">Restaurant</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?= $about;?>">About us</a>

@@ -1,3 +1,7 @@
+
+
+</div>
+</div>
 <!-- Footer -->
 <div class="footer">
   <footer class="page-footer text-center text-muted">
@@ -12,9 +16,7 @@
     </footer>
   </div>
   <!-- /Footer -->
-  <?php
-  //Get Foot Links
-  require('foot.php');
-  ?>
+
+  <?php require( $_SERVER['DOCUMENT_ROOT'].'/OnlineTravelTours/common/foot.php'); ?>
 </body>
 </html>

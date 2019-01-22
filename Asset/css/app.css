@@ -3,28 +3,28 @@
 /* Importing Google Fonts */
 @font-face {
   font-family: 'Rajdhani';
-  src:url(../fonts/Rajdhani-Font.woff2) format('woff2');
+  src:url(../fonts/Rajdhani/Rajdhani-Font.woff2) format('woff2');
 }
 @font-face {
   font-family: 'PT-Sans';
-  src:url(../fonts/PT-Sans.woff2) format('woff2');
+  src:url(../fonts/PT-Sans/PT-Sans.woff2) format('woff2');
 }
 /* IE 10 & 11 */
 @font-face {
   font-family:'Rajdhani';
-  src: url(../fonts/rajdhani.light.ttf);
+  src: url(../fonts/Rajdhani/rajdhani.light.ttf);
 }
 @font-face {
   font-family:'Great Vibes';
-  src: url(../fonts/GreatVibes-Regular.otf);
+  src: url(../fonts/GreatVibes/GreatVibes-Regular.otf);
 }
 @font-face {
   font-family:'PT-Sans';
-  src: url(../fonts/PT-Sans.ttf);
+  src: url(../fonts/PT-Sans/PT-Sans.ttf);
 }
 @font-face {
   font-family:'Poiret';
-  src: url(../fonts/PoiretOne-Regular.ttf);
+  src: url(../fonts/PoiretOne/PoiretOne-Regular.ttf);
 }
 
 
@@ -85,6 +85,9 @@
 /* Main Navigation Area CSS */
 .bg-teal{
   background: #fff;
+}
+.teal-color{
+  background: #339C95;
 }
 .teal-link a{
   color:  #339C95 !important;
@@ -324,8 +327,90 @@
 
 /* Login Page  */
 .form-signin {
-    width: 100%;
-    max-width: 420px;
-    padding: 15px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+
+/* --------------------------Dashboard--------------------------------------- */
+ul{
+  list-style: none;
+}
+
+.nav-dash:hover{
+  font-weight: bold;
+}
+
+.nav-dash{
+  color: #339C95 !important;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.dropdown-menu{
+  border-radius: 0px;
+}
+
+.dropdown-menu > a{
+  font-family: 'Rajdhani',Arial, sans-serif;
+  color: #000;
+  font-weight: bold;
+  font-size: 10px;
+}
+.dropdown-menu > a:hover{
+  background-color:#d3fffc;
+}
+
+.badge{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #339C95;
+}
+/*-------------------------------Login----------------------------------------*/
+
+/* Login Form */
+
+.form-background{
+  background:rgba(0, 0, 0, 0.5);
+  margin-top: 15px;
+}
+
+.input-text{
+  border-radius:0px;
+  border:1px solid #339C95;
+}
+
+.login-page{
+  background: url('../images/login-page/login-background-img.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login-button{
+  border-radius: 0px;
+  color:#fff;
+  background-color: #339C95;
+}
+.login-button:hover{
+  border-radius: 0px;
+  color:#000
+  transition: 0.5s;
+  background:rgba(255, 255, 255, 0.5);
+  border:1px solid #339C95;
+}
+
+.sign-up-link{
+  color: #fff;
+  text-decoration: none;
+}
+.sign-up-link:hover{
+  color: #339C95;
+  transition: 0.3s;
+  text-decoration: none;
 }

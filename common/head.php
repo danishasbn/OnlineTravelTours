@@ -7,11 +7,18 @@ $imagePath        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTo
 $bootstrapCssPath = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/bootstrap.min.css';
 $AppCssPath       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/app.css';
 $AOSPath          = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/aos.css';
-$homepage         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/index.php';
-$travelPackages   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/travel-packages/travel.php';
-$hotelPackages    = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/hotel-packages/hotel.php';
-$activityPackages = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/activities/activity.php';
-$carRental        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/car-rental/carrent.php';
-$about            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/about-us.php';
-
 ?>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta charset="utf-8">
+<!-- Allow application to be responsive on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Title tab  -->
+<title>Paradise Chaser</title>
+<!-- Title tab icon -->
+<link href="<?= $titleTabIcon; ?>" rel="icon"/>
+<!-- Bootstrap 4.0.0 Main CSS  -->
+<link href="<?= $bootstrapCssPath; ?>" rel="stylesheet" type="text/css"/>
+<!-- Custom Css -->
+<link href="<?= $AppCssPath; ?>" rel="stylesheet" type="text/css"/>
+<!-- AOS Css -->
+<link href="<?= $AOSPath; ?>" rel="stylesheet" type="text/css"/>
