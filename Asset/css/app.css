@@ -2,115 +2,114 @@
 
 /* Importing Google Fonts */
 @font-face {
-  font-family: 'Rajdhani';
-  src:url(../fonts/Rajdhani/Rajdhani-Font.woff2) format('woff2');
+  font-family: "Rajdhani";
+  src: url(../fonts/Rajdhani/Rajdhani-Font.woff2) format("woff2");
 }
 @font-face {
-  font-family: 'PT-Sans';
-  src:url(../fonts/PT-Sans/PT-Sans.woff2) format('woff2');
+  font-family: "PT-Sans";
+  src: url(../fonts/PT-Sans/PT-Sans.woff2) format("woff2");
 }
 /* IE 10 & 11 */
 @font-face {
-  font-family:'Rajdhani';
+  font-family: "Rajdhani";
   src: url(../fonts/Rajdhani/rajdhani.light.ttf);
 }
 @font-face {
-  font-family:'Great Vibes';
+  font-family: "Great Vibes";
   src: url(../fonts/GreatVibes/GreatVibes-Regular.otf);
 }
 @font-face {
-  font-family:'PT-Sans';
+  font-family: "PT-Sans";
   src: url(../fonts/PT-Sans/PT-Sans.ttf);
 }
 @font-face {
-  font-family:'Poiret';
+  font-family: "Poiret";
   src: url(../fonts/PoiretOne/PoiretOne-Regular.ttf);
 }
 
-
 /* Header CSS */
-.paradise-header{
-  background-color:rgba(0,131,122,0.8);
+.paradise-header {
+  background-color: rgba(0, 131, 122, 0.8);
   color: #fff;
   width: 100%;
 }
 
 /* Site Logo */
-.paradise-logo{
-  width:100%;
+.paradise-logo {
+  width: 100%;
 }
 
 /* Search box CSS */
 
 /* Textbox Search */
-.txt-search{
-  border-radius:0px;
+.txt-search {
+  border-radius: 0px;
   font-size: 10px;
-  border:1px solid #339C95;
-  color: #339C95;
+  border: 1px solid #339c95;
+  color: #339c95;
 }
 /* Search Icon */
-.search-icon{
+.search-icon {
   border-radius: 50%;
-  border:1px solid #339C95
+  border: 1px solid #339c95;
 }
 /* Search icon color */
-.teal{
-  color:#339C95;
+.teal {
+  color: #339c95;
 }
 /* Button Find */
-.btn-find{
+.btn-find {
   border-radius: 0px;
-  background-color:rgba(0,131,122,0.8);
+  background-color: rgba(0, 131, 122, 0.8);
   color: #fff;
 }
-.btn-find:hover{
-  color:#339C95;
-  background-color:#fff;
-  border:1px solid #339C95;
+.btn-find:hover {
+  color: #339c95;
+  background-color: #fff;
+  border: 1px solid #339c95;
   transition: 0.5s;
 }
 /* Navbar Toggler */
-.navbar-toggler{
+.navbar-toggler {
   border-radius: 0px;
-  border:1px solid #fff !important;
+  border: 1px solid #fff !important;
 }
 /* Default Nav-link */
-.nav-link{
+.nav-link {
   color: #fff !important;
-  font-family: 'Rajdhani', Arial;
+  font-family: "Rajdhani", Arial;
   font-weight: 400;
 }
 
 /* Main Navigation Area CSS */
-.bg-teal{
+.bg-teal {
   background: #fff;
 }
-.teal-color{
-  background: #339C95;
+.teal-color {
+  background: #339c95;
 }
-.teal-link a{
-  color:  #339C95 !important;
-  font-family:'Rajdhani',Arial;
-  letter-spacing:3px;
+.teal-link a {
+  color: #339c95 !important;
+  font-family: "Rajdhani", Arial;
+  letter-spacing: 3px;
   font-weight: bold;
 }
-.teal-link li a{
-  padding-right:100px !important;
+.teal-link li a {
+  padding-right: 100px !important;
 }
-.teal-link a:hover{
+.teal-link a:hover {
   color: #000 !important;
   transition: 0.3s;
 }
 
 /* Heading <h1> Homepage Text */
-.trending{
-  font-family: 'Great Vibes', Arial;
-  color: #339C95;
+.trending {
+  font-family: "Great Vibes", Arial;
+  color: #339c95;
   margin-top: 10px;
 }
 /*  Trending border image */
-.img-border{
+.img-border {
   height: 20px;
   width: auto;
 }
@@ -126,201 +125,198 @@
   margin-top: -18%;
   min-height: 260px;
   padding: 60px 80px 55px;
-  border:1px solid #339C95;
+  border: 1px solid #339c95;
 }
-.video-background{
+.video-background {
   background-color: #fff;
   height: 100%;
 }
 /* Default icon sizes */
-.icon{
+.icon {
   height: 20px;
   width: 20px;
 }
 
-.paradise-Packages{
-  color: #339C95;
-  font-family: 'Rajdhani', Arial;
-  border:1px solid;
-
+.paradise-Packages {
+  color: #339c95;
+  font-family: "Rajdhani", Arial;
+  border: 1px solid;
 }
 /* Card Packages CSS */
-.card-Packages{
+.card-Packages {
   padding: 10px;
   border-radius: 0px;
-  border:0px;
+  border: 0px;
 }
 
-.card-img-top
-{
+.card-img-top {
   border-radius: 0px;
 }
 
-.subtext{
-  font-family: 'Poiret', Arial;
+.subtext {
+  font-family: "Poiret", Arial;
 }
 
-.package-title{
-  font-family: 'PT-Sans', Arial;
+.package-title {
+  font-family: "PT-Sans", Arial;
 }
 
-.info{
-  font-family: 'Rajdhani', Arial;
+.info {
+  font-family: "Rajdhani", Arial;
 }
 
 /* Card Packages Hover Effect CSS*/
 
 .hovereffect {
-  width:100%;
-  height:100%;
-  float:left;
-  overflow:hidden;
-  position:relative;
-  text-align:center;
-  cursor:default;
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
 }
 
 .hovereffect .overlay {
-  width:100%;
-  height:100%;
-  position:absolute;
-  overflow:hidden;
-  top:0;
-  left:0;
-  opacity:0;
-  background-color:rgba(0,0,0,0.5);
-  -webkit-transition:all .4s ease-in-out;
-  transition:all .4s ease-in-out
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .hovereffect img {
-  display:block;
-  position:relative;
-  -webkit-transition:all .4s linear;
-  transition:all .4s linear;
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
 }
 
 .hovereffect h2 {
-  text-transform:uppercase;
-  color:#fff;
-  text-align:center;
-  position:relative;
-  font-size:17px;
-  background-color:rgba(0,131,122,0.8);
-  -webkit-transform:translatey(-100px);
-  -ms-transform:translatey(-100px);
-  transform:translatey(-100px);
-  -webkit-transition:all .2s ease-in-out;
-  transition:all .2s ease-in-out;
-  padding:10px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  background-color: rgba(0, 131, 122, 0.8);
+  -webkit-transform: translatey(-100px);
+  -ms-transform: translatey(-100px);
+  transform: translatey(-100px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 10px;
 }
 
 .hovereffect a.info {
-  text-decoration:none;
-  display:inline-block;
-  text-transform:uppercase;
-  color:#fff;
-  border:1px solid #fff;
-  background-color:transparent;
-  opacity:0;
-  filter:alpha(opacity=0);
-  -webkit-transition:all .2s ease-in-out;
-  transition:all .2s ease-in-out;
-  margin:50px 0 0;
-  padding:7px 14px;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin: 50px 0 0;
+  padding: 7px 14px;
 }
 
 .hovereffect a.info:hover {
-  box-shadow:0 0 5px #fff;
+  box-shadow: 0 0 5px #fff;
 }
 
 .hovereffect:hover img {
-  -ms-transform:scale(1.2);
-  -webkit-transform:scale(1.2);
-  transform:scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .hovereffect:hover .overlay {
-  opacity:1;
-  filter:alpha(opacity=100);
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 
-.hovereffect:hover h2,.hovereffect:hover a.info {
-  opacity:1;
-  filter:alpha(opacity=100);
-  -ms-transform:translatey(0);
-  -webkit-transform:translatey(0);
-  transform:translatey(0);
+.hovereffect:hover h2,
+.hovereffect:hover a.info {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -ms-transform: translatey(0);
+  -webkit-transform: translatey(0);
+  transform: translatey(0);
 }
 
 .hovereffect:hover a.info {
-  -webkit-transition-delay:.2s;
-  transition-delay:.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 /* End of Card Packages Hover Effect CSS*/
 
 /* Footer CSS */
-.footer{
+.footer {
   background-size: 1000%;
   height: 100%;
   /* background-image: linear-gradient(#fff, #339C95); /* Standard syntax (must be last) */
 
   /* CSS3 Gradient for all browser compatibility incuding mozilla, chrome, IE 11*/
   /* Creating cross-browser linear gradient */
-  background: #339C95;
-  background: -moz-linear-gradient(bottom, #339C95 0%, #ffffff 100%);
-  background: -o-linear-gradient(bottom, #339C95 0%, #ffffff 100%);
-  background: -webkit-linear-gradient(bottom, #339C95 0%, #ffffff 100%);
-  background: -ms-linear-gradient(bottom, #339C95 0%, #ffffff 100%);
+  background: #339c95;
+  background: -moz-linear-gradient(bottom, #339c95 0%, #ffffff 100%);
+  background: -o-linear-gradient(bottom, #339c95 0%, #ffffff 100%);
+  background: -webkit-linear-gradient(bottom, #339c95 0%, #ffffff 100%);
+  background: -ms-linear-gradient(bottom, #339c95 0%, #ffffff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#339C95', endColorstr='#ffffff',GradientType=1 );
   -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#339C95', endColorstr='#ffffff',GradientType=1 );
-  background: linear-gradient(bottom, #339C95 0%, #ffffff 100%);
-
-
+  background: linear-gradient(bottom, #339c95 0%, #ffffff 100%);
 }
 
 /* Social Links CSS */
-.social-icon{
+.social-icon {
   height: 30px;
   width: 30px;
 }
-.social-icon:hover{
+.social-icon:hover {
   /* transform: scale(1.1); -> onhover it increase image size*/
   /* onhover social links  moves up */
   transition: 0.3s;
   position: relative;
-  top:-5px;
+  top: -5px;
 }
 
 /* Hotel packages */
 
-.hotel-card{
+.hotel-card {
   border-radius: 0px;
   border: 1px solid #fff;
 }
 
-.btn-book{
+.btn-book {
   border-radius: 0px;
   margin: 0 auto;
   display: block;
-  border:1px solid #339c95;
+  border: 1px solid #339c95;
   color: #339c95;
-  background-color:#fff;
+  background-color: #fff;
 }
 
-.btn-book:hover{
+.btn-book:hover {
   transition: 0.5s;
   color: #fff;
-  border:1px solid #fff;
-  background-color:#339c95;
+  border: 1px solid #fff;
+  background-color: #339c95;
 }
 
 /* Click icon */
-.click-icon{
-  height:30px;
+.click-icon {
+  height: 30px;
   width: 30px;
 }
-.click-icon:hover{
+.click-icon:hover {
   transform: scale(1.1);
   transition: 0.3s;
 }
@@ -333,84 +329,84 @@
   margin: 0 auto;
 }
 
-
 /* --------------------------Dashboard--------------------------------------- */
-ul{
+ul {
   list-style: none;
 }
 
-.nav-dash:hover{
+.nav-dash:hover {
   font-weight: bold;
 }
 
-.nav-dash{
-  color: #339C95 !important;
+.nav-dash {
+  color: #339c95 !important;
   font-weight: bold;
   font-size: 15px;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   border-radius: 0px;
 }
 
-.dropdown-menu > a{
-  font-family: 'Rajdhani',Arial, sans-serif;
+.dropdown-menu > a {
+  font-family: "Rajdhani", Arial, sans-serif;
   color: #000;
   font-weight: bold;
   font-size: 10px;
 }
-.dropdown-menu > a:hover{
-  background-color:#d3fffc;
+.dropdown-menu > a:hover {
+  background-color: #d3fffc;
 }
 
-.badge{
+.badge {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  background-color: #339C95;
+  background-color: #339c95;
 }
 /*-------------------------------Login----------------------------------------*/
 
 /* Login Form */
 
-.form-background{
-  background:rgba(0, 0, 0, 0.5);
+.form-background {
+  background: rgba(0, 0, 0, 0.5);
   margin-top: 15px;
 }
 
-.input-text{
-  border-radius:0px;
-  border:1px solid #339C95;
+.input-text {
+  border-radius: 0px;
+  border: 1px solid #339c95;
 }
 
-.login-page{
-  background: url('../images/login-page/login-background-img.jpeg') no-repeat center center fixed;
+.login-page {
+  background: url("../images/login-page/login-background-img.jpeg") no-repeat
+    center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-.login-button{
+.login-button {
   border-radius: 0px;
-  color:#fff;
-  background-color: #339C95;
+  color: #fff;
+  background-color: #339c95;
 }
-.login-button:hover{
+.login-button:hover {
   border-radius: 0px;
-  color:#000
+  color: #000;
   transition: 0.5s;
-  background:rgba(255, 255, 255, 0.5);
-  border:1px solid #339C95;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #339c95;
 }
 
-.sign-up-link{
+.sign-up-link {
   color: #fff;
   text-decoration: none;
 }
-.sign-up-link:hover{
-  color: #339C95;
+.sign-up-link:hover {
+  color: #339c95;
   transition: 0.3s;
   text-decoration: none;
 }
