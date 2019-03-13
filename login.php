@@ -1,6 +1,7 @@
 <?php
 // List of icons
 require('common/icons.php');
+require('common/nav-links.php');
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -34,7 +35,7 @@ require('common/icons.php');
             </label>
         </div>
         <button class="btn btn-lg btn-block login-button" type="submit">Sign in <img src="<?= $signin; ?>" class="icon"/> </button>
-        <label class="text-warning">Not a member? </label> <a class="sign-up-link" href="">Sign Up |</a>
+        <label class="text-warning">Not a member? </label> <a class="sign-up-link" href="<?= $registerPath; ?>">Sign Up |</a>
         <a class="sign-up-link text-primary" href="">Forgot Password!</a>
         <p class="mt-5 mb-3 text-muted text-center"><em>Paradise Chaser</em>&copy;2019</p>
     </form>

@@ -10,6 +10,10 @@ $carRental                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/Online
 $about                    = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/about-us.php';
 $restaurantPackages       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/restaurant/restaurant.php';
 
+// Login + Register Path
+$registerPath             = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/register.php';
+$loginPath                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/login.php';
+
 // Dashboard Nav-Links
 
 // User

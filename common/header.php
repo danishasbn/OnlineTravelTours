@@ -50,9 +50,9 @@ require('icons.php');
               <li><a class="nav-link"><img src="<?= $phone;?>" class="icon"> +230-123-4560 </a></li>
               <li><a class="nav-link"><img src="<?= $address; ?>" class="icon"/> Floreal Mauritius </a></li>
               <li><a class="nav-link"><img src="<?= $email; ?>" class="icon"/> paradiseChaser@gmail.com </a></li>
-              <li><a href="#" class="nav-link"><img src="<?= $user; ?>" class="icon"/> User </a></li>
-              <li><a href="#" class="nav-link"><img src="<?= $register; ?>" class="icon"/> Register </a></li>
-              <li><a href="#" class="nav-link"><img src="<?= $login; ?>" class="icon"/> Login </a></li>
+              <!-- <li><a href="#" class="nav-link"><img src="<?= $user; ?>" class="icon"/> User </a></li> -->
+              <li><a href="<?= $registerPath;?>" class="nav-link"><img src="<?= $register; ?>" class="icon"/> Register </a></li>
+              <li><a href="<?= $loginPath; ?>" class="nav-link"><img src="<?= $login; ?>" class="icon"/> Login </a></li>
             </ul>
           </nav>
         </div>

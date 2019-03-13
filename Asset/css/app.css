@@ -410,3 +410,8 @@ ul {
   transition: 0.3s;
   text-decoration: none;
 }
+
+/* Register Page */
+.text-teal{
+  color:#339c95;
+}
