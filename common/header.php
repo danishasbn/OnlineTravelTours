@@ -51,6 +51,8 @@ require('icons.php');
               <li><a class="nav-link"><img src="<?= $address; ?>" class="icon"/> Floreal Mauritius </a></li>
               <li><a class="nav-link"><img src="<?= $email; ?>" class="icon"/> paradiseChaser@gmail.com </a></li>
               <li><a href="#" class="nav-link"><img src="<?= $user; ?>" class="icon"/> User </a></li>
+              <li><a href="#" class="nav-link"><img src="<?= $register; ?>" class="icon"/> Register </a></li>
+              <li><a href="#" class="nav-link"><img src="<?= $login; ?>" class="icon"/> Login </a></li>
             </ul>
           </nav>
         </div>
@@ -73,12 +75,6 @@ require('icons.php');
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?= $carRental;?>">Car Rental</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?= $activityPackages;?>">Activities</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?= $restaurantPackages;?>">Restaurant</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?= $about;?>">About us</a>

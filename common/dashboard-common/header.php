@@ -38,8 +38,6 @@ require($_SERVER['DOCUMENT_ROOT'].'/OnlineTravelTours/common/icons.php');
         <div class="collapse navbar-collapse">
           <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between dash-list" >
 
-
-
             <li class="nav-item  nav-dash pl-0 dropdown">
 
               <a class="nav-link nav-dash pl-0 nav-dash dropdown-toggle" href="<?= $dashboard; ?>"
