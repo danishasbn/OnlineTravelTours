@@ -2,6 +2,7 @@
 // List of icons
 require('common/icons.php');
 require('common/nav-links.php');
+include('Action/action-login.php');
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -12,7 +13,7 @@ require('common/nav-links.php');
     ?>
 </head>
 <body class="login-page">
-    <form class="form-signin form-background">
+    <form class="form-signin form-background" autocomplete="off">
         <div class="text-center mb-4">
             <img class="mb-4" src="Asset/images/icons/title-tab-icon.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal text-white">Paradise Chaser</h1>
@@ -36,10 +37,8 @@ require('common/nav-links.php');
         </div>
         <button class="btn btn-lg btn-block login-button" type="submit">Sign in <img src="<?= $signin; ?>" class="icon"/> </button>
         <label class="text-warning">Not a member? </label> <a class="sign-up-link" href="<?= $registerPath; ?>">Sign Up |</a>
-        <a class="sign-up-link text-primary" href="">Forgot Password!</a>
+        <!-- <a class="sign-up-link text-primary" href="">Forgot Password!</a> -->
         <p class="mt-5 mb-3 text-muted text-center"><em>Paradise Chaser</em>&copy;2019</p>
     </form>
-
-
 </body>
 </html>

@@ -3,6 +3,8 @@
 require('nav-links.php');
 // List of icons
 require('icons.php');
+// Fetch Database connection
+include('database/dbconnect.php');
 ?>
 <!DOCTYPE html>
 <!-- Insert this line of code to disable right click in your <html> tag below -->
