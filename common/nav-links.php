@@ -14,9 +14,11 @@ $restaurantPackages       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/Online
 // $dbconnect                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/database/dbconnect.php';
 
 
-// Login + Register Path
+// Login + Register + Logout Path 
 $registerPath             = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/register.php';
 $loginPath                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/login.php';
+$logoutPath               = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/logout.php';
+$myDataPath               = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/user/myData.php';
 
 // Dashboard Nav-Links
 

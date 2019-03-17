@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="row justify-content-center" >
-    <h1 class="text-center trending"><img src="<?= $border; ?>" class="img-border"/> About Us <img src="<?= $border; ?>" class="img-border"/></h1>
+    <h1 class="text-center trending"><img src="<?= $border; ?>" class="img-border"/> Our Story <img src="<?= $border; ?>" class="img-border"/></h1>
   </div>
 
 

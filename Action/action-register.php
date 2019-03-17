@@ -8,8 +8,10 @@
     $warning_password_msg = "";
     $success_msg = "";
 
+    // Array of Errors
     $errors = array();
-    
+
+    // Count errors and store in array
     if(count($errors) != 0){
         echo "YAYYYYYY";
     }
@@ -150,7 +152,8 @@
                 }
                 else{
                     // Insert Form Data into Database
-                    $sql = "INSERT INTO tbl_user(firstname,lastname,email,password,address,gender,country,phone,role_type,status) VALUES('$firstname','$lastname','$inputEmail', '$password', '$inputAddress' , '$gender' ,'$country', '$inputPhone', '$roleType' , '$status') ";
+                    $hashPassword = md5($password);
+                    $sql = "INSERT INTO tbl_user(firstname,lastname,email,password,address,gender,country,phone,role_type,status) VALUES('$firstname','$lastname','$inputEmail', '$hashPassword', '$inputAddress' , '$gender' ,'$country', '$inputPhone', '$roleType' , '$status') ";
                     $query = mysqli_query($dbc,$sql);
 
                     echo "<div class='alert alert-success text-center'>

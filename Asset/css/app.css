@@ -411,7 +411,46 @@ ul {
   text-decoration: none;
 }
 
-/* Register Page */
+/*-------------------------------------------------------------- Register Page ---------------------------------------------------*/
 .text-teal{
   color:#339c95;
+}
+
+/* -------------------------------------------------------------- About US Page -------------------------------------------------- */
+
+.myDataList{
+    list-style-image: url('../images/icons/plane.png');
+    background-image: linear-gradient(to right, #fff , #a7d4d1);
+    border-radius: 10px;
+    width:100%;
+}
+.myDataList li {
+  padding: 10px;
+}
+.myDataList li a{
+  color:#339c95;
+}
+.myDataList li a:hover{
+  text-decoration: none;
+  color:#000;
+  transition: color 0.5s ease;
+}
+.panel{
+  width:100%;
+  border:1px solid #339c95;
+}
+.panel-heading{
+  background-color:#339c95;
+}
+.panel-title{
+  font-family: "Poiret", Arial, sans-serif;
+  font-weight: bold;
+  font-size:20px;
+}
+.panel-body{
+  border:1px solid #339c95;
+}
+
+.input-width{
+  width: 50%;
 }
