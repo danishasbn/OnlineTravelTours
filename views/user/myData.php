@@ -35,22 +35,22 @@
                         <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="off">
                                 <label class="text-teal" for="inputFname">First Name *</label>
                                 <div class="form-label-group">
-                                    <input type="text" id="inputFname" name="inputFname" class="form-control input-text " placeholder="First Name" style="<?= $error_msg; ?> <?= $warning_fname_msg; ?>" value="<?= $firstname; ?>" maxLength="30">
+                                    <input type="text" id="inputFname" name="inputFname" class="form-control input-text " placeholder="First Name" value="<?= $firstname; ?>" maxLength="30">
                                 </div>
 
                                 <label class="text-teal" for="inputLname">Last Name *</label>
                                 <div class="form-label-group">
-                                    <input type="text" id="inputLname" name="inputLname" class="form-control input-text " placeholder="Last Name" style="<?= $error_msg; ?> <?= $warning_fname_msg; ?>" value="<?= $lastname; ?>" maxLength="30">
+                                    <input type="text" id="inputLname" name="inputLname" class="form-control input-text " placeholder="Last Name" value="<?= $lastname; ?>" maxLength="30">
                                 </div>
 
                                 <label class="text-teal" for="inputEmail">Email *</label>
                                 <div class="form-label-group">
-                                    <input type="text" id="inputEmail" name="inputEmail" class="form-control input-text " placeholder="Email Address" style="<?= $error_msg; ?> <?= $warning_fname_msg; ?>" value="<?= $inputEmail; ?>" maxLength="30">
+                                    <input type="text" id="inputEmail" name="inputEmail" class="form-control input-text " placeholder="Email Address" value="<?= $inputEmail; ?>" maxLength="30" readonly>
                                 </div>
 
                                 <label class="text-teal" for="inputPhone">Mobile Number *</label>
                                 <div class="form-label-group">
-                                    <input type="text" id="inputPhone" name="inputPhone" class="form-control input-text " placeholder="Mobile No." style="<?= $error_msg; ?> <?= $warning_fname_msg; ?>" value="<?= $inputPhone; ?>" maxLength="30">
+                                    <input type="text" id="inputPhone" name="inputPhone" class="form-control input-text " placeholder="Mobile No. (+ 230)" value="<?= $inputPhone; ?>" maxLength="8">
                                 </div>
                                 <br>
                                 <button class="btn btn-sm login-button " type="submit" id="btn-save" name="btn-save">Save Data</button>
@@ -64,17 +64,17 @@
                                 <h3 class="text-teal text-center">Change Password</h3>
                                 <label class="text-teal" for="inputOldPass">Old Password *</label>
                                 <div class="form-label-group">
-                                    <input type="password" id="inputOldPass" name="inputOldPass" class="form-control input-text input-width" placeholder="Old Password" style="<?= $error_msg; ?> <?= $warning_fname_msg; ?>" value="" maxLength="30">
+                                    <input type="password" id="inputOldPass" name="inputOldPass" class="form-control input-text input-width" placeholder="Old Password" value="" maxLength="30">
                                 </div>
 
                                 <label class="text-teal" for="inputNewPass">New Password *</label>
                                 <div class="form-label-group">
-                                    <input type="text" id="inputNewPass" name="inputNewPass" class="form-control input-text input-width" placeholder="New Password" style="<?= $error_msg; ?> <?= $warning_fname_msg; ?>" value="" maxLength="30">
+                                    <input type="password" id="inputNewPass" name="inputNewPass" class="form-control input-text input-width" placeholder="New Password" value="" maxLength="30">
                                 </div>
 
                                 <label class="text-teal" for="inputCpass">Confirmed Password *</label>
                                 <div class="form-label-group">
-                                    <input type="text" id="inputCpass" name="inputCpass" class="form-control input-text input-width" placeholder="Retype Password..." style="<?= $error_msg; ?> <?= $warning_fname_msg; ?>" value="" maxLength="30">
+                                    <input type="password" id="inputCpass" name="inputCpass" class="form-control input-text input-width" placeholder="Retype Password..." value="" maxLength="30">
                                 </div>
                                 <br>
                                 <button class="btn btn-sm login-button input-width" type="submit" id="btn-change" name="btn-change">Change Password</button>
@@ -96,12 +96,12 @@
                     <h3 class="text-teal text-center">Default Billing Address</h3>
                     <label class="text-teal" for="inputAddress">Address</label>
                     <div class="form-label-group">
-                        <input type="text" readonly id="inputAddress" name="inputAddress" class="form-control input-text" placeholder="My Billig Address" style="<?= $error_msg; ?> <?= $warning_fname_msg; ?>" value="<?= $inputAddress; ?>" maxLength="30">
+                        <input type="text" readonly id="inputAddress" name="inputAddress" class="form-control input-text" placeholder="My Billig Address" value="<?= $inputAddress; ?>" maxLength="30">
                     </div>
                     <br>
                     <label class="text-teal" for="inputNewAddress">New Billing Address</label>
                     <div class="form-label-group">
-                        <input type="text" id="inputNewAddress" name="inputNewAddress" class="form-control input-text input-width" placeholder="My New Billing Address" style="<?= $error_msg; ?> <?= $warning_fname_msg; ?>" value="" maxLength="30">
+                        <input type="text" id="inputNewAddress" name="inputNewAddress" class="form-control input-text input-width" placeholder="My New Billing Address" value="" maxLength="100">
                     </div>
                     <br>                
                     <button class="btn btn-sm login-button" type="submit" id="btn-billing" name="btn-billing">Change</button>
@@ -117,7 +117,7 @@
             </div>
             <div class="panel-body container">
                 <ul>
-                    <h3 class="text-teal">Delete account</h3>
+                    <h3 class="text-teal">Delete account <img src="<?= $noEntry; ?>" class="icon"/></h3>
                     <li><p>Request to remove your account, together with all your personal data, will be processed by our staff.</p></li>
                     <li><p>Deleting your account will remove all the purchase history, discounts, orders, invoices and all other information that might be related to your account or your purchases.</p></li>                        
                     <li><p>All your orders and similar information will be lost.</p></li>

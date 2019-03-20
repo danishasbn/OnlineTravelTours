@@ -39,33 +39,37 @@
         <div class="form-label-group">
             <input type="text" id="inputAddress" name="inputAddress" class="form-control input-text" placeholder="Address" style="<?= $error_msg; ?> <?= $warning_address_msg; ?>" value="<?php if(isset($inputAddress)){echo $inputAddress;} ?>" maxLength="150">
         </div>
+
         <!-- Phone Number -->
         <label class="text-teal" for="inputPhone">Phone Number *</label>
         <div class="form-label-group">
             <input type="text" id="inputPhone" name="inputPhone" class="form-control input-text" placeholder="Phone Number (+230)" title="E.g 51234567" style="<?= $error_msg; ?> <?= $warning_phone_msg; ?>" value="<?php if(isset($inputPhone)) {echo $inputPhone;} ?>" maxLength= "8">
         </div>
+
         <!-- Country -->
         <label class="text-teal">Country *</label>
         <div class="form-label-group">
             <input type="text" class="form-control input-text" name="inputCountry" value="Mauritius" readonly>
         </div>
+
         <!-- Email -->
         <label class="text-teal" for="inputEmail">Email address *</label>
         <div class="form-label-group">
             <input type="text" id="inputEmail" name="inputEmail" class="form-control input-text" placeholder="Email address" style="<?= $error_msg; ?> <?= $warning_email_msg; ?>" maxLength="100" value="<?php if(isset($inputEmail)) {echo $inputEmail;}?>">
         </div>
+
         <!-- Password -->
         <label class="text-teal" for="inputPassword">Password *</label>
         <div class="form-label-group">
             <input type="password" id="inputPassword" name="inputPassword" class="form-control input-text" placeholder="Password" style="<?= $error_msg; ?> <?= $warning_password_msg; ?>" maxLength="200">
         </div>
-
+        
         <!-- Confirm Password -->
         <label class="text-teal" for="inputCPassword">Confirm Password *</label>
         <div class="form-label-group">
             <input type="password" id="inputCPassword" name="inputCPassword" class="form-control input-text" placeholder="Confirm Password" style="<?= $error_msg; ?> <?= $warning_password_msg; ?>" maxLength="200">
         </div>
-        
+
         <br>
         <button class="btn btn-lg btn-block login-button" type="submit" id="btn-register" name="btn-register">Sign up <img src="<?= $signin; ?>" class="icon"/> </button>
         <br>

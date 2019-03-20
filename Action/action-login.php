@@ -36,15 +36,22 @@
             while($row = mysqli_fetch_array($query)){
                 $sessionEmail = $row['email'];
                 $sessionFname = $row['firstname'];
+                $getPassword  = $row['password'];
+                //  Create Session
+                // Store Email in session login-user
                 $_SESSION['login-user'] = $sessionEmail;
+                // Store Firstname in session login-user-fname
                 $_SESSION['login-user-fname'] = $sessionFname;
+            }
+            if($inputEmail == @$sessionEmail && $hashPassword == $getPassword ){
                 echo "<meta http-equiv='refresh' content='0;url=index.php'>";
             }
-        }else{
-            echo
-            "<div class='alert alert-danger text-center'>
-                Email or Password is Incorrect!
-            </div>";
+            else{
+                echo
+                  "<div class='alert alert-danger text-center'>
+                         Email or Password is Incorrect!
+                    </div>";
+            }
         }
     }
 

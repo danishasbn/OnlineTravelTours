@@ -13,6 +13,7 @@ $AosJS        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/
 <script src="<?= $BS_bootstrap; ?>"></script>
 <script src="<?= $CustomJS; ?>"></script>
 <script src="<?= $AosJS; ?>"></script>
+
 <script>
 // Initialize Animated on scroll (AOS) library
 AOS.init();

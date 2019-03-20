@@ -13,7 +13,7 @@ $login    = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asse
 $logout   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/header/icon-logout.png';
 $myData   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/header/icon-myData.png';
 $save     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/icon-save.png';
-
+$noEntry  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/icon-no-entry.png';
 
 // Dashboard Icons
 $dash         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/dash.png';
