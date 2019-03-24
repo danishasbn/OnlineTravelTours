@@ -1,22 +1,23 @@
 //jQuery disabling right-click on image
-$('img').each(function() {
-  $(this)[0].oncontextmenu = function() {
+$('img').each(function () {
+  $(this)[0].oncontextmenu = function () {
     return false;
   };
 });
 
 // Disabling inspect element-- hiding source code from users
-document.onkeydown = function(e) {
-  if(event.keyCode == 123) {
+document.onkeydown = function (e) {
+  if (event.keyCode == 123) {
     return false;
   }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+  if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
     return false;
   }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+  if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
     return false;
   }
-  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+  if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
     return false;
   }
 }
+

@@ -6,6 +6,12 @@ $BS_popper    = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/
 $BS_bootstrap = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/bootstrap.min.js';
 $CustomJS     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/app.js';
 $AosJS        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/aos.js';
+
+// Data Table JS
+$DataTableJS     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/jquery-3.3.1.js';
+$DataTableJSMin  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/jquery.dataTables.min.js';
+$DataTableBoot   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/dataTables.bootstrap4.min.js';
+
 ?>
 <!-- Bootstrap Main Scripts -->
 <script src="<?= $BS_jquery; ?>"></script>
@@ -14,6 +20,9 @@ $AosJS        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/
 <script src="<?= $CustomJS; ?>"></script>
 <script src="<?= $AosJS; ?>"></script>
 
+<script src="<?= $DataTableJS; ?>"></script>
+<script src="<?= $DataTableJSMin; ?>"></script>
+<script src="<?= $DataTableBoot;?>"></script>
 <script>
 // Initialize Animated on scroll (AOS) library
 AOS.init();

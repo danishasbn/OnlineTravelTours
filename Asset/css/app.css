@@ -104,14 +104,15 @@
 
 /* Heading <h1> Homepage Text */
 .trending {
-  font-family: "Great Vibes", Arial;
+  font-family: "PT-Sans", Arial;
   color: #339c95;
   margin-top: 10px;
 }
 /*  Trending border image */
 .img-border {
-  height: 20px;
+  height: 50px;
   width: auto;
+  /* display: none; */
 }
 /* Video Background Text Card */
 /* Video Footer  */
@@ -453,4 +454,48 @@ ul {
 
 .input-width{
   width: 50%;
+}
+/* ------------------------------------------------Data Table CSS------------------------------------------------------------------ */
+.page-link{
+  background-color: #339c95 !important;
+  color:#fff !important;
+  border:1px solid #fff !important;
+}
+.page-link:hover{
+  background-color: #fff !important;
+  color:#339c95 !important;
+}
+/* ----------------------------------------List of Customers Page------------------------------------------------------------- */
+
+.btn-block {
+  border-radius: 0px;
+  background-color: rgba(0, 131, 122, 0.8);
+  color: #fff;
+  border:0px;
+  text-decoration: none !important;
+}
+.btn-block:hover {
+  color: #339c95;
+  background-color: #fff;
+  border: 1px solid #339c95;
+  transition: 0.5s;
+  cursor: pointer;
+} 
+
+.alert-box{
+  margin:0 auto !important;
+  padding:20px !important;
+  margin-top:50px !important;
+}
+
+/* --------------------------------------------Car Rental Page---------------------------------------------------------------------- */
+.dashboard-circle{
+  /* background-image: url('../images/car-rental/focus-bg.jpg'); */
+}
+.dashboard-img{
+  margin:0 auto;
+}
+
+.border{
+  border:1px solid red !important;
 }

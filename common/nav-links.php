@@ -23,14 +23,10 @@ $myDataPath               = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/Online
 
 // User
 $dashboard                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/dashboard.php';
-$createUser               = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/user/create-user.php';
 $listUser                 = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/user/list-user.php';
 $blockedUser              = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/user/blocked-user.php';
 
-// Package
-// Booking
-//Website Content
-//Settings
-
+// Car
+$createCar                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/carrental/create-car-rental.php';
 
 ?>

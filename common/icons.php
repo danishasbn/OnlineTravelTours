@@ -7,7 +7,7 @@ $email    = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asse
 $user     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/header/icon-user.png';
 $address  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/header/icon-address.png';
 $search   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/header/icon-search.png';
-$border   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/header/border.png';
+$border   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/header/border.gif';
 $register = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/header/icon-register.png';
 $login    = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/header/icon-login.png';
 $logout   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/header/icon-logout.png';
@@ -23,6 +23,9 @@ $package      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/
 $setting      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/setting.png';
 $webContent   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/web-content.png';
 $userDash     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/user.png';
+$homeDark     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/home-dark.png';
+$hotel        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/hotel.png';
+$car          = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/car.png';
 
 //login icons
 $signin   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/signin.png';

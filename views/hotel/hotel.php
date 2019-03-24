@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="row justify-content-center" >
-    <h1 class="text-center trending"><img src="<?= $border; ?>" class="img-border"/> Hotel <img src="<?= $border; ?>" class="img-border"/></h1>
+    <h1 class="text-center trending">Hotel <img src="<?= $border; ?>" class="img-border"/></h1>
   </div>
 
   <div class="row">

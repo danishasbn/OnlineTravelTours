@@ -96,7 +96,7 @@
                     <h3 class="text-teal text-center">Default Billing Address</h3>
                     <label class="text-teal" for="inputAddress">Address</label>
                     <div class="form-label-group">
-                        <input type="text" readonly id="inputAddress" name="inputAddress" class="form-control input-text" placeholder="My Billig Address" value="<?= $inputAddress; ?>" maxLength="30">
+                        <input type="text" readonly id="inputAddress" name="inputAddress" class="form-control iznput-text" placeholder="My Billig Address" value="<?= $inputAddress; ?>" maxLength="30">
                     </div>
                     <br>
                     <label class="text-teal" for="inputNewAddress">New Billing Address</label>
