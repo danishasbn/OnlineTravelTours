@@ -94,7 +94,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/OnlineTravelTours/common/database/dbconnect.
               <div class="dropdown-menu" aria-labelledby="carrentDrop">
                 <a class="dropdown-item" href="<?= $createCar; ?>">Create New Car</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">List of Cars</a>
+                <a class="dropdown-item" href="<?= $listCar; ?>">List of Cars</a>
               </div>
             </li>
 

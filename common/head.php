@@ -15,6 +15,12 @@ $DataTableMin     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTo
 // Data Table JS
 $loadjQuery     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/jquery-3.3.1.js';
 
+// jQuery UI
+$jQueryUI       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/jquery-ui.min.js';
+
+// Balloon CSS
+$ballonCss      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/balloon.css';
+
 ?>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta charset="utf-8">
@@ -34,4 +40,10 @@ $loadjQuery     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTour
 <link href="<?= $DataTable; ?>" rel="stylesheet" type="text/css"/>
 <link href="<?= $DataTableMin; ?>" rel="stylesheet" type="text/css"/>
 
+<!-- Balloon CSS -->
+<link href="<?= $ballonCss; ?>" rel="stylesheet" type="text/css"/>
+
+<!-- jQuery -->
 <script src="<?= $loadjQuery; ?>"></script>
+<!-- JQuery UI -->
+<script src="<?= $jQueryUI; ?>"></script>

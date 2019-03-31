@@ -21,3 +21,44 @@ document.onkeydown = function (e) {
   }
 }
 
+// Display Image on Upload
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('#displayUpload')
+        .attr('src', e.target.result)
+        .width(600)
+        .height(300);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+
+// Show/Hide Panel on check 
+// Disable input 
+$(document).ready(function () {
+
+  // On Page Load
+  // $('#uploadImagePanel').hide();
+  // $('#uploadImg').removeAttr('name');
+  // $('#uploadImg').attr('data-validation', false);
+  $('#uploadImgUpdate').attr('disabled', true);
+  // On checked
+  $('#changePhoto').change(function () {
+    if (this.checked) {
+      $('#uploadImgUpdate').attr('disabled', false);
+      // $('#uploadImagePanel').fadeIn('slow');
+      // $('#uploadImg').attr('data-validation', 'required');
+      // $('#uploadImg').attr('name', 'uploadImg');
+    } else {
+      $('#uploadImgUpdate').attr('disabled', true);
+      // $('#uploadImagePanel').fadeOut('slow');
+      // $('#uploadImg').attr('data-validation', false);
+      // $('#uploadImg').removeAttr('name');
+    }
+  });
+});

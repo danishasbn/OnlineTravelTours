@@ -23,6 +23,13 @@ $DataTableBoot   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTou
 <script src="<?= $DataTableJS; ?>"></script>
 <script src="<?= $DataTableJSMin; ?>"></script>
 <script src="<?= $DataTableBoot;?>"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+<script>
+	$.validate();
+</script>
+
 <script>
 // Initialize Animated on scroll (AOS) library
 AOS.init();

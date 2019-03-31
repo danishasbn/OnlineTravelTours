@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row justify-content-center" >
-        <h1 class="text-center trending"><img src="<?= $border; ?>" class="img-border"/> Info <img src="<?= $border; ?>" class="img-border"/></h1>
+        <h1 class="text-center trending">Info <img src="<?= $border; ?>" class="img-border"/></h1>
     </div>
     <div class="row">
         <ul class="myDataList">
@@ -31,26 +31,26 @@
             </div>
             <div class="panel-body container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="off">
                                 <label class="text-teal" for="inputFname">First Name *</label>
                                 <div class="form-label-group">
-                                    <input type="text" id="inputFname" name="inputFname" class="form-control input-text " placeholder="First Name" value="<?= $firstname; ?>" maxLength="30">
+                                    <input type="text" id="inputFname" name="inputFname" class="form-control input-text input-width" placeholder="First Name" value="<?= $firstname; ?>" maxLength="30">
                                 </div>
 
                                 <label class="text-teal" for="inputLname">Last Name *</label>
                                 <div class="form-label-group">
-                                    <input type="text" id="inputLname" name="inputLname" class="form-control input-text " placeholder="Last Name" value="<?= $lastname; ?>" maxLength="30">
+                                    <input type="text" id="inputLname" name="inputLname" class="form-control input-text input-width" placeholder="Last Name" value="<?= $lastname; ?>" maxLength="30">
                                 </div>
 
                                 <label class="text-teal" for="inputEmail">Email *</label>
                                 <div class="form-label-group">
-                                    <input type="text" id="inputEmail" name="inputEmail" class="form-control input-text " placeholder="Email Address" value="<?= $inputEmail; ?>" maxLength="30" readonly>
+                                    <input type="text" id="inputEmail" name="inputEmail" class="form-control input-text input-width" placeholder="Email Address" value="<?= $inputEmail; ?>" maxLength="30" readonly>
                                 </div>
 
                                 <label class="text-teal" for="inputPhone">Mobile Number *</label>
                                 <div class="form-label-group">
-                                    <input type="text" id="inputPhone" name="inputPhone" class="form-control input-text " placeholder="Mobile No. (+ 230)" value="<?= $inputPhone; ?>" maxLength="8">
+                                    <input type="text" id="inputPhone" name="inputPhone" class="form-control input-text input-width" placeholder="Mobile No. (+ 230)" value="<?= $inputPhone; ?>" maxLength="8">
                                 </div>
                                 <br>
                                 <button class="btn btn-sm login-button " type="submit" id="btn-save" name="btn-save">Save Data</button>
@@ -59,12 +59,13 @@
                         </form>
                     </div>
 
-                    <div class="col-md-8" align="center">
+
+                    <div class="col-md-6" align="center">
                         <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="off">
                                 <h3 class="text-teal text-center">Change Password</h3>
                                 <label class="text-teal" for="inputOldPass">Old Password *</label>
                                 <div class="form-label-group">
-                                    <input type="password" id="inputOldPass" name="inputOldPass" class="form-control input-text input-width" placeholder="Old Password" value="" maxLength="30">
+                                    <input type="password" id="inputOldPass" name="inputOldPass" class="form-control input-text  input-width" placeholder="Old Password" value="" maxLength="30">
                                 </div>
 
                                 <label class="text-teal" for="inputNewPass">New Password *</label>
@@ -101,7 +102,7 @@
                     <br>
                     <label class="text-teal" for="inputNewAddress">New Billing Address</label>
                     <div class="form-label-group">
-                        <input type="text" id="inputNewAddress" name="inputNewAddress" class="form-control input-text input-width" placeholder="My New Billing Address" value="" maxLength="100">
+                        <input type="text" id="inputNewAddress" name="inputNewAddress" class="form-control input-text input-widthinput-width" placeholder="My New Billing Address" value="" maxLength="100">
                     </div>
                     <br>                
                     <button class="btn btn-sm login-button" type="submit" id="btn-billing" name="btn-billing">Change</button>

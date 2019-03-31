@@ -28,5 +28,6 @@ $blockedUser              = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/Online
 
 // Car
 $createCar                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/carrental/create-car-rental.php';
+$listCar                  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/carrental/list-of-carrental.php';
 
 ?>

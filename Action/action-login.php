@@ -38,6 +38,7 @@
                         $sessionFname = $row['firstname'];
                         $getPassword  = $row['password'];
                         $getroleType  = $row['role_type'];
+                        $getStatus    = $row['status'];
 
                         if($getroleType == 'Admin'){
                             // Create Admin Session
@@ -52,10 +53,13 @@
                         }
                     }
 
-                    if($inputEmail == @$sessionEmail && $hashPassword == $getPassword && $getroleType == 'Customer'){
+                    if($inputEmail == @$sessionEmail && $hashPassword == $getPassword && $getroleType == 'Customer' && $getStatus == '1'){
                         echo "<meta http-equiv='refresh' content='0;url=index.php'>";
                     }else if($inputEmail == @$sessionEmail && $hashPassword == $getPassword && $getroleType == 'Admin'){
                         echo "<meta http-equiv='refresh' content='0;url=dashboard/dashboard.php'>";
+                    }else if(@$getStatus == '0'){
+                       echo "<meta http-equiv='refresh' content='0;url=suspend.php'>";
+                       session_destroy();
                     }else{
                         echo
                             "<div class='alert alert-danger text-center'>

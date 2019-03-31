@@ -30,7 +30,7 @@
         $roleType           = $_POST['role-type'];
         $status             = $_POST['status'];
         
-         // Form Validation using PHP
+        // Form Validation using PHP
         if(empty($firstname) || empty($lastname) || empty($gender) || empty($inputAddress) || empty($inputPhone) || empty($inputEmail) || empty($password) || empty($CPassword) ){                        
             echo  "<div class='alert alert-danger text-center'>
                     Please Fill in the Required* Fields !
@@ -43,7 +43,7 @@
             if(!preg_match("/^[a-zA-Z ]*$/",$firstname)) {
                 echo "<div class='alert alert-warning text-center'>
                         Only letters and white space allowed !
-                        </div>";
+                      </div>";
                 $errors[$warning_fname_msg] ='border:1px solid #ff7b00';
                 $warning_fname_msg ='border:1px solid #ff7b00';
             }
@@ -103,38 +103,35 @@
                     </div>";
                 $errors[$warning_password_msg] ='border:1px solid #ff7b00';
                 $warning_password_msg ='border:1px solid #ff7b00';
-            }
-            
-            else if(!preg_match("#[0-9]+#",$password)) {
+
+            }else if(!preg_match("#[0-9]+#",$password)) {
                 echo "<div class='alert alert-warning text-center'>
                         Your Password Must Contain At Least a Number !
                         </div>";
                 $errors[$warning_password_msg]='border:1px solid #ff7b00';
                 $warning_password_msg='border:1px solid #ff7b00';
-            }
-            else if(!preg_match("#[A-Z]+#",$password)) {
+
+            }else if(!preg_match("#[A-Z]+#",$password)) {
                         echo "<div class='alert alert-warning text-center'>
                         Your Password Must Contain At Least an Uppercase Letter !
                         </div>";
                 $errors[$warning_password_msg]='border:1px solid #ff7b00';
                 $warning_password_msg='border:1px solid #ff7b00';
-            }
-            else if(!preg_match("#[a-z]+#",$password)) {
+
+            }else if(!preg_match("#[a-z]+#",$password)) {
                         echo "<div class='alert alert-warning text-center'>
                         Your Password Must Contain At Least 1 Lowercase Letter !
                         </div>";
                 $errors[$warning_password_msg]='border:1px solid #ff7b00';
                 $warning_password_msg='border:1px solid #ff7b00';
-            }
 
-            else if($password != $CPassword){
+            }else if($password != $CPassword){
                     echo "<div class='alert alert-danger text-center'>
                         Password & Confirmed Password do not match !
                     </div>";
                 $errors[$warning_password_msg]='border:1px solid #ff7b00';
                 $warning_password_msg='border:1px solid #ff7b00';
-            }
-            else{
+            }else{
             // Check if Email already exist
             $sql    = "SELECT * FROM tbl_user";
             $query  = mysqli_query($dbc, $sql);
@@ -149,8 +146,7 @@
                             </div>";
                     $errors[$warning_email_msg] ='border:1px solid #ff7b00';
                     $warning_email_msg ='border:1px solid #ff7b00';
-                }
-                else{
+                }else{
                     // Insert Form Data into Database
                     $hashPassword = md5($password);
                     $sql = "INSERT INTO tbl_user(firstname,lastname,email,password,address,gender,country,phone,role_type,status) VALUES('$firstname','$lastname','$inputEmail', '$hashPassword', '$inputAddress' , '$gender' ,'$country', '$inputPhone', '$roleType' , '$status') ";
@@ -164,7 +160,7 @@
                     echo "<meta http-equiv='refresh' content='5; url=login.php'>";
                     }
                 }
-            }         
+            }
         }
     }
 ?>
