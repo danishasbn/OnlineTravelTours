@@ -21,6 +21,9 @@ $jQueryUI       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTour
 // Balloon CSS
 $ballonCss      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/balloon.css';
 
+// FlatPikr CSS 
+$flatpickr      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/flatpickr.min.css';
+
 ?>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta charset="utf-8">
@@ -42,6 +45,9 @@ $ballonCss      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTour
 
 <!-- Balloon CSS -->
 <link href="<?= $ballonCss; ?>" rel="stylesheet" type="text/css"/>
+
+<!-- Flatpickr CSS -->
+<link href="<?= $flatpickr; ?>" rel="stylesheet" type="text/css"/>
 
 <!-- jQuery -->
 <script src="<?= $loadjQuery; ?>"></script>

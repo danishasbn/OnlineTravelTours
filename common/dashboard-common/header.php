@@ -76,9 +76,9 @@ require($_SERVER['DOCUMENT_ROOT'].'/OnlineTravelTours/common/database/dbconnect.
               </a>
 
               <div class="dropdown-menu" aria-labelledby="packageDrop">
-                <a class="dropdown-item" href="#">Create New Package</a>
+                <a class="dropdown-item" href="<?= $createPackage; ?>">Create New Package</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">List of Packages</a>
+                <a class="dropdown-item" href="<?= $listPackage; ?>">List of Packages</a>
               </div>
             </li>
 
@@ -107,9 +107,9 @@ require($_SERVER['DOCUMENT_ROOT'].'/OnlineTravelTours/common/database/dbconnect.
               </a>
 
               <div class="dropdown-menu" aria-labelledby="hotelDrop">
-                <a class="dropdown-item" href="#">Create New Hotel</a>
+                <a class="dropdown-item" href="<?= $createHotel; ?>">Create New Hotel</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">List of Hotels</a>
+                <a class="dropdown-item" href="<?= $listHotel; ?>">List of Hotels</a>
               </div>
             </li>
 

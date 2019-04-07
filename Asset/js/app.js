@@ -21,22 +21,6 @@ document.onkeydown = function (e) {
   }
 }
 
-// Display Image on Upload
-
-function readURL(input) {
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-      $('#displayUpload')
-        .attr('src', e.target.result)
-        .width(600)
-        .height(300);
-    };
-    reader.readAsDataURL(input.files[0]);
-  }
-}
-
 
 // Show/Hide Panel on check 
 // Disable input 
@@ -61,4 +45,41 @@ $(document).ready(function () {
       // $('#uploadImg').removeAttr('name');
     }
   });
+
+  // ------------------------------------------------  Dashboard -> Create Hotel ----------------------------------------------------------------------------
+
+  // FlatPickr Date Availability
+  $(".availabilityDate").flatpickr({
+    altFormat: "F j, Y",
+    dateFormat: "d/m/Y",
+    minDate: "today"
+  });
 });
+
+// Upload Multiple Images
+function preview_image() {
+  var total_file = document.getElementById("upload_file").files.length;
+  for (var i = 0; i < total_file; i++) {
+    $('#image_preview').append("<img src='" + URL.createObjectURL(event.target.files[i]) + "' class='img-fluid' height='50' width='50'>");
+  }
+}
+
+
+// ------------------------------------------------  Dashboard -> Create Car ----------------------------------------------------------------------------
+
+// Preview Single Image on Upload
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('#displaySingle')
+        .attr('src', e.target.result)
+        .width(600)
+        .height(300);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+

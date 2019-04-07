@@ -126,7 +126,7 @@
                     </select>
                     <br>
                     <br>
-                    <button class="btn-save-car" type="submit" name="btn-save-car" id="btn-save-car">Upload Data <span><img src="<?= $upload; ?>" class="icon"/></span></button>
+                    <button class="btn-save" type="submit" name="btn-save-car" id="btn-save-car">Save Changes <span><img src="<?= $upload; ?>" class="icon"/></span></button>
                     <br>
                     <br>
                 </div>

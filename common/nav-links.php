@@ -30,4 +30,12 @@ $blockedUser              = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/Online
 $createCar                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/carrental/create-car-rental.php';
 $listCar                  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/carrental/list-of-carrental.php';
 
+// Hotel
+$createHotel              = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/hotels/create-hotel.php';
+$listHotel                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/hotels/list-of-hotels.php';
+
+// Package
+$createPackage            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/package/create-package.php';
+$listPackage              = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/package/list-of-package.php';
+
 ?>

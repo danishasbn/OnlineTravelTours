@@ -42,7 +42,7 @@ include('database/dbconnect.php');
                       <img src="<?= $search; ?>" class="icon"/>
                     </span>
                   </div>
-                  <input class="form-control txt-search" type="text" placeholder="Search" aria-label="Search">
+                  <input class="form-control txt-search" type="text" placeholder="Search" aria-label="Search" id="search_text" name="search_text">
                   <button class="btn btn-find">Find</button>
                 </div>
               </form>

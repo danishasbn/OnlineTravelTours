@@ -10,23 +10,4 @@
   </div>
 </div>
 
-
-
-<div class="container">
- <div class="row">
-   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 border" >
-    <div class="hovereffect">
-        <img class="img-responsive" height="300px" width="500px" src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-        <div class="overlay">
-           <h2>Hover effect 5</h2>
-           <a class="info" href="#">link here</a>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-
-
-
-
 <?php require('../../common/footer.php');?>

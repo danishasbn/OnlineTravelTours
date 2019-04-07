@@ -18,9 +18,9 @@
 
                     <label for="">Upload Cover Image *</label>
                     <input type="hidden" name="size" value="1000000">
-                    <input type="file" class="form-control" name="uploadImg" id="uploadImg" data-validation="required"  onchange="readURL(this);" >
+                    <input type="file" class="form-control" name="uploadImg" id="uploadImg" data-validation="required" onchange="readURL(this);" >
                     <br>
-                    <img id="displayUpload" src="<?= $imageFormat; ?>" alt="your image" class="img-fluid"/>
+                    <img id="displaySingle" src="<?= $imageFormat; ?>" alt="your image" class="img-fluid"/>
                     <br>
    
                     <label for="sltcarRentalCompany">Car Rental Company *</label>
@@ -86,7 +86,7 @@
                     </select>
                     <br>
                     <br>
-                    <button class="btn-save-car" type="submit" name="btn-save-car" id="btn-save-car">Upload Data <span><img src="<?= $upload; ?>" class="icon"/></span></button>
+                    <button class="btn-save" type="submit" name="btn-save-car" id="btn-save-car">Create<span><img src="<?= $upload; ?>" class="icon"/></span></button>
                     <br>
                     <br>
                 </div>
