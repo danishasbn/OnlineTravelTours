@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row">
             <form method="post" action= "<?= $_SERVER['PHP_SELF']; ?>" autocomplete="off">
-                <table id="list-of-customer" class="table table-striped table-bordered" style="width:100%">
+                <table id="list-of-customer" class="table table-striped table-responsive table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th>First Name</th>

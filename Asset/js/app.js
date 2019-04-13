@@ -21,7 +21,7 @@ document.onkeydown = function (e) {
   }
 }
 
-
+// ---------------------------------------------Dashboard -> Update Car ------------------------------------------------------------------
 // Show/Hide Panel on check 
 // Disable input 
 $(document).ready(function () {
@@ -46,6 +46,7 @@ $(document).ready(function () {
     }
   });
 
+
   // ------------------------------------------------  Dashboard -> Create Hotel ----------------------------------------------------------------------------
 
   // FlatPickr Date Availability
@@ -61,10 +62,9 @@ function preview_image() {
   var total_file = document.getElementById("upload_file").files.length;
   for (var i = 0; i < total_file; i++) {
     $('#image_preview').append("<img src='" + URL.createObjectURL(event.target.files[i]) + "' class='img-fluid' height='50' width='50'>");
+
   }
 }
-
-
 // ------------------------------------------------  Dashboard -> Create Car ----------------------------------------------------------------------------
 
 // Preview Single Image on Upload
@@ -82,4 +82,19 @@ function readURL(input) {
   }
 }
 
+// ------------------------------------------------------- Dashboard -> Update Hotel---------------------------------------------------------
 
+// Show/Hide Panel on check 
+// Disable input 
+$(document).ready(function () {
+  $('#upload_file').attr('disabled', true);
+  // On checked
+  $('#changePhoto').change(function () {
+    if (this.checked) {
+      $('#upload_file').attr('disabled', false);
+    } else {
+      $('#upload_file').attr('disabled', true);
+    }
+
+  });
+});

@@ -27,7 +27,6 @@
         // Fetch Discount
         $sql_discount   = "SELECT * FROM tbl_discount";
         $query_discount = mysqli_query($dbc,$sql_discount);
- 
     
     }else{
         echo "<meta http-equiv='refresh' content='0;url=../../../404-dashboard.php'>";
@@ -35,8 +34,8 @@
 
     if(isset($_POST['btn-save-car'])){
         $id     = $_GET['id'];
+        
         // Get Form Values
-
         @$carTitle       = $_POST['txt-carTitle'];
         @$carCompany     = $_POST['sltcarRentalCompany'];
         @$pickUp         = $_POST['sltPickup'];
@@ -57,7 +56,7 @@
 
         // Update Car Rental
         $sql_updatecr = "UPDATE tbl_car_rental
-                            SET    car_title                       = '$carTitle',
+                         SET    car_title                       = '$carTitle',
                                 car_rental_company_id           = '$carCompany',
                                 pickup_id                       = '$pickUp',
                                 transmission                    = '$transmission',

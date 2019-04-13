@@ -1,8 +1,8 @@
 <?php
     // Fetch Hotel
-    $sql_hotel      = "SELECT *
+    $sql_hotel      = "SELECT *, h.id as HotelID
                        FROM  tbl_hotel h, tbl_discount d
-                       WHERE h.discount_id = d.id ";
+                       WHERE h.discount_id = d.id";
     $query_hotel  = mysqli_query($dbc,$sql_hotel);
 
     // if(isset($_GET['del'])){

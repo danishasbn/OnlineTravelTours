@@ -662,3 +662,8 @@ ul {
   transform: scale(1);
   background-color: rgba(0,0,0,0.4);
 }
+
+/* ------------------------------------------ Display Car Rental- ------------------------------------------------------------ */
+.car-rental-text{
+  list-style-type: disc;
+}

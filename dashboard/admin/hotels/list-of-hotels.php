@@ -8,8 +8,9 @@
     <h3 class="text-left"> >> List  <small> <em> of Hotels </em></small> <<</h3>  
     <form method="post" action= "<?= $_SERVER['PHP_SELF']; ?>" autocomplete="off">
         <table id="list-of-hotels" class="table table-striped table-responsive table-bordered" style="width:100%">
-            <thead>
+            <thead>                
                 <tr>
+                    <th>-</th>
                     <th>Hotel Name</th>
                     <th>Price</th>
                     <th>Date From</th>
@@ -24,9 +25,10 @@
                 <?php
                     if($query_hotel){
                     while($row = mysqli_fetch_array($query_hotel)){
-                        $id = $row['id'];
+                        $id = $row['HotelID'];
                         ?>
                     <tr>
+                        <td><img src="<?= $hotel;?>" class="icon"/></td>
                         <td><?= $row['hotelName']; ?></td>
                         <td><?= $row['price']; ?></td>
                         <td><?= $row['dateFrom']; ?></td>

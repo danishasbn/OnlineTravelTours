@@ -21,10 +21,10 @@
                     <br>
                     <h5>Date of Availability *</h5>
                     <label for="txt-dateFrom">Date From *</label>
-                    <input type="text" class="form-control availabilityDate" id="txt-dateFrom" name="txt-dateFrom" data-validation="required"  value="" placeholder="Select Date From..">
+                    <input type="text" class="form-control availabilityDate input-width-2" id="txt-dateFrom" name="txt-dateFrom" data-validation="required"  value="" placeholder="Select Date From..">
 
                     <label for="txt-dateTo">Date To *</label>
-                    <input type="text" class="form-control availabilityDate" id="txt-dateTo" name="txt-dateTo" data-validation="required"  value="" placeholder="Select Date To..">
+                    <input type="text" class="form-control availabilityDate input-width-2" id="txt-dateTo" name="txt-dateTo" data-validation="required"  value="" placeholder="Select Date To..">
                     
                     <label for="txt-purchaseInclude">Purchase Include *</label>
                     <textarea class="form-control" rows="10" id="txt-purchaseInclude" name="txt-purchaseInclude" data-validation="required"></textarea>
