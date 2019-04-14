@@ -3,7 +3,7 @@
         $getID = $_GET['id'];
         
         // Fetch Hotel Details
-        $sql_hotel = "SELECT *
+        $sql_hotel = "SELECT *, tbl_hotel.id as hotelID
                       FROM  tbl_hotel, tbl_discount
                       WHERE tbl_hotel.discount_id = tbl_discount.id
                       AND   tbl_hotel.id = $getID";
@@ -54,6 +54,9 @@
         }else{
             echo "Failed".mysqli_error($dbc);
         }
+
+        
+        
 
 
     }

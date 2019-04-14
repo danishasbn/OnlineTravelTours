@@ -3,7 +3,6 @@
   $sql_pickup   = "SELECT * FROM tbl_pickuppoint";
   $query_pickup = mysqli_query($dbc,$sql_pickup);
 
-
   // Fetch Car Rental Company
   $sql_carRentCompany   = "SELECT * FROM tbl_carrental_company";
   $query_carRentCompany = mysqli_query($dbc, $sql_carRentCompany);

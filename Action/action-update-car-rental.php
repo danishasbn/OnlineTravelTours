@@ -33,8 +33,6 @@
     }
 
     if(isset($_POST['btn-save-car'])){
-        $id     = $_GET['id'];
-        
         // Get Form Values
         @$carTitle       = $_POST['txt-carTitle'];
         @$carCompany     = $_POST['sltcarRentalCompany'];
@@ -48,11 +46,6 @@
         @$carRentalCompanyDesc = $_POST['txt-CarCompanyDescription'];
         @$conditionApply       = $_POST['txt-ConditionApply'];
         @$packageDetails       = $_POST['txt-PackageDetails'];
-
-        @$uploadImage = $_POST['uploadImg'];
-        
-        @$getImage     = $_FILES['uploadImg']['name'];
-        // echo $getImage;
 
         // Update Car Rental
         $sql_updatecr = "UPDATE tbl_car_rental

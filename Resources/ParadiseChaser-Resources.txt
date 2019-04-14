@@ -1,0 +1,24 @@
+Plugins Used for Paradise Chaser Development
+
+1. Bootstrap 4.0.0
+2. PHP 
+3. Mysql
+4. HTML, CSS
+5. JQuery
+6. JavaScript
+7. FlatPickr Datepicker
+8. Jquery form validation
+9. Bootstrap Datatable
+10. Jquery Zoom image effect
+
+Balloon pop up
+https://kazzkiq.github.io/balloon.css/
+
+Resource for car image
+https://www.arnoldclark.com/alfa-romeo
+
+Resource for multiple image upload
+http://talkerscode.com/webtricks/upload-multiple-images-with-image-preview-using-jquery-ajax-php.php
+
+Resource for Date Picker
+https://flatpickr.js.org/examples/#basic

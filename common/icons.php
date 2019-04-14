@@ -18,6 +18,7 @@ $noEntry  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asse
 // Dashboard Icons
 $dash         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/dash.png';
 $plus         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/plus.png';
+$plusTeal     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/icon-plus-teal.png';
 $booking      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/booking.png';
 $package      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/package.png';
 $setting      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/setting.png';

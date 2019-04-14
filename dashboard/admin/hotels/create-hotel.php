@@ -50,15 +50,16 @@
 
                     <label for="txt-uploadImages">Upload Images *</label>
                     <!-- Validate that file is an image of type JPG, GIF or PNG and not larger than 2 mega bytes -->
-                    <input type="file" name="upload_file[]" id="upload_file" class="form-control" onchange="preview_image();" multiple/>
+                    <input type="file" name="upload_file[]" id="upload_file" class="form-control test" onchange="preview_image();" multiple/>
                     <br>
                     <div class="col">
+                        <span><a href="" id="clearInput" class="decoration-none"><img src="<?= $remove;?>" class="icon"/> Remove all</a></span>
                         <div id="image_preview" class="border"></div>
+                        <br>
                     </div>
                     <br>
                     <button class="btn-save" type="submit" name="btn-save-hotel" id="btn-save-hotel">Create<span><img src="<?= $upload; ?>" class="icon"/></span></button>
                 </div>
-
             </div>
         </div>
     </form>    

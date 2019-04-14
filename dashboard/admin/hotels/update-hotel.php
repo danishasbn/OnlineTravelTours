@@ -44,7 +44,7 @@
                         <?php
                             if($row_hotel['discount_id'] == '0'){
                             ?>
-                                <option selected >Null</option>        
+                                <option selected >Null</option>
                             <?php
                             }else{
                                 ?>
@@ -63,38 +63,13 @@
                             }
                          ?>
                     </select>
+                    <br>
+                        <img src="<?= $imageFormat; ?>" alt="your image" class="img-fluid"/> <a href="view-hotel-gallery.php?id=<?= $row_hotel['hotelID']?>">View Gallery</a>
+                    <br>
                 <?php
                         }   
                     }
-                ?>
-                    <br>
-                    <div class="d-flex">
-                        <?php
-                            if($query_hotelGallery){
-                                while($row_hotelGallery=mysqli_fetch_array($query_hotelGallery)){
-                                    ?>
-                                    <img src="<?= "../../uploadImages/".$row_hotelGallery['imagePath']; ?>" class="img-fluid" />
-                                    <?php                                    
-                                }
-                            }
-                        ?>
-                    </div>
-                    <br>
-
-                    <p class="text-info">Click here to change picture</p>
-                    <input type="checkbox" id="changePhoto" name="changePhoto" class="changePhoto"> 
-                    <label for="changePhoto" name="changePhoto" class="changePhoto"></label>
-
-                    <div id="uploadImagePanel">
-                        <label for="txt-uploadImages">Upload Images *</label>
-                        <!-- Validate that file is an image of type JPG, GIF or PNG and not larger than 2 mega bytes -->
-                        <input type="file" name="upload_file[]" id="upload_file" class="form-control" onchange="preview_image();" multiple/>
-                        <br>
-                        <div class="col">
-                            <div id="image_preview" class="border"></div>
-                        </div>                       
-                    </div>
-
+                ?>                 
                     <br>
                     <button class="btn-save" type="submit" name="btn-update-hotel" id="btn-update-hotel">Save Changes<span><img src="<?= $upload; ?>" class="icon"/></span></button>
                 </div>

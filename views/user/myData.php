@@ -123,10 +123,11 @@
                     <li><p>Deleting your account will remove all the purchase history, discounts, orders, invoices and all other information that might be related to your account or your purchases.</p></li>                        
                     <li><p>All your orders and similar information will be lost.</p></li>
                     <li><p>You will not be able to restore access to your account after we approve your removal request.</p></li>
+                    <li><strong><p>I understand and I want to delete my account.</p></strong></li>
                     <li>
-                        <form>
-                            <input type="checkbox"/> 
-                            <label for="">I understand and I want to delete my account.</label>
+                        <form>                            
+                            <input type="checkbox" id="deleteAccount"/>     
+                            <label for="deleteAccount"></label>
                             <br>
                             <button class="btn btn-sm login-button" type="submit" id="btn-delete" name="btn-delete">Submit Request</button>
                             <br>

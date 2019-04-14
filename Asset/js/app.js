@@ -1,3 +1,52 @@
+
+// ---------------------------------------------Dashboard -> Update Car ------------------------------------------------------------------
+// Show/Hide Panel on check 
+// Disable input 
+$(document).ready(function () {
+
+  // On Page Load
+  $('#uploadImgUpdate').attr('disabled', true);
+  // On checked
+  $('#changePhoto').change(function () {
+    if (this.checked) {
+      $('#uploadImgUpdate').attr('disabled', false);
+    } else {
+      $('#uploadImgUpdate').attr('disabled', true);
+    }
+  });
+
+
+  // ------------------------------------------------  Dashboard -> Create Hotel ----------------------------------------------------------------------------
+
+  // FlatPickr Date Availability
+  $(".availabilityDate").flatpickr({
+    altFormat: "F j, Y",
+    dateFormat: "d/m/Y",
+    minDate: "today"
+  });
+
+  // ------------------------------------------------------- Dashboard -> Update Hotel---------------------------------------------------------
+  // Show/Hide Panel on check 
+  // Disable input 
+  $('#update_upload_file').attr('disabled', true);
+
+  // On checked
+  $('#changePhoto').change(function () {
+    if (this.checked) {
+      $('#update_upload_file').attr('disabled', false);
+    } else {
+      $('#update_upload_file').attr('disabled', true);
+    }
+
+  });
+
+  // ------------------------------------------------------ Dashboard -> View Hotel Gallery ------------------------------------------------------
+  $('.exe3').zoom({ on: 'click' });
+});
+
+
+// ******************************************** -- OUTSIDE DOM-- (Document Ready) *********************************************************************************************
+
 //jQuery disabling right-click on image
 $('img').each(function () {
   $(this)[0].oncontextmenu = function () {
@@ -21,41 +70,6 @@ document.onkeydown = function (e) {
   }
 }
 
-// ---------------------------------------------Dashboard -> Update Car ------------------------------------------------------------------
-// Show/Hide Panel on check 
-// Disable input 
-$(document).ready(function () {
-
-  // On Page Load
-  // $('#uploadImagePanel').hide();
-  // $('#uploadImg').removeAttr('name');
-  // $('#uploadImg').attr('data-validation', false);
-  $('#uploadImgUpdate').attr('disabled', true);
-  // On checked
-  $('#changePhoto').change(function () {
-    if (this.checked) {
-      $('#uploadImgUpdate').attr('disabled', false);
-      // $('#uploadImagePanel').fadeIn('slow');
-      // $('#uploadImg').attr('data-validation', 'required');
-      // $('#uploadImg').attr('name', 'uploadImg');
-    } else {
-      $('#uploadImgUpdate').attr('disabled', true);
-      // $('#uploadImagePanel').fadeOut('slow');
-      // $('#uploadImg').attr('data-validation', false);
-      // $('#uploadImg').removeAttr('name');
-    }
-  });
-
-
-  // ------------------------------------------------  Dashboard -> Create Hotel ----------------------------------------------------------------------------
-
-  // FlatPickr Date Availability
-  $(".availabilityDate").flatpickr({
-    altFormat: "F j, Y",
-    dateFormat: "d/m/Y",
-    minDate: "today"
-  });
-});
 
 // Upload Multiple Images
 function preview_image() {
@@ -65,6 +79,7 @@ function preview_image() {
 
   }
 }
+
 // ------------------------------------------------  Dashboard -> Create Car ----------------------------------------------------------------------------
 
 // Preview Single Image on Upload
@@ -82,19 +97,9 @@ function readURL(input) {
   }
 }
 
-// ------------------------------------------------------- Dashboard -> Update Hotel---------------------------------------------------------
-
-// Show/Hide Panel on check 
-// Disable input 
-$(document).ready(function () {
-  $('#upload_file').attr('disabled', true);
-  // On checked
-  $('#changePhoto').change(function () {
-    if (this.checked) {
-      $('#upload_file').attr('disabled', false);
-    } else {
-      $('#upload_file').attr('disabled', true);
-    }
-
-  });
+// Clear File input
+$("#clearInput").click(function () {
+  $("#upload_file").val(null);
+  $('#image_preview img').remove();
 });
+

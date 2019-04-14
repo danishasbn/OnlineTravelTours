@@ -15,6 +15,11 @@ $DataTableBoot   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTou
 // Flatpickr JS
 $Flatpickr  	 = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/flatpickr.js';
 
+// jQuery Zoom Effect JS
+$zoom			= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/jquery.zoom.min.js';
+
+// jQuery Form Validator JS
+$formValidator	= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/jquery.form-validator.min.js';
 
 ?>
 <!-- Bootstrap Main Scripts -->
@@ -36,7 +41,11 @@ $Flatpickr  	 = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/
 <!-- Flatpickr Js -->
 <script src="<?= $Flatpickr;?>"></script>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+<!-- jQuery Zoom Effect Plugin -->
+<script src="<?= $zoom; ?>"></script>
+
+<!-- jQuery Form Validator -->
+<script src="<?= $formValidator; ?>"></script>
 
 <script>
 	// JQuery Validation

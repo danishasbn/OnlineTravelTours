@@ -330,7 +330,7 @@
   margin: 0 auto;
 }
 
-/* --------------------------Dashboard--------------------------------------- */
+/* --------------------------Dashboard--------------------------------------- */zz
 ul {
   list-style: none;
 }
@@ -666,4 +666,42 @@ ul {
 /* ------------------------------------------ Display Car Rental- ------------------------------------------------------------ */
 .car-rental-text{
   list-style-type: disc;
+}
+
+/* --------------------------------------------- View Hotel Gallery ------------------------------------------------------------ */
+
+.addNew:hover{
+  cursor: pointer;
+}
+
+/* ------------------------------------------- View Hotel Gallery Zoom Effect -----------------------------------------------------------------------  */
+.zoom-activate-text { position:absolute; top:3px; right:28px; color:#555; font:bold 13px/1 sans-serif;}
+
+.zoom {
+  display:inline-block;
+  position: relative;
+}
+
+/* magnifying glass icon */
+.zoom:after {
+  content:'';
+  display:block; 
+  width:33px; 
+  height:33px; 
+  position:absolute; 
+  top:0;
+  right:0;
+  background:url('../images/icons/dashboard/icon-zoom-search.png');
+}
+
+.zoom img {
+  display: block;
+}
+
+.zoom img::selection { background-color: transparent; }
+
+
+/* Default CSS */
+.decoration-none{
+  text-decoration: none !important;
 }
