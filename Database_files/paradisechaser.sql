@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2019 at 08:33 AM
+-- Generation Time: Apr 16, 2019 at 09:42 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -39,9 +39,10 @@ CREATE TABLE `tbl_carrental_company` (
 --
 
 INSERT INTO `tbl_carrental_company` (`id`, `company_name`, `description`) VALUES
-(1, 'ABC Car Rental co ltd', ''),
-(2, 'First Car Rental', ''),
-(3, 'Europ Car Mauritius', '');
+(1, 'ABC Car Rental co ltd', 'fsdfgsdgsdgfsdgsgd'),
+(2, 'First Car Rental', 'yayyyyyyyyyyyyyy!!!!!!!!!!'),
+(3, 'Europ Car Mauritius', 'tesgsdfsdf'),
+(4, 'Company', 'test2');
 
 -- --------------------------------------------------------
 
@@ -91,10 +92,8 @@ CREATE TABLE `tbl_discount` (
 --
 
 INSERT INTO `tbl_discount` (`id`, `discount_percent`) VALUES
-(1, '0%'),
-(2, '20%'),
-(3, '30%'),
-(4, '40%');
+(27, '20'),
+(28, '30');
 
 -- --------------------------------------------------------
 
@@ -238,31 +237,31 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_carrental_company`
 --
 ALTER TABLE `tbl_carrental_company`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_car_rental`
 --
 ALTER TABLE `tbl_car_rental`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_discount`
 --
 ALTER TABLE `tbl_discount`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `tbl_gallery`
 --
 ALTER TABLE `tbl_gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_hotel`
 --
 ALTER TABLE `tbl_hotel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_pickuppoint`
