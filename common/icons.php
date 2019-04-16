@@ -19,6 +19,8 @@ $noEntry  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asse
 $dash         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/dash.png';
 $plus         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/plus.png';
 $plusTeal     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/icon-plus-teal.png';
+$plusWhite    = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/icon-plus-white.png';
+
 $booking      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/booking.png';
 $package      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/package.png';
 $setting      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/setting.png';
@@ -27,6 +29,9 @@ $userDash     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/
 $homeDark     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/home-dark.png';
 $hotel        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/hotel.png';
 $car          = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/car.png';
+$discount     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/discount.png';
+$pickup       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/icon-pickup.png';
+$carCompany   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/icon-car-company.png';
 // Edit | Remove icon
 $edit         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/edit.png';
 $remove       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/remove.png';

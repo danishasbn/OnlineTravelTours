@@ -22,3 +22,19 @@ http://talkerscode.com/webtricks/upload-multiple-images-with-image-preview-using
 
 Resource for Date Picker
 https://flatpickr.js.org/examples/#basic
+
+------------
+Credentials:
+------------
+Admin Login:
+username: paradisechaser2019@gmail.com
+password: Pa$$w0rd!
+
+** Note ** -> All customer password are the same, their email are different 
+
+-- Google Sheet Planning --
+
+https://docs.google.com/spreadsheets/d/1BQBMse1vQD3MGCwsqH9x36h89Lk5Hv8xCgAwHpSIW80/edit#gid=0
+
+Email: paradisechaser2019@gmail.com
+Password: Pa55w0rd2019

@@ -38,4 +38,12 @@ $listHotel                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/Online
 $createPackage            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/package/create-package.php';
 $listPackage              = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/package/list-of-package.php';
 
+// Discount 
+$createDiscount           = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/discount/create-discount.php';
+
+// Pickup Point
+$createPickup             = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/pickuppoint/create-pickuppoint.php';
+
+// CRC
+$createCRC                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/crc/create-crc.php';
 ?>

@@ -66,8 +66,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/OnlineTravelTours/common/database/dbconnect.
                 <a class="dropdown-item" href="<?=$blockedUser;?>">Blocked Users</a>
               </div>
             </li>
-            <li class="nav-item  nav-dash pl-0 dropdown">
 
+            <li class="nav-item  nav-dash pl-0 dropdown">
               <a class="nav-link nav-dash pl-0 nav-dash dropdown-toggle" href="<?= $dashboard; ?>"
                 id="packageDrop" data-toggle="dropdown">
                 <img src="<?= $package;?>" class="icon">
@@ -83,7 +83,6 @@ require($_SERVER['DOCUMENT_ROOT'].'/OnlineTravelTours/common/database/dbconnect.
             </li>
 
             <li class="nav-item  nav-dash pl-0 dropdown">
-            
               <a class="nav-link nav-dash pl-0 nav-dash dropdown-toggle" href="<?= $dashboard; ?>"
                 id="carrentDrop" data-toggle="dropdown">
                 <img src="<?= $car;?>" class="icon">
@@ -110,6 +109,40 @@ require($_SERVER['DOCUMENT_ROOT'].'/OnlineTravelTours/common/database/dbconnect.
                 <a class="dropdown-item" href="<?= $createHotel; ?>">Create New Hotel</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="<?= $listHotel; ?>">List of Hotels</a>
+              </div>
+            </li>
+
+            <li class="nav-item  nav-dash pl-0 dropdown">
+              <a class="nav-link nav-dash pl-0 nav-dash dropdown-toggle" href="<?= $dashboard; ?>"
+                id="discountDrop" data-toggle="dropdown">
+                <img src="<?= $discount;?>" class="icon">
+                <span class="d-none d-md-inline">Discount</span> 
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="discountDrop">
+                <a class="dropdown-item" href="<?= $createDiscount; ?>">Create New Discount</a>
+              </div>
+            </li>
+
+            <li class="nav-item  nav-dash pl-0 dropdown">
+              <a class="nav-link nav-dash pl-0 nav-dash dropdown-toggle" href="<?= $dashboard; ?>"
+                id="pickupDrop" data-toggle="dropdown">
+                <img src="<?= $pickup;?>" class="icon">
+                <span class="d-none d-md-inline">Pick up point</span> 
+              </a>
+              <div class="dropdown-menu" aria-labelledby="pickupDrop">
+                <a class="dropdown-item" href="<?= $createPickup; ?>">Create New Pickup Points</a>
+              </div>
+            </li>
+
+            <li class="nav-item  nav-dash pl-0 dropdown">
+              <a class="nav-link nav-dash pl-0 nav-dash dropdown-toggle" href="<?= $dashboard; ?>"
+                id="crcDrop" data-toggle="dropdown">
+                <img src="<?= $carCompany;?>" class="icon">
+                <span class="d-none d-md-inline">Car Rental Company</span> 
+              </a>
+              <div class="dropdown-menu" aria-labelledby="crcDrop">
+                <a class="dropdown-item" href="<?= $createCRC; ?>">Create New Car Rental Company</a>
               </div>
             </li>
 

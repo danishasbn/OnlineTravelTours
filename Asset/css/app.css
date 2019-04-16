@@ -1,33 +1,41 @@
 /* OnlineTravelTours CSS */
 
 /* Importing Google Fonts */
+
 @font-face {
   font-family: "Rajdhani";
   src: url(../fonts/Rajdhani/Rajdhani-Font.woff2) format("woff2");
 }
+
 @font-face {
   font-family: "PT-Sans";
   src: url(../fonts/PT-Sans/PT-Sans.woff2) format("woff2");
 }
+
 /* IE 10 & 11 */
+
 @font-face {
   font-family: "Rajdhani";
   src: url(../fonts/Rajdhani/rajdhani.light.ttf);
 }
+
 @font-face {
   font-family: "Great Vibes";
   src: url(../fonts/GreatVibes/GreatVibes-Regular.otf);
 }
+
 @font-face {
   font-family: "PT-Sans";
   src: url(../fonts/PT-Sans/PT-Sans.ttf);
 }
+
 @font-face {
   font-family: "Poiret";
   src: url(../fonts/PoiretOne/PoiretOne-Regular.ttf);
 }
 
 /* Header CSS */
+
 .paradise-header {
   background-color: rgba(0, 131, 122, 0.8);
   color: #fff;
@@ -35,6 +43,7 @@
 }
 
 /* Site Logo */
+
 .paradise-logo {
   width: 100%;
 }
@@ -42,39 +51,51 @@
 /* Search box CSS */
 
 /* Textbox Search */
+
 .txt-search {
   border-radius: 0px;
   font-size: 10px;
   border: 1px solid #339c95;
   color: #339c95;
 }
+
 /* Search Icon */
+
 .search-icon {
   border-radius: 50%;
   border: 1px solid #339c95;
 }
+
 /* Search icon color */
+
 .teal {
   color: #339c95;
 }
+
 /* Button Find */
+
 .btn-find {
   border-radius: 0px;
   background-color: rgba(0, 131, 122, 0.8);
   color: #fff;
 }
+
 .btn-find:hover {
   color: #339c95;
   background-color: #fff;
   border: 1px solid #339c95;
   transition: 0.5s;
 }
+
 /* Navbar Toggler */
+
 .navbar-toggler {
   border-radius: 0px;
   border: 1px solid #fff !important;
 }
+
 /* Default Nav-link */
+
 .nav-link {
   color: #fff !important;
   font-family: "Rajdhani", Arial;
@@ -82,40 +103,51 @@
 }
 
 /* Main Navigation Area CSS */
+
 .bg-teal {
   background: #fff;
 }
+
 .teal-color {
   background: #339c95;
 }
+
 .teal-link a {
   color: #339c95 !important;
   font-family: "Rajdhani", Arial;
   letter-spacing: 3px;
   font-weight: bold;
 }
+
 .teal-link li a {
   padding-right: 100px !important;
 }
+
 .teal-link a:hover {
   color: #000 !important;
   transition: 0.3s;
 }
 
 /* Heading <h1> Homepage Text */
+
 .trending {
   font-family: "PT-Sans", Arial;
   color: #339c95;
   margin-top: 10px;
 }
+
 /*  Trending border image */
+
 .img-border {
   height: 50px;
   width: auto;
   /* display: none; */
 }
+
 /* Video Background Text Card */
+
 /* Video Footer  */
+
 .video-foot {
   background-color: #fff;
   margin: auto;
@@ -128,11 +160,14 @@
   padding: 60px 80px 55px;
   border: 1px solid #339c95;
 }
+
 .video-background {
   background-color: #fff;
   height: 100%;
 }
+
 /* Default icon sizes */
+
 .icon {
   height: 20px;
   width: 20px;
@@ -143,7 +178,9 @@
   font-family: "Rajdhani", Arial;
   border: 1px solid;
 }
+
 /* Card Packages CSS */
+
 .card-Packages {
   padding: 10px;
   border-radius: 0px;
@@ -243,8 +280,7 @@
   filter: alpha(opacity=100);
 }
 
-.hovereffect:hover h2,
-.hovereffect:hover a.info {
+.hovereffect:hover h2, .hovereffect:hover a.info {
   opacity: 1;
   filter: alpha(opacity=100);
   -ms-transform: translatey(0);
@@ -256,14 +292,15 @@
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
+
 /* End of Card Packages Hover Effect CSS*/
 
 /* Footer CSS */
+
 .footer {
   background-size: 1000%;
   height: 100%;
   /* background-image: linear-gradient(#fff, #339C95); /* Standard syntax (must be last) */
-
   /* CSS3 Gradient for all browser compatibility incuding mozilla, chrome, IE 11*/
   /* Creating cross-browser linear gradient */
   background: #339c95;
@@ -271,16 +308,18 @@
   background: -o-linear-gradient(bottom, #339c95 0%, #ffffff 100%);
   background: -webkit-linear-gradient(bottom, #339c95 0%, #ffffff 100%);
   background: -ms-linear-gradient(bottom, #339c95 0%, #ffffff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#339C95', endColorstr='#ffffff',GradientType=1 );
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#339C95', endColorstr='#ffffff',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#339C95', endColorstr='#ffffff', GradientType=1);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#339C95', endColorstr='#ffffff', GradientType=1);
   background: linear-gradient(bottom, #339c95 0%, #ffffff 100%);
 }
 
 /* Social Links CSS */
+
 .social-icon {
   height: 30px;
   width: 30px;
 }
+
 .social-icon:hover {
   /* transform: scale(1.1); -> onhover it increase image size*/
   /* onhover social links  moves up */
@@ -313,16 +352,19 @@
 }
 
 /* Click icon */
+
 .click-icon {
   height: 30px;
   width: 30px;
 }
+
 .click-icon:hover {
   transform: scale(1.1);
   transition: 0.3s;
 }
 
 /* Login Page  */
+
 .form-signin {
   width: 100%;
   max-width: 420px;
@@ -330,8 +372,9 @@
   margin: 0 auto;
 }
 
-/* --------------------------Dashboard--------------------------------------- */zz
-ul {
+/* --------------------------Dashboard--------------------------------------- */
+
+zz ul {
   list-style: none;
 }
 
@@ -349,13 +392,14 @@ ul {
   border-radius: 0px;
 }
 
-.dropdown-menu > a {
+.dropdown-menu>a {
   font-family: "Rajdhani", Arial, sans-serif;
   color: #000;
   font-weight: bold;
   font-size: 10px;
 }
-.dropdown-menu > a:hover {
+
+.dropdown-menu>a:hover {
   background-color: #d3fffc;
 }
 
@@ -366,6 +410,7 @@ ul {
   border-bottom-right-radius: 5px;
   background-color: #339c95;
 }
+
 /*-------------------------------Login----------------------------------------*/
 
 /* Login Form */
@@ -380,10 +425,8 @@ ul {
   border: 1px solid #339c95;
 }
 
-
 .login-page {
-  background: url("../images/login-page/login-background-img.jpeg") no-repeat
-    center center fixed;
+  background: url("../images/login-page/login-background-img.jpeg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -395,6 +438,7 @@ ul {
   color: #fff;
   background-color: #339c95;
 }
+
 .login-button:hover {
   border-radius: 0px;
   color: #000;
@@ -407,6 +451,7 @@ ul {
   color: #fff;
   text-decoration: none;
 }
+
 .sign-up-link:hover {
   color: #339c95;
   transition: 0.3s;
@@ -414,163 +459,182 @@ ul {
 }
 
 /*-------------------------------------------------------------- Register Page ---------------------------------------------------*/
-.text-teal{
-  color:#339c95;
+
+.text-teal {
+  color: #339c95;
 }
 
 /* -------------------------------------------------------------- About US Page -------------------------------------------------- */
 
-.myDataList{
-    list-style-image: url('../images/icons/plane.png');
-    background-image: linear-gradient(to right, #fff , #a7d4d1);
-    border-radius: 10px;
-    width:100%;
+.myDataList {
+  list-style-image: url('../images/icons/plane.png');
+  background-image: linear-gradient(to right, #fff, #a7d4d1);
+  border-radius: 10px;
+  width: 100%;
 }
+
 .myDataList li {
   padding: 10px;
 }
-.myDataList li a{
-  color:#339c95;
+
+.myDataList li a {
+  color: #339c95;
 }
-.myDataList li a:hover{
+
+.myDataList li a:hover {
   text-decoration: none;
-  color:#000;
+  color: #000;
   transition: color 0.5s ease;
 }
-.panel{
-  width:100%;
-  border:1px solid #339c95;
+
+.panel {
+  width: 100%;
+  border: 1px solid #339c95;
 }
-.panel-heading{
-  background-color:#339c95;
+
+.panel-heading {
+  background-color: #339c95;
 }
-.panel-title{
+
+.panel-title {
   font-family: "Poiret", Arial, sans-serif;
   font-weight: bold;
-  font-size:20px;
+  font-size: 20px;
 }
-.panel-body{
-  border:1px solid #339c95;
+
+.panel-body {
+  border: 1px solid #339c95;
 }
 
 /* ------------------------------------------------Data Table CSS------------------------------------------------------------------ */
-.page-link{
+
+.page-link {
   background-color: #339c95 !important;
-  color:#fff !important;
-  border:1px solid #fff !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
 }
-.page-link:hover{
+
+.page-link:hover {
   background-color: #fff !important;
-  color:#339c95 !important;
+  color: #339c95 !important;
 }
+
 /* ----------------------------------------List of Customers Page------------------------------------------------------------- */
 
 .btn-block {
   border-radius: 0px;
   background-color: rgba(0, 131, 122, 0.8);
   color: #fff;
-  border:0px;
+  border: 0px;
   text-decoration: none !important;
 }
+
 .btn-block:hover {
   color: #339c95;
   background-color: #fff;
   border: 1px solid #339c95;
   transition: 0.5s;
   cursor: pointer;
-} 
+}
 
-.alert-box{
-  margin:0 auto !important;
-  padding:20px !important;
-  margin-top:50px !important;
+.alert-box {
+  margin: 0 auto !important;
+  padding: 20px !important;
+  margin-top: 50px !important;
 }
 
 /* --------------------------------------------Car Rental Page---------------------------------------------------------------------- */
-.dashboard-circle{
+
+.dashboard-circle {
   /* background-image: url('../images/car-rental/focus-bg.jpg'); */
 }
-.dashboard-img{
-  margin:0 auto;
+
+.dashboard-img {
+  margin: 0 auto;
 }
 
 /* --------------------------------------------Dashboard-> Car Rental----------------------------------------------------------------------------------- */
 
-.btn-save{
+.btn-save {
   border-radius: 0px;
   background-color: rgba(0, 131, 122, 0.8);
   color: #fff;
-  border:0px;
+  border: 0px;
   text-decoration: none !important;
   cursor: pointer;
 }
 
-.form-control.error{
-  border:1px solid red !important;
-}
-.help-block.form-error{
-  display: none !important; 
+.form-control.error {
+  border: 1px solid red !important;
 }
 
-#alertBox{
+.help-block.form-error {
+  display: none !important;
+}
+
+#alertBox, #alertBoxError, #alertBoxUpdate {
   display: none;
 }
 
 /* -----------------------------------------------Dashboard -> Car Rental -> List Car Rental Page ------------------------------------------------------------ */
-.imageDimension{
-  height:100px;
-  width:100px;
+
+.imageDimension {
+  height: 100px;
+  width: 100px;
 }
 
 /* ------------------------------------------------------------- Default Checkbox Style---------------------------------------------------------------------------------------*/
-  
-  input[type=checkbox] {
-        display:none;
-  }
 
-  input[type=checkbox] + label
-  {
-    background-image: url('../images/icons/dashboard/icon-unchecked.png');
-    background-repeat: no-repeat;
-    height: 50px;
-    width: 50px;
-    display:inline-block;
-    padding: 0 0 0 0px;
-  }
-  input[type=checkbox]:checked + label
-  {
-    background-image: url('../images/icons/dashboard/icon-checked.png');
-    height: 50px;
-    width: 50px;
-    display:inline-block;
-    padding: 0 0 0 0px;
-  }
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]+label {
+  background-image: url('../images/icons/dashboard/icon-unchecked.png');
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  padding: 0 0 0 0px;
+}
+
+input[type=checkbox]:checked+label {
+  background-image: url('../images/icons/dashboard/icon-checked.png');
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  padding: 0 0 0 0px;
+}
+
 /* ------------------------------------------------------------Input Width----------------------------------------------------------------------------- */
-.input-width{
+
+.input-width {
   width: 100%;
 }
 
-.input-width-1{
+.input-width-1 {
   width: 20% !important;
 }
 
-.input-width-2{
+.input-width-2 {
   width: 40% !important;
 }
 
-.input-width-3{
+.input-width-3 {
   width: 60% !important;
 }
 
-.input-width-4{
+.input-width-4 {
   width: 80% !important;
 }
+
 /* -----------------------------------------On Hover Effect------------------------------------------------------------------------------- */
-.hoverEffect:hover{
-  border:1px solid #339c95;
-  -ms-transform:scale(1.2);
-  -webkit-transform:scale(1.2);
-  transform:scale(1.2);
+
+.hoverEffect:hover {
+  border: 1px solid #339c95;
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
   transition: 0.3s;
   cursor: pointer;
 }
@@ -597,7 +661,7 @@ ul {
 }
 
 .hovereffect-2:hover .overlay {
-  background-color: rgba(170,170,170,0.4);
+  background-color: rgba(170, 170, 170, 0.4);
 }
 
 .hovereffect-2 h2, .hovereffect img {
@@ -660,48 +724,59 @@ ul {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* ------------------------------------------ Display Car Rental- ------------------------------------------------------------ */
-.car-rental-text{
+
+.car-rental-text {
   list-style-type: disc;
 }
 
 /* --------------------------------------------- View Hotel Gallery ------------------------------------------------------------ */
 
-.addNew:hover{
+.addNew:hover {
   cursor: pointer;
 }
 
 /* ------------------------------------------- View Hotel Gallery Zoom Effect -----------------------------------------------------------------------  */
-.zoom-activate-text { position:absolute; top:3px; right:28px; color:#555; font:bold 13px/1 sans-serif;}
+
+.zoom-activate-text {
+  position: absolute;
+  top: 3px;
+  right: 28px;
+  color: #555;
+  font: bold 13px/1 sans-serif;
+}
 
 .zoom {
-  display:inline-block;
+  display: inline-block;
   position: relative;
 }
 
 /* magnifying glass icon */
+
 .zoom:after {
-  content:'';
-  display:block; 
-  width:33px; 
-  height:33px; 
-  position:absolute; 
-  top:0;
-  right:0;
-  background:url('../images/icons/dashboard/icon-zoom-search.png');
+  content: '';
+  display: block;
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('../images/icons/dashboard/icon-zoom-search.png');
 }
 
 .zoom img {
   display: block;
 }
 
-.zoom img::selection { background-color: transparent; }
-
+.zoom img::selection {
+  background-color: transparent;
+}
 
 /* Default CSS */
-.decoration-none{
+
+.decoration-none {
   text-decoration: none !important;
 }
