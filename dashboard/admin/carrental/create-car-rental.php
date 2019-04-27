@@ -71,7 +71,7 @@
                     <label for="txt-delivery"></label>
                     <br>
                     <br>
-                    <label for="txt-discount">Discount</label>
+                    <label for="txt-discount">Discount (%)</label>
                     <select class="form-control input-width-2" name="txt-discount" id="txt-discount" data-validation="required">
                         <option selected disabled>Select Discount</option>
                          <?php

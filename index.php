@@ -69,7 +69,5 @@
       </div>
     </div>
 
-
-
   <!-- End of Index Container -->
   <?php require('common/footer.php');?>

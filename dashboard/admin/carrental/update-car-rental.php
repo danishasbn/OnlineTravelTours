@@ -38,13 +38,13 @@
                     <label for="sltcarRentalCompany">Car Rental Company *</label>
                     <select class="form-control input-width-3" name="sltcarRentalCompany" id="sltcarRentalCompany" data-validation="required">      
                         <option disabled>-----Your Selection-----</option>
-                        <option  selected value="<?= $row['id']?>"><?= $row['company_name']?></option>
+                        <option  selected value="<?= $row['pickup_id']?>"><?= $row['company_name']?></option>
                         <option disabled>-----Car Rental Company-----</option>
                          <?php
                             if($query_crc){
                                 while($row_crc = mysqli_fetch_array($query_crc)){
                                     ?>
-                                        <option value="<?= $row_crc['id']?>"><?= $row_crc['company_name']?></option>
+                                        <option value="<?= $row_crc['pickup_id']?>"><?= $row_crc['company_name']?></option>
                                     <?php
                                 }
                             }
@@ -54,13 +54,13 @@
                     <label for="sltPickup">Pick up Point *</label>
                     <select class="form-control input-width-2" name="sltPickup" id="sltPickup" data-validation="required">
                       <option disabled>-----Your Selection-----</option>
-                        <option  selected value="<?= $row['id']?>"><?= $row['pickup_place']?></option>
+                        <option  selected value="<?= $row['pickup_id']?>"><?= $row['pickup_place']?></option>
                         <option disabled>-----Pick up Point-----</option>
                          <?php
                             if($query_pickuppoint){
                                 while($row_pickuppoint = mysqli_fetch_array($query_pickuppoint)){
                                     ?>
-                                        <option value="<?= $row_pickuppoint['id']?>"><?= $row_pickuppoint['pickup_place']?></option>
+                                        <option value="<?= $row_pickuppoint['pickup_id']?>"><?= $row_pickuppoint['pickup_place']?></option>
                                     <?php
                                 }
                             }
@@ -100,29 +100,30 @@
                     <br>
                     <label for="txt-discount">Discount</label>
                     <select class="form-control input-width-2" name="txt-discount" id="txt-discount">
-                      <option disabled>-----Your Selection-----</option>
+                        <option disabled>-----Your Selection-----</option>
                         <?php
                             if($row['discount_id'] == '0'){
-                            ?>
-                                <option selected >Null</option>        
-                            <?php
+                        ?>
+                        <option selected>Null</option>
+                        <?php
                             }else{
-                                ?>
-                                <option  selected value="<?= $row['id']?>"><?= $row['discount_percent']?></option>
-                            <?php
+                        ?>
+                        <option selected value="<?= $row['discount_id']?>"><?= $row['discount_percent']?>
+                        </option>
+                        <?php
                             }
                         ?>
                         <option disabled>-----Discount-----</option>
-                         <?php
-                            if($query_discount){
+                        <?php
+                           if($query_discount){
                                 while($row_discount = mysqli_fetch_array($query_discount)){
-                                    ?>
-                                        <option value="<?= $row_discount['id']?>"><?= $row_discount['discount_percent']?></option>
-                                    <?php
+                        ?>
+                        <option value="<?= $row_discount['discount_id']?>"><?= $row_discount['discount_percent']?>
+                        </option>
+                        <?php
                                 }
                             }
-                         ?>
-
+                        ?>
                     </select>
                     <br>
                     <br>

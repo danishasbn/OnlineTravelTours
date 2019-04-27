@@ -3,7 +3,7 @@
 $fullPath                 =  realpath($_SERVER['DOCUMENT_ROOT']);
 //Home Page Nav-Links
 $homepage                 = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/index.php';
-$travelPackages           = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/travel/travel.php';
+$Packages                 = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/packages/packages.php';
 $hotelPackages            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/hotel/hotel.php';
 $activityPackages         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/activity/activity.php';
 $carRental                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/car-rental/carrent.php';

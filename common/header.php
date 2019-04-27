@@ -83,7 +83,7 @@ include('database/dbconnect.php');
               <a class="nav-link" href="<?= $homepage;?>"><img src="<?= $home; ?>" class="icon"/> <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?= $travelPackages;?>">Travel</a>
+              <a class="nav-link" href="<?= $Packages;?>">Packages</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?= $hotelPackages;?>">Hotels</a>

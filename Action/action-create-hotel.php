@@ -11,10 +11,14 @@
         $discount           = $_POST['txt-discount'];
         $purchaseInclude    = $_POST['txt-purchaseInclude'];
         $packageDetails     = $_POST['txt-PackageDetails'];
+        $getImage           = $_FILES['uploadImg']['name'];
 
         // Insert into table hotel
-        $sql_hotel      = "INSERT INTO tbl_hotel(hotelName, price,dateFrom, dateTo, purchaseInclude, packageDetails, discount_id) VALUES ('$hotel', '$price', '$dateFrom', '$dateTo', '$purchaseInclude', '$packageDetails', '$discount')";
+        $sql_hotel      = "INSERT INTO tbl_hotel(hotelName, price,dateFrom, dateTo, purchaseInclude, packageDetails, discount_id, cover_image) VALUES ('$hotel', '$price', '$dateFrom', '$dateTo', '$purchaseInclude', '$packageDetails', '$discount', '$getImage')";
         $query_hotel    = mysqli_query($dbc,$sql_hotel);
+
+        $target         = "../../uploadImages/".basename($getImage);
+        $moveFile     = move_uploaded_file($_FILES['uploadImg']['tmp_name'], $target);
 
         // Get Last Inserted ID
         if($query_hotel){

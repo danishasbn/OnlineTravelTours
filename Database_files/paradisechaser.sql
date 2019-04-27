@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2019 at 09:42 PM
+-- Generation Time: Apr 27, 2019 at 05:39 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -40,7 +40,7 @@ CREATE TABLE `tbl_carrental_company` (
 
 INSERT INTO `tbl_carrental_company` (`id`, `company_name`, `description`) VALUES
 (1, 'ABC Car Rental co ltd', 'fsdfgsdgsdgfsdgsgd'),
-(2, 'First Car Rental', 'yayyyyyyyyyyyyyy!!!!!!!!!!'),
+(2, 'First Car Rental', 'First Car Rental is the wholly owned car rental subsidiary of Combined Motor Holdings Limited, a JSE-listed investment holding company based in South Africa. First Car Rental operates out of 51 branch'),
 (3, 'Europ Car Mauritius', 'tesgsdfsdf'),
 (4, 'Company', 'test2');
 
@@ -64,6 +64,13 @@ CREATE TABLE `tbl_car_rental` (
   `conditionApply` varchar(200) NOT NULL,
   `packageDetails` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_car_rental`
+--
+
+INSERT INTO `tbl_car_rental` (`id`, `car_title`, `car_rental_company_id`, `pickup_id`, `transmission`, `price`, `year`, `freeDelivery`, `discount_id`, `car_rental_company_description`, `conditionApply`, `packageDetails`) VALUES
+(13, 'Ullam quae sed fugia', 1, 1, 'Manual', 79, 1989, 'Free Delivery', 27, 'Sunt molestiae id ', 'Quidem reiciendis ob', 'Voluptatem nostrud q');
 
 -- --------------------------------------------------------
 
@@ -120,7 +127,8 @@ CREATE TABLE `tbl_hotel` (
   `dateTo` varchar(100) NOT NULL,
   `purchaseInclude` varchar(200) NOT NULL,
   `packageDetails` varchar(200) NOT NULL,
-  `discount_id` int(11) NOT NULL
+  `discount_id` int(11) NOT NULL,
+  `cover_image` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -131,6 +139,35 @@ CREATE TABLE `tbl_hotel` (
 
 CREATE TABLE `tbl_hotel_gallery` (
   `hotel_id` int(11) NOT NULL,
+  `gallery_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_package`
+--
+
+CREATE TABLE `tbl_package` (
+  `id` int(11) NOT NULL,
+  `packageTitle` varchar(200) NOT NULL,
+  `price` float NOT NULL,
+  `discount_id` int(11) NOT NULL,
+  `purchaseInclude` varchar(200) NOT NULL,
+  `packageDetails` varchar(200) NOT NULL,
+  `dateFrom` varchar(100) NOT NULL,
+  `dateTo` varchar(100) NOT NULL,
+  `cover_image` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_package_gallery`
+--
+
+CREATE TABLE `tbl_package_gallery` (
+  `package_id` int(11) NOT NULL,
   `gallery_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -150,8 +187,9 @@ CREATE TABLE `tbl_pickuppoint` (
 --
 
 INSERT INTO `tbl_pickuppoint` (`id`, `pickup_place`) VALUES
-(1, 'Rose-Hill'),
-(2, 'Vacoas Phoenix');
+(1, 'Vacoas Phoenix'),
+(3, 'Rose Hill'),
+(4, 'Curepipe');
 
 -- --------------------------------------------------------
 
@@ -218,6 +256,12 @@ ALTER TABLE `tbl_hotel`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_package`
+--
+ALTER TABLE `tbl_package`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_pickuppoint`
 --
 ALTER TABLE `tbl_pickuppoint`
@@ -237,13 +281,13 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_carrental_company`
 --
 ALTER TABLE `tbl_carrental_company`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_car_rental`
 --
 ALTER TABLE `tbl_car_rental`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tbl_discount`
@@ -255,7 +299,7 @@ ALTER TABLE `tbl_discount`
 -- AUTO_INCREMENT for table `tbl_gallery`
 --
 ALTER TABLE `tbl_gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `tbl_hotel`
@@ -264,10 +308,16 @@ ALTER TABLE `tbl_hotel`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `tbl_package`
+--
+ALTER TABLE `tbl_package`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `tbl_pickuppoint`
 --
 ALTER TABLE `tbl_pickuppoint`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`

@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <label for="txt-discount">Discount</label>
+                    <label for="txt-discount">Discount (%)</label>
                     <select class="form-control input-width-2" name="txt-discount" id="txt-discount" data-validation="required">
                         <option selected disabled>Select Discount</option>
                          <?php
@@ -47,6 +47,14 @@
                             }
                         ?>
                     </select>
+
+                    
+                    <label for="">Upload Cover Image *</label>
+                    <input type="hidden" name="size" value="1000000">
+                    <input type="file" class="form-control" name="uploadImg" id="uploadImg" data-validation="required" onchange="readURL(this);" >
+                    <br>
+                    <img id="displaySingle" src="<?= $imageFormat; ?>" alt="your image" class="img-fluid"/>
+                    <br>
 
                     <label for="txt-uploadImages">Upload Images *</label>
                     <!-- Validate that file is an image of type JPG, GIF or PNG and not larger than 2 mega bytes -->

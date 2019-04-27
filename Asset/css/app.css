@@ -34,6 +34,13 @@
   src: url(../fonts/PoiretOne/PoiretOne-Regular.ttf);
 }
 
+/* Yanone Kaffeesatz */
+
+@font-face {
+  font-family: "Yanone-Kaffeesatz";
+  src: url(../fonts/Yanone-Kaffeesatz/Yanone-Kaffeesatz.woff2);
+}
+
 /* Header CSS */
 
 .paradise-header {
@@ -106,6 +113,10 @@
 
 .bg-teal {
   background: #fff;
+}
+
+.bg-teal-back {
+  background: #339c95;
 }
 
 .teal-color {
@@ -374,7 +385,7 @@
 
 /* --------------------------Dashboard--------------------------------------- */
 
-zz ul {
+ul {
   list-style: none;
 }
 
@@ -545,12 +556,11 @@ zz ul {
 
 /* --------------------------------------------Car Rental Page---------------------------------------------------------------------- */
 
-.dashboard-circle {
-  /* background-image: url('../images/car-rental/focus-bg.jpg'); */
-}
-
 .dashboard-img {
   margin: 0 auto;
+  height: 100px !important;
+  padding-top: 10px;
+  margin-bottom: 50px;
 }
 
 /* --------------------------------------------Dashboard-> Car Rental----------------------------------------------------------------------------------- */
@@ -779,4 +789,11 @@ input[type=checkbox]:checked+label {
 
 .decoration-none {
   text-decoration: none !important;
+}
+
+.heading-3 {
+  font-family: 'Yanone-Kaffeesatz';
+  font-size: 25px;
+  word-spacing: 10px;
+  letter-spacing: 0.3em;
 }

@@ -1,18 +1,33 @@
 <?php
-    // Fetch Car Rental
-    $sql_carrent    = "SELECT *, cr.id as car_rental_id
-                       FROM tbl_car_rental cr, 
-                            tbl_car_rental_gallery crg, 
-                            tbl_gallery g, 
-                            tbl_pickuppoint pp, 
+    $sql_carrent      = "SELECT 
+                            cr.car_title,
+                            cr.transmission,
+                            cr.price,
+                            cr.year,
+                            cr.freeDelivery,
+                            cr.conditionApply,
+                            cr.packageDetails,
+                            crc.description,
+                            cr.id,
+                            crg.car_rental_id,
+                            crc.company_name,
+                            g.imagePath,
+                            d.discount_percent,
+                            cr.car_rental_company_description,
+                            pp.pickup_place
+                        FROM
+                            tbl_car_rental cr,
+                            tbl_gallery g,
+                            tbl_car_rental_gallery crg,
+                            tbl_discount d,
                             tbl_carrental_company crc,
-                            tbl_discount d
-                       WHERE cr.id                    = crg.car_rental_id
-                       AND   g.id                     = crg.gallery_id
-                       AND   cr.pickup_id             = pp.id
-                       AND   cr.discount_id           = d.id
-                       AND   cr.car_rental_company_id = crc.id";
-       
+                            tbl_pickuppoint pp
+
+                        WHERE cr.id = crg.car_rental_id
+                        AND   cr.pickup_id = pp.id
+                        AND   cr.car_rental_company_id = crc.id
+                        AND   crg.gallery_id = g.id
+                        AND   d.id = cr.discount_id ";
     $query_carrent  = mysqli_query($dbc,$sql_carrent);
 
     // Remove Car Rental

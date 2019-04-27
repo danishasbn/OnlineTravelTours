@@ -12,22 +12,35 @@
 </div>
 
 <div class="container">
-  <div class="row">
+  <div class="row car-rental-wrapper">
     <?php
       if($query){
         while($row = mysqli_fetch_array($query)){
           ?>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?= "../../dashboard/uploadImages/".$row['imagePath']?>" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title"><?= $row['car_title'] ?></h5>
-              <ul class="card-text car-rental-text">              
-                <li>Car Transmission: <?= $row['transmission']?></li>
-              </ul>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card card-Packages col-md-4" data-aos="fade-up">
+              <div class="hovereffect">
+                <img class="card-img-top img-responsive" src="<?= "../../dashboard/uploadImages/".$row['imagePath']?>" alt="Card image cap">
+                <div class="overlay">
+                  <h2 class="package-title"><?= $row['car_title'] ?></h2>
+                  <a class="info" href="view-carrental.php?id=<?= $row['carID'];?>">View Details</a>
+                </div>
+                <div class="card-body">
+                    <?php
+                      if(empty($row['freeDelivery'])){
+                        ?>
+                        <p class="card-text text-left"><span class="badge badge-warning">No Delivery </span> - Pickup @ showroom</p>
+                        <?php
+                      }else{
+                        ?>
+                        <p class="card-text text-left"><span class="badge badge-success"> <?= $row['freeDelivery']; ?></span></p>
+                      <?php
+                      }
+                      ?>
+                  <p class="card-text text-left"><span class="badge badge-info">Discount <?= $row['discount_percent']; ?> % off</span></p>
+                  <p class="card-text text-left">As From. <span class="badge badge-danger"> <?=  "Rs." .$row['price']?> </span> per day</p>
+                </div>
+              </div>
             </div>
-          </div>    
-
           <?php
         }
       }

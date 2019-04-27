@@ -75,7 +75,7 @@
         </div>
     </div>
 </main>
-<script>    
+<script>
     $(document).ready(function() {
         $('#list-of-customer').DataTable();
     } );

@@ -1,9 +1,9 @@
 <?php require('../../common/header.php');?>
-<?php require('../../Action/action-display-hotel.php');?>
+<?php require('../../Action/action-display-package.php');?>
 
 <div class="container">
     <div class="row justify-content-center">
-      <h1 class="text-center trending"> Hotel <img src="<?= $border; ?>" class="img-border"/></h1>
+      <h1 class="text-center trending"> Packages <img src="<?= $border; ?>" class="img-border"/></h1>
     </div>
   </div>
 </div>
@@ -19,8 +19,8 @@
               <div class="hovereffect">            
                 <img class="card-img-top img-responsive" src="<?= "../../dashboard/uploadImages/".$row['cover_image']?>" alt="Card image cap">
                 <div class="overlay">
-                  <h2 class="package-title"><?= $row['hotelName'] ?></h2>
-                  <a class="info" href="view-hotel.php?id=<?= $row['hotelID'];?>">View Details</a>
+                  <h2 class="package-title"><?= $row['packageTitle'] ?></h2>
+                  <a class="info" href="view-package.php?id=<?= $row['packageID'];?>">View Details</a>
                 </div>
                 <div class="card-body">
                   <p class="card-text text-left"><span class="badge badge-info">Discount <?= $row['discount_percent']; ?> % off</span></p>
