@@ -13,8 +13,9 @@
                             crc.company_name,
                             g.imagePath,
                             d.discount_percent,
-                            cr.car_rental_company_description,
-                            pp.pickup_place
+                            pp.pickup_place,
+                            cr.dateFrom,
+                            cr.dateTo
                         FROM
                             tbl_car_rental cr,
                             tbl_gallery g,
@@ -27,7 +28,8 @@
                         AND   cr.pickup_id = pp.id
                         AND   cr.car_rental_company_id = crc.id
                         AND   crg.gallery_id = g.id
-                        AND   d.id = cr.discount_id ";
+                        AND   d.id = cr.discount_id 
+                        AND   crc.id = cr.car_rental_company_id";
     $query_carrent  = mysqli_query($dbc,$sql_carrent);
 
     // Remove Car Rental

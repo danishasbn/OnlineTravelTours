@@ -24,6 +24,11 @@ $ballonCss      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTour
 // FlatPikr CSS 
 $flatpickr      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/flatpickr.min.css';
 
+// Slick CSS
+$slick          = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/slick.css';
+
+// Bootstrap Datepicker CSS
+$BSDatepicker   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/bootstrap-datepicker.css';
 ?>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta charset="utf-8">
@@ -48,6 +53,12 @@ $flatpickr      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTour
 
 <!-- Flatpickr CSS -->
 <link href="<?= $flatpickr; ?>" rel="stylesheet" type="text/css"/>
+
+<!-- Slick CSS -->
+<link href="<?= $slick; ?>" rel="stylesheet" type="text/css"/>
+
+<!-- BS Datepicker CSS -->
+<link href="<?= $BSDatepicker; ?>" rel="stylesheet" type="text/css"/>
 
 <!-- jQuery -->
 <script src="<?= $loadjQuery; ?>"></script>

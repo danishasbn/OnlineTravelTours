@@ -18,8 +18,9 @@
                         crc.company_name,
                         g.imagePath,
                         d.discount_percent,
-                        cr.car_rental_company_description,
-                        pp.pickup_place
+                        pp.pickup_place,
+                        cr.dateFrom,
+                        cr.dateTo
                     FROM
                         tbl_car_rental cr,
                         tbl_gallery g,
@@ -33,6 +34,7 @@
                     AND   cr.car_rental_company_id = crc.id
                     AND   crg.gallery_id = g.id
                     AND   d.id = cr.discount_id
+                    AND   crc.id = cr.car_rental_company_id
                     AND   cr.id = '$id' "; 
         $query_cr = mysqli_query($dbc,$sql_cr);
 
@@ -66,6 +68,9 @@
         @$carRentalCompanyDesc = $_POST['txt-CarCompanyDescription'];
         @$conditionApply       = $_POST['txt-ConditionApply'];
 
+        @$dateFrom           = $_POST['txt-dateFrom'];
+        @$dateTo             = $_POST['txt-dateTo'];      
+        
  
         // echo "Car Company -> " .$carCompany;
         // echo "</br>";
@@ -86,10 +91,11 @@
                                 price                           = '$price',
                                 year                            = '$year',
                                 freeDelivery                    = '$delivery',
-                                car_rental_company_description  = '$carRentalCompanyDesc',
                                 conditionApply                  = '$conditionApply',
                                 discount_id                     = '$discount',
-                                packageDetails                  = '$packageDetails'
+                                packageDetails                  = '$packageDetails',
+                                dateFrom                        = '$dateFrom',
+                                dateTo                          = '$dateTo'
                         WHERE   id                              = '$id'";
         $query_updatecr = mysqli_query($dbc,$sql_updatecr);
 

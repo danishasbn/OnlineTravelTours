@@ -14,7 +14,16 @@
             <div class="row">
                 <div class="col-md-6">
                     <label for="txt-carTitle">Car Rental Title *</label>
-                    <input type="text" class="form-control" id="txt-carTitle" name="txt-carTitle" data-validation="length required custom" data-validation-regexp="^([a-zA-Z ]+)$" data-validation-length="min4" value="<?php if(isset($carTitle)){echo $carTitle;} ?>">
+                    <input type="text" class="form-control" id="txt-carTitle" name="txt-carTitle" data-validation="length required custom" data-validation-regexp="^([a-zA-Z-0-9 ]+)$" data-validation-length="min4" value="<?php if(isset($carTitle)){echo $carTitle;} ?>">
+ 
+                    <br>
+                    <h5>Date of Availability *</h5>
+                    <label for="txt-dateFrom">Date From *</label>
+                    <input type="text" class="form-control availabilityDate input-width-2" id="txt-dateFrom" name="txt-dateFrom" data-validation="required"  value="" placeholder="Select Date From..">
+
+                    <label for="txt-dateTo">Date To *</label>
+                    <input type="text" class="form-control availabilityDate input-width-2" id="txt-dateTo" name="txt-dateTo" data-validation="required"  value="" placeholder="Select Date To..">
+ 
 
                     <label for="">Upload Cover Image *</label>
                     <input type="hidden" name="size" value="1000000">

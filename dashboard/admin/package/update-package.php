@@ -17,6 +17,36 @@
                         while($row_package = mysqli_fetch_array($query_package)){
                 ?>
                 <div class="col-md-6">
+
+                <label for="txt-packageType">Package Type </label>
+                    <select class="form-control input-width-2" name="txt-packageType" id="txt-packageType">
+                        <option disabled>-----Your Selection-----</option>
+                        <?php
+                            if($row_package['package_type_id'] == '0'){
+                        ?>
+                        <option selected>Null</option>
+                        <?php
+                            }else{
+                        ?>
+                        <option selected value="<?= $row_package['package_type_id']?>"><?= $row_package['package_type']?>
+                        </option>
+                        <?php
+                            }
+                        ?>
+                        <option disabled>-----Package Type-----</option>
+                        <?php
+                        if($query_packageType){
+                                while($row_package_type = mysqli_fetch_array($query_packageType)){
+                        ?>
+                        <option value="<?= $row_package_type['id']?>"><?= $row_package_type['package_type']?>
+                        </option>
+                        <?php
+                                }
+                            }
+                        ?>
+                    </select>
+                    
+
                     <label for="txt-packageTitle">Package Title *</label>
                     <input type="text" class="form-control" id="txt-packageTitle" name="txt-packageTitle" data-validation="length required custom" data-validation-regexp="^([a-zA-Z ]+)$" data-validation-length="min4" value="<?= $row_package['packageTitle']; ?>">
 
@@ -32,7 +62,6 @@
                     <input type="text" class="form-control availabilityDate input-width-2" id="txt-dateTo" name="txt-dateTo" data-validation="required"  placeholder="Select Date To.." value="<?= $row_package['dateTo'];?>">
 
                     <label for="txt-discount">Discount (%)</label>
-                     <label for="txt-discount">Discount</label>
                         <select class="form-control input-width-2" name="txt-discount" id="txt-discount">
                             <option disabled>-----Your Selection-----</option>
                             <?php
@@ -42,7 +71,7 @@
                             <?php
                                 }else{
                             ?>
-                            <option selected value="<?= $row_package['id']?>"><?= $row_package['discount_percent']?>
+                            <option selected value="<?= $row_package['discount_id']?>"><?= $row_package['discount_percent']?>
                             </option>
                             <?php
                                 }
@@ -59,12 +88,14 @@
                                 }
                             ?>
                         </select>
+                    
+                    <br>
+                     <img src="<?= "../../uploadImages/".$row_package['cover_image']; ?>" alt="your cover image" class="img-fluid" />
+                     <a href="update-cover-image.php?id=<?= $row_package['packageID'];?>">Update Cover Image</a>
                     <br>
                       <img src="<?= $imageFormat; ?>" alt="your image" class="img-fluid" /> <a
                         href="view-package-gallery.php?id=<?= $row_package['packageID']; ?>">View Gallery</a>
                     <br>
-
-
                 </div>
                 <div class="col-md-6">
                     <label for="txt-purchaseInclude">Purchase Include *</label>

@@ -21,6 +21,12 @@ $zoom			= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/
 // jQuery Form Validator JS
 $formValidator	= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/jquery.form-validator.min.js';
 
+// Slick JS
+$slickJS		= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/slick.min.js';
+
+// Bootstrap Date Picker 
+$BSDatePicker	= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/bootstrap-datepicker.js';
+
 ?>
 <!-- Bootstrap Main Scripts -->
 <script src="<?= $BS_jquery; ?>"></script>
@@ -47,6 +53,12 @@ $formValidator	= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours
 <!-- jQuery Form Validator -->
 <script src="<?= $formValidator; ?>"></script>
 
+<!-- Slick Slider JS-->
+<script src="<?= $slickJS; ?>"></script>
+
+<!-- Bootstrap Datepicker JS-->
+<script src="<?= $BSDatePicker; ?>"></script>
+
 <script>
 	// JQuery Validation
 	$.validate();
@@ -56,3 +68,5 @@ $formValidator	= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours
 // Initialize Animated on scroll (AOS) library
 AOS.init();
 </script>
+
+

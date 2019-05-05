@@ -18,6 +18,7 @@ $registerPath             = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/Online
 $loginPath                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/login.php';
 $logoutPath               = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/logout.php';
 $myDataPath               = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/user/myData.php';
+$myShoppingCart           = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/shopping-cart.php';
 
 // Dashboard Nav-Links
 

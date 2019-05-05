@@ -76,6 +76,12 @@
                         ?>
                     </select>
                     <br>
+
+                    <img src="<?= "../../uploadImages/".$row_hotel['cover_image']; ?>" alt="your cover image" class="img-fluid" />
+                    <br>
+                     <a href="update-cover-image.php?id=<?= $row_hotel['hotelID'];?>">Update Cover Image</a>
+                    <br>
+                    <br>
                     <img src="<?= $imageFormat; ?>" alt="your image" class="img-fluid" /> <a
                         href="view-hotel-gallery.php?id=<?= $row_hotel['hotelID']?>">View Gallery</a>
                     <br>

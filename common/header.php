@@ -58,6 +58,7 @@ include('database/dbconnect.php');
                   ?>
                     <li><a class="nav-link"><img src="<?= $user; ?>" class="icon"/> <?= "Hi " . $_SESSION['login-user-fname'];?> </a></li>
                     <li><a href="<?= $myDataPath; ?>" class="nav-link"><img src="<?= $myData; ?>" class="icon"/> My Informations </a></li>
+                    <li><a href="<?= $myShoppingCart; ?>" class="nav-link"><img src="<?= $shoppingCartWhite; ?>" class="icon"/> My Shopping Cart </a></li>
                     <li><a href="<?= $logoutPath; ?>" class="nav-link"><img src="<?= $logout; ?>" class="icon"/> Logout </a></li>
                   <?php
                 }else{

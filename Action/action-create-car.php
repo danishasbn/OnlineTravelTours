@@ -25,15 +25,18 @@
         @$delivery       = $_POST['txt-delivery'];
         @$discount       = $_POST['txt-discount'];
         
-        @$carRentalCompanyDesc = $_POST['txt-CarCompanyDescription'];
         @$conditionApply       = $_POST['txt-ConditionApply'];
         @$packageDetails       = $_POST['txt-PackageDetails'];
 
+        $dateFrom           = $_POST['txt-dateFrom'];
+        $dateTo             = $_POST['txt-dateTo'];
+
+
         // Insert into Car Rental
         $sql_carRent    = "INSERT INTO tbl_car_rental
-                          (car_title,car_rental_company_id,pickup_id,transmission,price,year,freeDelivery,discount_id,car_rental_company_description,conditionApply,packageDetails)
+                          (car_title,car_rental_company_id,pickup_id,transmission,price,year,freeDelivery,discount_id,conditionApply,packageDetails,dateFrom,dateTo)
                           VALUES
-                          ('$carTitle', '$carCompany' , '$pickUp' , '$transmission' , '$price', '$year' , '$delivery' , '$discount', '$carRentalCompanyDesc', '$conditionApply' , '$packageDetails');
+                          ('$carTitle', '$carCompany' , '$pickUp' , '$transmission' , '$price', '$year' , '$delivery' , '$discount', '$conditionApply' , '$packageDetails', '$dateFrom', '$dateTo');
         ";
         $query_carRent  = mysqli_query($dbc,$sql_carRent);
         if($query_carRent){

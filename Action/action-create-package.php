@@ -3,21 +3,27 @@
     $sql_discount   = "SELECT * FROM tbl_discount";
     $query_discount = mysqli_query($dbc,$sql_discount);
 
+    // Fetch Package Type
+    $sql_package_type   = "SELECT * FROM tbl_package_type";
+    $query_package_type = mysqli_query($dbc,$sql_package_type);
+
+
     if(isset($_POST['btn-save-package'])){
         $package            = $_POST['txt-packageTitle'];
         $price              = $_POST['txt-price'];
         $dateFrom           = $_POST['txt-dateFrom'];
         $dateTo             = $_POST['txt-dateTo'];
         $discount           = $_POST['txt-discount'];
+        $packageType        = $_POST['txt-packageType'];
         $purchaseInclude    = $_POST['txt-purchaseInclude'];
         $packageDetails     = $_POST['txt-PackageDetails'];
         $getImage           = $_FILES['uploadImg']['name'];
 
         // Insert into table package
-        $sql_package      = "INSERT INTO tbl_package(packageTitle, price,dateFrom, dateTo, purchaseInclude, packageDetails, discount_id, cover_image) VALUES ('$package', '$price', '$dateFrom', '$dateTo', '$purchaseInclude', '$packageDetails', '$discount', '$getImage')";
+        $sql_package      = "INSERT INTO tbl_package(packageTitle, price,dateFrom, dateTo, purchaseInclude, packageDetails, discount_id, cover_image, package_type_id) VALUES ('$package', '$price', '$dateFrom', '$dateTo', '$purchaseInclude', '$packageDetails', '$discount', '$getImage', '$packageType')";
         $query_package    = mysqli_query($dbc,$sql_package);
 
-        $target         = "../../uploadImages/".basename($getImage);
+        $target       = "../../uploadImages/".basename($getImage);
         $moveFile     = move_uploaded_file($_FILES['uploadImg']['tmp_name'], $target);
 
         // Get Last Inserted ID

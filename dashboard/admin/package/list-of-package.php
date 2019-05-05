@@ -1,16 +1,13 @@
 <?php require('../../../common/dashboard-common/header.php'); ?>
 <?php require('../../../Action/action-list-of-package.php');?>
 
-<!-- <img src="../../../Asset/images/car-rental/dashboard-small-2.png" alt="" class="img-fluid" style="margin:0 auto; height:50% !important; margin-top:50px; "> -->
-
-
 <main class="col bg-faded py-3">
     <h3 class="text-left"> >> List  <small> <em> of Packages </em></small> <<</h3>  
     <form method="post" action= "<?= $_SERVER['PHP_SELF']; ?>" autocomplete="off">
         <table id="list-of-packages" class="table table-striped table-responsive table-bordered" style="width:100%">
             <thead>                
                 <tr>
-                    <th>-</th>        
+                    <th>Package type</th>        
                     <th>Package Title</th>           
                     <th>Price</th>
                     <th>Date From</th>
@@ -28,7 +25,7 @@
                             $id = $row['packageID'];
                         ?>
                         <tr>
-                            <td><img src="<?= $hotel;?>" class="icon"/></td>
+                            <td><?= $row['package_type']; ?></td>
                             <td><?= $row['packageTitle']; ?></td>
                             <td><?= $row['price']; ?></td>
                             <td><?= $row['dateFrom']; ?></td>
@@ -36,6 +33,7 @@
                             <td><?= $row['purchaseInclude']; ?></td>
                             <td><?= $row['packageDetails']; ?></td>
                             <td><?= $row['discount_percent']; ?></td>
+
                             <td>
                                 <a href="update-package.php?id=<?= $id;?>"> <span data-balloon="Edit" data-balloon-pos="up"><img src="<?= $edit; ?>" class="icon" /></span></a> |
                                 <a href="list-of-package.php?del=<?= $id;?>"> <span data-balloon="Remove" data-balloon-pos="up"><img src="<?= $remove; ?>" class="icon" /></span></a> 

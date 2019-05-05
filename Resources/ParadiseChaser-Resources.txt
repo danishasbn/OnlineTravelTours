@@ -10,6 +10,8 @@ Plugins Used for Paradise Chaser Development
 8. Jquery form validation
 9. Bootstrap Datatable
 10. Jquery Zoom image effect
+11. Slick JS For slider effect
+
 
 Balloon pop up
 https://kazzkiq.github.io/balloon.css/
@@ -37,4 +39,5 @@ password: Pa$$w0rd!
 https://docs.google.com/spreadsheets/d/1BQBMse1vQD3MGCwsqH9x36h89Lk5Hv8xCgAwHpSIW80/edit#gid=0
 
 Email: paradisechaser2019@gmail.com
-Password: Pa55w0rd2019
+Password: Securitycode2019
+

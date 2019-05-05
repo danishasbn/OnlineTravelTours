@@ -23,6 +23,8 @@
                     <th>Car Rental Company Description</th>
                     <th>Conditions</th>
                     <th>Package Details</th>
+                    <th>Date From </th>
+                    <th> Date To </th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -40,10 +42,12 @@
                     $pickuppoint    = $row['pickup_place'];
                     $carrentCompany = $row['company_name'];
 
-                    $crcDescr       = $row['car_rental_company_description'];
+                    $crcDescr       = $row['description'];
                     $condition      = $row['conditionApply'];
                     $packageDetails = $row['packageDetails'];
 
+                    $dateFrom       = $row['dateFrom'];
+                    $dateTo         = $row['dateTo'];
                     $image          = $row['imagePath'];
             ?>
                 <tr>
@@ -59,6 +63,8 @@
                     <td><?= $crcDescr; ?></td>   
                     <td><?= $condition; ?></td>   
                     <td><?= $packageDetails; ?></td>
+                    <td><?= $dateFrom; ?></td>
+                    <td><?= $dateTo; ?></td>
                     <td>
                         <a href="update-car-rental.php?id=<?= $id;?>"> <span data-balloon="Edit" data-balloon-pos="up"><img src="<?= $edit; ?>" class="icon" /></span></a> |
                         <a href="list-of-carrental.php?del=<?= $id;?>"> <span data-balloon="Remove" data-balloon-pos="up"><img src="<?= $remove; ?>" class="icon" /></span></a> 

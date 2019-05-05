@@ -18,7 +18,21 @@
                 <div class="col-md-6">
                     <label for="txt-carTitle">Car Rental Title *</label>
                     <input type="text" class="form-control" id="txt-carTitle" name="txt-carTitle" data-validation="length required custom" data-validation-regexp="^([a-zA-Z ]+)$" data-validation-length="min4" value="<?= $row['car_title'];?>">
-                    
+
+                    <br>
+                    <h5>Date of Availability *</h5>
+                    <label for="txt-dateFrom">Date From *</label>
+                    <input type="text" class="form-control availabilityDate input-width-2" id="txt-dateFrom"
+                        name="txt-dateFrom" data-validation="required" value="<?= $row['dateFrom'];?>"
+                        placeholder="Select Date From..">
+
+                    <label for="txt-dateTo">Date To *</label>
+                    <input type="text" class="form-control availabilityDate input-width-2" id="txt-dateTo"
+                        name="txt-dateTo" data-validation="required" value="<?= $row['dateTo'];?>"
+                        placeholder="Select Date To..">
+
+
+
                     <img src="<?= '../../uploadImages/'.$row['imagePath']?>" class="img-fluid">
 
                     <p class="text-info">Click here to change picture</p>
@@ -133,7 +147,7 @@
                 </div>
                 <div class="col-md-6">
                     <label for="txt-CarCompanyDescription">Car Rental Company Description *</label>
-                    <textarea class="form-control" rows="10" id="txt-CarCompanyDescription" name="txt-CarCompanyDescription" data-validation="required"><?= $row['car_rental_company_description']; ?></textarea>
+                    <textarea class="form-control" rows="10" id="txt-CarCompanyDescription" name="txt-CarCompanyDescription" data-validation="required"><?= $row['description']; ?></textarea>
 
                     <label for="txt-ConditionApply">Condition apply *</label>
                     <textarea class="form-control" rows="10" id="txt-ConditionApply" name="txt-ConditionApply" data-validation="required"><?= $row['conditionApply']; ?></textarea>

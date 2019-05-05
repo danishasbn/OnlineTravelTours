@@ -2,10 +2,11 @@
     if(isset($_GET['id'])){
         $getID = $_GET['id'];
         
-        // Fetch Hotel Details
+        // Fetch Package Details
         $sql_package = "SELECT *, tbl_package.id as packageID
-                        FROM  tbl_package, tbl_discount
+                        FROM  tbl_package, tbl_discount, tbl_package_type
                         WHERE tbl_package.discount_id = tbl_discount.id
+                        AND   tbl_package.package_type_id = tbl_package_type.id
                         AND   tbl_package.id = $getID ";
         $query_package = mysqli_query($dbc, $sql_package);
 
@@ -23,6 +24,11 @@
         // Fetch Discount
         $sql_discount   = "SELECT * FROM tbl_discount";
         $query_discount = mysqli_query($dbc,$sql_discount);
+
+        // Fetch Package Type
+        $sql_packageType   = "SELECT * FROM tbl_package_type";
+        $query_packageType = mysqli_query($dbc,$sql_packageType);
+
     }else{
         echo "<meta http-equiv='refresh' content='0;url=../../../404-dashboard.php'>";
     }
@@ -39,6 +45,9 @@
         @$purchaseInclude    = $_POST['txt-purchaseInclude'];
         @$packageDetails     = $_POST['txt-PackageDetails'];
         @$discount           = $_POST['txt-discount'];
+        @$packageType        = $_POST['txt-packageType'];
+
+        // echo $target;
 
         // Update Table Hotel
         $sql_update_price = "UPDATE tbl_package
@@ -48,7 +57,8 @@
                                     dateTo          = '$dateTo',
                                     discount_id     = '$discount',
                                     purchaseInclude = '$purchaseInclude',
-                                    packageDetails  = '$packageDetails'
+                                    packageDetails  = '$packageDetails',
+                                    package_type_id = '$packageType'
                             WHERE   id              = '$id' ";
         $query_update_price = mysqli_query($dbc,$sql_update_price);
         if($query_update_price){

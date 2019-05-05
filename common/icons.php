@@ -42,4 +42,8 @@ $signin       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/
 // Image Format icon
 $imageFormat  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/icon-imageFormat.png';
 
+// Shopping cart
+$shoppingCart       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/shopping-cart.png';
+$shoppingCartWhite  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/shopping-cart-2.png';
+
 ?>

@@ -13,6 +13,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
+                    <label for="txt-discount">Package Type</label>
+                    <select class="form-control input-width-2" name="txt-packageType" id="txt-packageType" data-validation="required">
+                        <option selected disabled>Select package type...</option>
+                         <?php
+                            if($query_package_type){
+                                while($row_packageType = mysqli_fetch_array($query_package_type)){
+                                    ?>
+                                        <option value="<?= $row_packageType['id']?>"><?= $row_packageType['package_type']?></option>
+                                    <?php
+                                }
+                            }
+                        ?>
+                    </select>
+
                     <label for="txt-packageTitle">Package Title *</label>
                     <input type="text" class="form-control" id="txt-packageTitle" name="txt-packageTitle" data-validation="length required custom" data-validation-regexp="^([a-zA-Z ]+)$" data-validation-length="min4" value="">
 

@@ -37,6 +37,9 @@
         @$purchaseInclude    = $_POST['txt-purchaseInclude'];
         @$packageDetails     = $_POST['txt-PackageDetails'];
         @$discount           = $_POST['txt-discount'];
+        @$getImage           = $_FILES['uploadImgUpdate']['name'];
+        $target              = "../../uploadImages/".basename($getImage);
+        $moveFile            = @move_uploaded_file($_FILES['uploadImgUpdate']['tmp_name'], $target);
 
         // Update Table Hotel
         $sql_update_hotel = "UPDATE tbl_hotel 
@@ -46,18 +49,23 @@
                                     dateTo          = '$dateTo',
                                     discount_id     = '$discount',
                                     purchaseInclude = '$purchaseInclude',
-                                    packageDetails  = '$packageDetails'                                    
+                                    packageDetails  = '$packageDetails'                                                                
                             WHERE   id              = $id";
         $query_update_hotel = mysqli_query($dbc,$sql_update_hotel);
         if($query_update_hotel){
             // echo "Success";
+        echo "
+            <script>
+                $(document).ready(function(){
+                $('#alertBox').show();
+                });
+            </script>
+        ";
+        echo "<meta http-equiv='refresh' content='3;url=update-hotel.php?id=$id'>";
+
         }else{
             echo "Failed".mysqli_error($dbc);
         }
-
-        
-        
-
 
     }
 ?>

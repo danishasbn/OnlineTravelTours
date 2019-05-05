@@ -18,7 +18,7 @@
         $query_hotel    = mysqli_query($dbc,$sql_hotel);
 
         $target         = "../../uploadImages/".basename($getImage);
-        $moveFile     = move_uploaded_file($_FILES['uploadImg']['tmp_name'], $target);
+        $moveFile       = move_uploaded_file($_FILES['uploadImg']['tmp_name'], $target);
 
         // Get Last Inserted ID
         if($query_hotel){
