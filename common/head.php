@@ -29,6 +29,10 @@ $slick          = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTour
 
 // Bootstrap Datepicker CSS
 $BSDatepicker   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/bootstrap-datepicker.css';
+
+// Sweet Alert
+$sweetAlertCSS  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/css/sweetalert2.min.css';
+
 ?>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta charset="utf-8">
@@ -59,6 +63,9 @@ $BSDatepicker   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTour
 
 <!-- BS Datepicker CSS -->
 <link href="<?= $BSDatepicker; ?>" rel="stylesheet" type="text/css"/>
+
+<!-- Sweet Alert Css -->
+<link href="<?= $sweetAlertCSS; ?>" rel="stylesheet" type="text/css"/>
 
 <!-- jQuery -->
 <script src="<?= $loadjQuery; ?>"></script>

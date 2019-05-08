@@ -11,6 +11,7 @@ Plugins Used for Paradise Chaser Development
 9. Bootstrap Datatable
 10. Jquery Zoom image effect
 11. Slick JS For slider effect
+12. Bootstrap Datepicker
 
 
 Balloon pop up
@@ -30,6 +31,10 @@ Credentials:
 ------------
 Admin Login:
 username: paradisechaser2019@gmail.com
+password: Pa$$w0rd!
+
+Customer Login:
+username: cypiza@mailinator.com
 password: Pa$$w0rd!
 
 ** Note ** -> All customer password are the same, their email are different 

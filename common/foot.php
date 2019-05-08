@@ -27,6 +27,9 @@ $slickJS		= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asse
 // Bootstrap Date Picker 
 $BSDatePicker	= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/bootstrap-datepicker.js';
 
+// Sweet Alert
+$sweetAlertJS	= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/sweetalert2.min.js';
+
 ?>
 <!-- Bootstrap Main Scripts -->
 <script src="<?= $BS_jquery; ?>"></script>
@@ -59,6 +62,8 @@ $BSDatePicker	= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/
 <!-- Bootstrap Datepicker JS-->
 <script src="<?= $BSDatePicker; ?>"></script>
 
+<!-- Sweet Alert  -->
+<script src="<?= $sweetAlertJS; ?>"></script>
 <script>
 	// JQuery Validation
 	$.validate();

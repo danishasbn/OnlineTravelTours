@@ -23,8 +23,18 @@
                   <a class="info" href="view-package.php?id=<?= $row['packageID'];?>">View Details</a>
                 </div>
                 <div class="card-body">
-                  <p class="card-text text-left"><span class="badge badge-info">Discount <?= $row['discount_percent']; ?> % off</span></p>
-                  <p class="card-text text-left">As From. <span class="badge badge-danger"> <?=  "Rs." .$row['price']?> </span> per day</p>
+                  <?php
+                    if( $row['discount_percent'] == '0'){
+                      ?>
+                        <p class="card-text text-left"><span class="badge badge-warning">No Discount</span></p>
+                      <?php
+                    }else{
+                      ?>
+                      <p class="card-text text-left"><span class="badge badge-info">Discount <?= $row['discount_percent']; ?> % off</span></p>
+                      <?php
+                    }
+                  ?>
+                  <p class="card-text text-left">Price: <span class="badge badge-danger"> <?=  "Rs." .$row['price']?> </span></p>
                 </div>
               </div>
             </div>

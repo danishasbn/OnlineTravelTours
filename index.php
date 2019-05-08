@@ -11,63 +11,116 @@
         Our Packages
       </h1>
       <br>
-      <img src="<?= $border; ?>" class="img-border" alt="Floral Border image"/>
+      
+      <!-- <img src="<?= $border; ?>" class="img-border" alt="Floral Border image"/> -->
       <h3 class="subtext" data-aos="fade-left">Find your ideal paradise packages</h3>
-      <h5 class="subtext" data-aos="fade-left">Our Most Booked Packages</h5>
-      <h6 class="subtext" data-aos="fade-left">Your Dream Holidays</h6>
+      <h5 class="subtext" data-aos="fade-left">View Our Most Booked Packages</h5>
+      <h6 class="subtext" data-aos="fade-left">Plan your Dream Holidays Now!</h6>
+
     </div>
+
+    
   </div>
   <!-- End of Video Background -->
 
   <!-- Main Index Container -->
   <div class="container">
 
-      <div class="row">
-        <!-- Card 1 -->
-        <div class="card card-Packages col-md-4" data-aos="fade-up-right">
-          <div class="hovereffect">
-            <img class="card-img-top img-responsive" src="Asset/images/travel-packages/dk.jpg" alt="Card image cap">
-            <div class="overlay">
-              <h2 class="package-title">Travel Package - Dubai & Kuala Lumpur (December 2018)</h2>
-              <a class="info" href="#">View Details</a>
-            </div>
-            <div class="card-body">
-              <p class="card-text text-left">Visit Dubai and Kuala Lumpur, Air Ticket included 3 week packages</p>
-              <p class="card-text text-left">Travel Date 16 December 2018 - 03 January 2019</p>
-              <p class="card-text text-left">Package Price: Rs. 63,000</p>
-            </div>
-          </div>
-        </div>
-        <div class="card card-Packages col-md-4" data-aos="fade-up">
-          <div class="hovereffect">
-            <img class="card-img-top img-responsive" src="Asset/images/hotels/villaC.jpg" alt="Card image cap">
-            <div class="overlay">
-              <h2 class="package-title">Hotel Package - Villa Caroline </h2>
-              <a class="info" href="#">View Details</a>
-            </div>
-            <div class="card-body">
-              <p class="card-text text-left">Visit Dubai and Kuala Lumpur, Air Ticket included 3 week packages</p>
-              <p class="card-text text-left">Travel Date 16 December 2018 - 03 January 2019</p>
-              <p class="card-text text-left">Package Price: Rs. 63,000</p>
-            </div>
-          </div>
-        </div>
-        <div class="card card-Packages col-md-4" data-aos="fade-down">
-          <div class="hovereffect">
-            <img class="card-img-top img-responsive" src="Asset/images/activities/7cascade.jpg" alt="Card image cap">
-            <div class="overlay">
-              <h2 class="package-title">Activity Package - 7 Cascade Lodge</h2>
-              <a class="info" href="#">View Details</a>
-            </div>
-            <div class="card-body">
-              <p class="card-text text-left">Visit Dubai and Kuala Lumpur, Air Ticket included 3 week packages</p>
-              <p class="card-text text-left">Travel Date 16 December 2018 - 03 January 2019</p>
-              <p class="card-text text-left">Package Price: Rs. 63,000</p>
-            </div>
-          </div>
-        </div>
+  <h3 class="text-center">Gallery</h3>
+
+       <?php
+  $sql = "select * from tbl_gallery";
+  $query = mysqli_query($dbc, $sql);
+  if($query){
+    ?>
+    <div class="slider center">
+    <?php
+    while($row = mysqli_fetch_array($query)){
+      ?>
+    <a href="<?= $Packages; ?>">
+      <div class="clip">
+        <h3>
+          <div class="top"><img src="<?= "dashboard/uploadImages/".$row['imagePath'];?>" /></div>
+        </h3>
       </div>
+      </a>
+      <?php
+    }
+    ?>
     </div>
+    <?php
+  }
+?>
+
+<style>
+
+h3 img{
+  height:autopx;
+  width:100%;
+}
+h3{
+  padding:2%;
+}
+  .top {
+    font-size: 70%;
+    /* height: 70%; */
+    
+    margin: 0 auto;
+    background-color: rgba(red, 0.3);
+  }
+.clip {
+  /* height: 100px; */
+  width:100%;
+  overflow: hidden;
+  bottom: 0;
+  
+}
+.center .slick-slide {
+  background-color: rgba(red, 0.3);
+  /* height: 400px; */
+}
+</style>
+
+
+
+      
+    </div>
+    
 
   <!-- End of Index Container -->
   <?php require('common/footer.php');?>
+
+
+  <script>
+
+
+$(document).ready(function(){
+
+$('.center').slick({
+  centerMode: true,
+  infinite: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  speed: 500,
+  variableWidth: false,
+  autoplay:true,
+  dots: false,
+  prevArrow: false,
+  nextArrow: false,
+  autoplaySpeed: 1000,
+
+});
+$('.center').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  console.log('beforeChange', currentSlide, nextSlide);
+});
+$('.center').on('afterChange', function(event, slick, currentSlide){
+  console.log('afterChange', currentSlide);
+});
+
+
+
+});
+		
+</script>
+
+

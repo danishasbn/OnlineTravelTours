@@ -22,11 +22,11 @@
                         <input type="hidden" name="txt-orderCategory" value="hotel"/>
                         
                         <div class="panel panel-teal text-white bg-teal-back">
-                            <h1 class="text-center"> <?= $row_fetch['hotelName']; ?> </h1>
+                            <h1 class="text-center trending text-white"> <?= $row_fetch['hotelName']; ?></h1>
                         </div>
                         <h3 class="text-center text-danger"> As From Rs.<?= $row_fetch["price"];?></h3>
-                        <input type="hidden" value="<?= $row_fetch["dateFrom"]; ?>" name="checkin" id="checkin"/>
-                        <input type="hidden" value="<?= $row_fetch["dateTo"]; ?>" name="checkout" id="checkout"/>
+                        <input type="hidden" value="<?= $row_fetch["dateFrom"]; ?>" name="checkin" class="availability" id="checkin"/>
+                        <input type="hidden" value="<?= $row_fetch["dateTo"]; ?>" name="checkout" class="availability" id="checkout"/>
                         
                         <p class="text-center">
                             <span class="badge badge-warning">Discount <?= $row_fetch["discount_percent"]; ?>% off</span>
@@ -35,8 +35,9 @@
                         <div class="availability text-center">
                           Available: As From <span class="badge badge-info"><?= $row_fetch["dateFrom"]; ?></span> to <span class="badge badge-info"><?= $row_fetch["dateTo"]; ?></span> 
                           <br><br>
-                          <input type="text" class="checkIn" placeholder="Check-In" required/> 
-                          <input type="text" class="checkOut" placeholder="Check-Out" required/>    
+                          <input type="text" class="checkIn availability"  name="checkin" placeholder="Check-In" required/> 
+                          <input type="text" class="checkOut availability" name="checkout"  placeholder="Check-Out" required/>    
+                          <input type="hidden" name="nights" class="calculated" id="calculated" placeholder="Calculated" value=""/>
                         </div>
                         <br>
                       <h5>Room Type</h5>
@@ -67,7 +68,7 @@
                           if($query_meal){
                             while($row_meal = mysqli_fetch_array($query_meal)){
                               ?>
-                              <input type="radio" name="meal" id="meal" required data-price = "<?= $row_meal["price"]; ?> value="<?= $row_meal["id"]; ?>"/> <?= $row_meal["meal_type"]; ?>
+                              <input type="radio" name="meal" id="meal" data-price = "<?= $row_meal["price"]; ?> " value="<?= $row_meal["id"]; ?>" required/> <?= $row_meal["meal_type"]; ?>
                               <br>
                               <?php
                             }
@@ -76,7 +77,7 @@
                         <br>
                         <h2><b>Total: </b></h2>
                         <input type="hidden"  id="curr_price" value="<?= $row_fetch["price"]; ?>" class="form-control price-input" readonly/> 
-                        <input type="text" name="totalPrice"  id="new_price" class="form-control price-input input-width-3" readonly value="Rs. 0"/> 
+                        <input type="text" name="totalPrice"  id="new_price" class="form-control price-input input-width-2" readonly value="Rs. 0"/> 
                         <br>
                         <?php
                         if(isset($_SESSION['login-user'])){

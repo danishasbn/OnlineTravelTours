@@ -21,7 +21,7 @@
                 while($row_fetch = mysqli_fetch_array($query_fetch)){
                     ?>
                         <div class="panel panel-teal text-white bg-teal-back">
-                            <h1 class="text-center"> <?= $row_fetch['car_title']; ?> by <?= $row_fetch["companyName"];?></h1>
+                            <h1 class="text-center trending text-white"> <?= $row_fetch['car_title']; ?> by <?= $row_fetch["companyName"];?></h1>
                             <h5 class="text-center"> <?= "Discount ".$row_fetch['discount_percent']. "% off"; ?> </h5>
                         </div>
                         <br>

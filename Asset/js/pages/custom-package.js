@@ -1,10 +1,9 @@
 $(document).ready(function() {
-  $("input[type='radio'], .availability").on("change", function() {
-    var curr_price = $("#curr_price").val();
+  $("input[type='radio']").on("click", function() {
+    var curr_price = $("#curr_price_hotel").val();
     var getRoom = $("input[name='room_type']:checked").attr("data-price");
     var getOccupacy = $("input[name='occupacy']:checked").attr("data-price");
     var getMeal = $("input[name='meal']:checked").attr("data-price");
-    var getNights = $(".calculated").val();
 
     var calculateRoom = parseInt(getRoom);
     var calculateMeal = parseInt(getMeal);
@@ -15,6 +14,6 @@ $(document).ready(function() {
         parseInt(calculateRoom) +
         parseInt(calculateMeal)) *
       calculateOccupacy;
-    $("#new_price").val(calculateTotal * getNights);
+    $("#new_hotel_price").val(calculateTotal);
   });
 });

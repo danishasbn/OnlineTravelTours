@@ -31,11 +31,11 @@ include('Action/action-login.php');
             <input type="password" id="inputPassword" name="inputPassword" class="form-control input-text" placeholder="Password" style="<?= $error_msg; ?>">
         </div>
 
-        <div class="checkbox mb-3">
+        <!-- <div class="checkbox mb-3">
             <label class="text-white">
                 <input type="checkbox" value="remember-me"> Remember me
             </label>
-        </div>
+        </div> -->
         <button class="btn btn-lg btn-block login-button" type="submit" name="btn-login">Sign in <img src="<?= $signin; ?>" class="icon"/> </button>
         <label class="text-warning">Not a member? </label> <a class="sign-up-link" href="<?= $registerPath; ?>">Sign Up |</a>
         <!-- <a class="sign-up-link text-primary" href="">Forgot Password!</a> -->
