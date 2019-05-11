@@ -19,13 +19,20 @@
                          <?php
                             if($query_package_type){
                                 while($row_packageType = mysqli_fetch_array($query_package_type)){
+                                    $packageType = $row_packageType['package_type'];
                                     ?>
-                                        <option value="<?= $row_packageType['id']?>"><?= $row_packageType['package_type']?></option>
+                                        <option data-value = "<?= $row_packageType['package_type']?>" value="<?= $row_packageType['id']?>"><?= $row_packageType['package_type']?></option>
                                     <?php
                                 }
                             }
                         ?>
                     </select>
+                    
+                    <div class="travel-section">
+                        <h1>Travel Section </h1>
+                        <label>Departing From SSR Airport</label>
+                    </div>
+
 
                     <label for="txt-packageTitle">Package Title *</label>
                     <input type="text" class="form-control" id="txt-packageTitle" name="txt-packageTitle" data-validation="length required custom" data-validation-regexp="^([a-zA-Z ]+)$" data-validation-length="min4" value="">
@@ -88,4 +95,9 @@
         </div>
     </form>    
 </main>
+<!-- Custom JS Travel Package -->
+<?php
+  $custom_travel	        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/pages/custom-create-travel.js';
+?>
+<script src="<?= $custom_travel; ?>"></script>
 <?php require('../../../common/dashboard-common/footer.php'); ?>
