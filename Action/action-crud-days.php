@@ -54,7 +54,7 @@ Class days
         //run mysql query
         $query  = mysqli_query($this->conn, $sql);
 
-        //check if query is run and have more than one value
+        //check if query is run
         if($query){
             //array select value
             $result = [];
