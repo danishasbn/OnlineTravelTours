@@ -7,12 +7,10 @@ require($_SERVER['DOCUMENT_ROOT'].'/OnlineTravelTours/common/icons.php');
 // Database Connection 
 require($_SERVER['DOCUMENT_ROOT'].'/OnlineTravelTours/common/database/dbconnect.php');
 ?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
 <head>
   <?php require( $_SERVER['DOCUMENT_ROOT'].'/OnlineTravelTours/common/head.php'); ?>
 </head>
-<body>
+
   <!-- Paradise Chaser Logo -->
   <nav class="navbar navbar-expand-lg navbar-dark teal-color">
     <a class="navbar-brand" href="<?=$dashboard;?>">
