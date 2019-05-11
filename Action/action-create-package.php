@@ -7,6 +7,10 @@
     $sql_package_type   = "SELECT * FROM tbl_package_type";
     $query_package_type = mysqli_query($dbc,$sql_package_type);
 
+    // Fetch Country
+    $sql_country   = "SELECT * FROM tbl_country";
+    $query_country = mysqli_query($dbc,$sql_country);
+
 
     if(isset($_POST['btn-save-package'])){
         $package            = $_POST['txt-packageTitle'];
