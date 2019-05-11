@@ -809,3 +809,10 @@ input[type=checkbox]:checked+label {
   color: #fff !important;
   font-weight: bold !important;
 }
+
+/* ---------------------------- Travel Section --------------------------------------------------------- */
+
+.travel-section {
+  padding: 50px;
+  border: 1px solid #339C95;
+}

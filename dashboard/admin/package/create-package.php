@@ -29,8 +29,25 @@
                     </select>
                     
                     <div class="travel-section">
-                        <h1>Travel Section </h1>
+                        <strong><h5 class="text-info">Travel Section </h5></strong>
                         <label>Departing From SSR Airport</label>
+                        <br>
+                        <label for="txt-country">Country *</label>
+                        <select class="form-control input-width-2" name="txt-country" id="txt-country" data-validation="required">
+                            <option selected disabled>Select Country</option>
+                            <?php
+                                if($query_country){
+                                    while($row = mysqli_fetch_array($query_country)){
+                                        ?>
+                                            <option value="<?= $row['id']?>"> (<?= $row['country_code']?>) <?= $row['country_name']?></option>
+                                        <?php
+                                    }
+                                }
+                            ?>
+                        </select>     
+                        <label for="txt-country">Terms and Conditions *</label>
+                                           
+                        
                     </div>
 
 

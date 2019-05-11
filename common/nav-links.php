@@ -47,4 +47,12 @@ $createPickup             = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/Online
 
 // CRC
 $createCRC                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/crc/create-crc.php';
+
+// CRUD Settings
+$createDays                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/crud-operations/days/create-days.php';
+$createGallery             = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/crud-operations/gallery/create-gallery.php';
+$createOccupacy            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/crud-operations/occupacy/create-occupacy.php';
+$createRoomType            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/crud-operations/roomType/create-roomType.php';
+$createMealType            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/crud-operations/mealType/create-mealType.php';
+
 ?>

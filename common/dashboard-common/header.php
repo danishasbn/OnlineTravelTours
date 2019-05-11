@@ -145,6 +145,21 @@ require($_SERVER['DOCUMENT_ROOT'].'/OnlineTravelTours/common/database/dbconnect.
                 <a class="dropdown-item" href="<?= $createCRC; ?>">Create New Car Rental Company</a>
               </div>
             </li>
+            
+            <li class="nav-item  nav-dash pl-0 dropdown">
+              <a class="nav-link nav-dash pl-0 nav-dash dropdown-toggle" href="<?= $dashboard; ?>"
+                id="settingDrop" data-toggle="dropdown">
+                <img src="<?= $setting;?>" class="icon">
+                <span class="d-none d-md-inline">Settings</span> 
+              </a>
+              <div class="dropdown-menu" aria-labelledby="settingDrop">
+                <a class="dropdown-item" href="<?= $createDays; ?>">Create New Day</a>
+                <a class="dropdown-item" href="<?= $createGallery; ?>">Create New Gallery</a>
+                <a class="dropdown-item" href="<?= $createOccupacy; ?>">Create New Occupacy</a>
+                <a class="dropdown-item" href="<?= $createRoomType; ?>">Create New Room Type</a>
+                <a class="dropdown-item" href="<?= $createMealType; ?>">Create New Meal Type</a>
+              </div>
+            </li>
 
           </ul>
         </div>
