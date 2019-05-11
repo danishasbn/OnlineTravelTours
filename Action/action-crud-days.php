@@ -113,13 +113,18 @@ Class days
         return $query;
     }
 
-    public function removeDaysNumber($days_number)
+    public function removeDaysNumber($id)
     {
+        //build mysql query
+        $sql = "DELETE FROM tbl_days WHERE id='$id'";
+        //run mysql query
+        $query  = mysqli_query($this->conn, $sql);
 
+        return $query;
     }
 }
 
-//New days obj (initilisation)
+//New days obj
 $day = new Days($dbc);
 
 if(!empty($_SERVER['QUERY_STRING'])){
@@ -130,6 +135,11 @@ if(!empty($_SERVER['QUERY_STRING'])){
         //display current day value
         $cDay = $day->selectDayById($dayId)['days'];
         $state = "Update";
+    } else {
+        //delete days value
+        if($day->removeDaysNumber($dayId)){
+            echo "<script>alert('days value is deleted'); window.location = '".$_SERVER['PHP_SELF']."';</script>";
+        }
     }
 } else {
     //used in btn
@@ -161,7 +171,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             }
         }
 
-        echo "<script>alert('".$msg."')</script>";
+        echo "<script>alert('".$msg."'); window.location = '".$_SERVER['PHP_SELF']."';</script>";
+
     } else {
         $dayErrMsg = "Days values should be numeric";
     }

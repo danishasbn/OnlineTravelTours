@@ -3,6 +3,16 @@
 <main class="col bg-faded py-3">
     <h3 class="text-left"> >> Create new <small> <em> Day </em></small> <<</h3>
 
+    <!--Form to add/update days value-->
+    <form method="post" action="<?=$_SERVER['PHP_SELF']."?".$_SERVER['QUERY_STRING'];?>" autocomplete="off" if="frmdays">
+        <div class="form-group">
+            <label for="txtdays">Days</label>
+            <input type="text" name="txtdays" id="txtdays" value="<?= @$cDay; ?>" required>
+        </div>
+        <span class="msg-error"><?php echo @$dayErrMsg ?></span><br />
+        <button type="submit" id="btnsubday"" class="btn btn-primary"><?= @$state; ?> days</button>
+    </form>
+
     <h5>Days List</h5>
     <!--List of days-->
     <table id="tblday" class="table">
@@ -34,15 +44,5 @@
             ?>
         </tbody>
     </table>
-
-    <!--Form to add days value-->
-    <form method="post" action="<?=$_SERVER['PHP_SELF']."?".$_SERVER['QUERY_STRING'];?>" autocomplete="off" if="frmdays">
-        <div class="form-group">
-            <label for="txtdays">Days</label>
-            <input type="text" name="txtdays" id="txtdays" value="<?= @$cDay; ?>" required>
-        </div>
-        <span class="msg-error"><?php echo @$dayErrMsg ?></span><br />
-        <button type="submit" id="btnsubday"" class="btn btn-primary"><?= @$state; ?> days</button>
-    </form>
 </main>
 <?php require('../../../../common/dashboard-common/footer.php'); ?>
