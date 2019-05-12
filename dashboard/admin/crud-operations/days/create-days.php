@@ -10,7 +10,7 @@
             <input type="text" name="txtdays" id="txtdays" value="<?= @$cDay; ?>" required>
         </div>
         <span class="msg-error"><?php echo @$dayErrMsg ?></span><br />
-        <button type="submit" id="btnsubday"" class="btn btn-primary"><?= @$state; ?> days</button>
+        <button type="submit" id="btnsubday" class="btn btn-primary"><?= @$state; ?> days</button>
     </form>
 
     <h5>Days List</h5>

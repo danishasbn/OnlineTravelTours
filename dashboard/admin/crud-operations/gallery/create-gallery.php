@@ -2,7 +2,7 @@
 <?php require('../../../../Action/action-crud-gallery.php'); ?>
 
 <main class="col bg-faded py-3">
-    <h3 class="text-left"> >> Create new <small> <em> Day </em></small> <<</h3> 
+    <h3 class="text-left"> >> Create new <small> <em> Image Gallery </em></small> <<</h3>
     
     <!--Upload Gallery Img-->
     <form method="post" action="<?=$_SERVER['PHP_SELF']?>" enctype="multipart/form-data">
