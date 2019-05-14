@@ -26,13 +26,9 @@
                     <h3 class="text-center text-danger"> Price: Rs.<?= $row_fetch["price"];?></h3>
                     <input type="hidden" name="dateFrom" id="dateFrom" value="<?= $row_fetch["dateFrom"]; ?>"/>
                     <input type="hidden" name="dateTo" id="dateTo" value="<?= $row_fetch["dateTo"]; ?>"/>
-                    <br>
-                      Available: As From <span class="badge badge-info"><?= $row_fetch["dateFrom"]; ?></span> to <span class="badge badge-info"><?= $row_fetch["dateTo"]; ?></span> 
-                    <br><br>
                     <p class="text-center">
                         <span class="badge badge-warning">Discount <?= $row_fetch["discount_percent"]; ?>% off</span>
                     </p>
-
                   <?php
                     $packageType = $row_fetch['package_type'];
                     if($packageType == 'Car Rent'){
@@ -97,7 +93,116 @@
                     <input type="text" name="totalPriceHotel"  id="new_hotel_price" class="form-control price-input input-width-2" readonly value="Rs. 0"/> 
                     <br> 
                       <?php
-                    }
+                    }else if($packageType == 'Travel'){
+                      ?>
+                    <input type="hidden" id="package_type" name="package_type" value="<?= $row_fetch['package_type']; ?>"/>
+                    <div class="airline-box text-center border">
+                      <h3 class="text-white">Airline : </h3>
+                      <h5 class="text-white"><?=$row_fetch["airline"];  ?></h5>
+                    </div>
+                    <div class="text-center">
+                      <img src="<?= $row_fetch["image_path"]; ?>" class="img-fluid"  style="height:150px;"/>
+                    </div>
+
+                    <!-- Display Form for Travel -->
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label for="txt-fullName">Full Name</label>
+                          <input type="text" class="form-control" id="txt-fullName" name="txt-fullName" data-validation="length required custom" data-validation-regexp="^([a-zA-Z ]+)$" data-validation-length="min3">
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                          <label for="txt-mobileNumber">Mobile Number</label>
+                          <input type="tel" class="form-control" id="txt-mobileNumber" name="txt-mobileNumber" data-validation="required custom"  data-validation-regexp="^([0-9]+)$" placeholder="Mobile No. (+ 230)" maxLength ="8"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label for="txt-departureDate">Departure Date </label>
+                          <input type="text" class="form-control" name="txt-departureDate" id="txt-departureDate" data-validation="required" value="<?= $row_fetch["dateFrom"]; ?>" readonly>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                          <label for="txt-returnDate">Return Date </label>
+                          <input type="text" class="form-control" id="txt-returnDate" name="txt-returnDate" data-validation="required" value="<?= $row_fetch["dateTo"]; ?>" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                          <div class="col-md-4 mb-3">
+                            <label for="sltAdult">Adult (18+)</label>
+                            <select data-validation="required" class="custom-select d-block w-100 pax" id="sltAdult" name="sltAdult" data-paxAdult = "Adult" >
+                              <option value="">Choose...</option>
+                                <?php
+                                    for($i=0;$i<=11; $i++){
+                                      ?>
+                                      <option value="<?= $i;?>"><?= $i; ?></option>
+                                      <?php
+                                    }
+                                ?>
+                            </select>
+                            <input type="hidden" value="" id="paxAdult" />
+                          </div>
+                         
+                          <div class="col-md-4 mb-3">
+                            <label for="sltTeen">Teen (< 18)</label>
+                            <select data-validation="required" class="custom-select d-block w-100 pax" id="sltTeen" name="sltTeen" data-paxTeen = "Teen" >
+                              <option value="">Choose...</option>
+                                <?php
+                                    for($i=0;$i<=11; $i++){
+                                      ?>
+                                      <option value="<?= $i;?>"><?= $i; ?></option>
+                                      <?php
+                                    }
+                                ?>
+                            </select>
+                            <input type="hidden" value="" id="paxTeen" />
+                          </div>
+
+
+                          <div class="col-md-4 mb-3">
+                            <label for="sltChild">Child ( < 12)</label>
+                            <select data-validation="required" class="custom-select d-block w-100 pax" id="sltChild" name="sltChild" data-paxChild = "Child" >
+                              <option value="">Choose...</option>
+                                <?php
+                                    for($i=0;$i<=11; $i++){
+                                      ?>
+                                      <option value="<?= $i;?>"><?= $i; ?></option>
+                                      <?php
+                                    }
+                                ?>
+                            </select>
+                            <input type="hidden" value="" id="paxChild" />
+                          </div>
+
+
+                          <div class="col-md-4 mb-3">
+                            <label for="sltInfant">Infant ( < 2)</label>
+                            <select data-validation="required" class="custom-select d-block w-100 pax" id="sltInfant" name="sltInfant" data-paxInfant = "Infant">
+                              <option value="">Choose...</option>
+                                <?php
+                                    for($i=0;$i<=11; $i++){
+                                      ?>
+                                      <option value="<?= $i;?>"><?= $i; ?></option>
+                                      <?php
+                                    }
+                                ?>
+                            </select>
+                            <input type="hidden" value="" id="paxInfant" />
+                          </div>
+
+                        
+                        </div>
+
+                        <h2><b>Total: </b></h2>
+                        <input type="hidden"  id="curr_price_travel" value="<?= $row_fetch["price"]; ?>" class="form-control price-input" readonly/> 
+                        <input type="text" name="totalPriceTravel"  id="new_price_travel" class="form-control price-input input-width-2" readonly value="Rs. 0"/> 
+                        <br>
+                      <?php
+                    
+                  
+                  }
                     ?>
                   <?php
                     if(isset($_SESSION['login-user'])){

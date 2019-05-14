@@ -54,5 +54,8 @@ $createGallery             = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/Onlin
 $createOccupacy            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/crud-operations/occupacy/create-occupacy.php';
 $createRoomType            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/crud-operations/roomType/create-roomType.php';
 $createMealType            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/crud-operations/mealType/create-mealType.php';
+$createAirlines            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/crud-operations/airline/create-airlines.php';
+
+
 
 ?>

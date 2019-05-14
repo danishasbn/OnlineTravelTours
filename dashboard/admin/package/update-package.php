@@ -17,7 +17,6 @@
                         while($row_package = mysqli_fetch_array($query_package)){
                 ?>
                 <div class="col-md-6">
-
                 <label for="txt-packageType">Package Type </label>
                     <select class="form-control input-width-2" name="txt-packageType" id="txt-packageType">
                         <option disabled>-----Your Selection-----</option>
@@ -38,13 +37,78 @@
                         if($query_packageType){
                                 while($row_package_type = mysqli_fetch_array($query_packageType)){
                         ?>
-                        <option value="<?= $row_package_type['id']?>"><?= $row_package_type['package_type']?>
+                        <option disabled value="<?= $row_package_type['id']?>"><?= $row_package_type['package_type']?>
                         </option>
                         <?php
                                 }
                             }
                         ?>
                     </select>
+
+
+
+                    <div class="travel-section">
+                        <strong><h5 class="text-info">Travel Section </h5></strong>
+                        <strong><label>Departing From SSR Airport</label></strong>
+                        <br>
+                        <label for="txt-airline">Airline *</label>
+                        <select class="form-control input-width-2" name="txt-airline" id="txt-airline">
+                            <option disabled>-----Your Selection-----</option>
+                            <?php
+                                if($row_package['airline_id'] == '0'){
+                            ?>
+                            <option selected>Null</option>
+                            <?php
+                                }else{
+                            ?>
+                            <option selected value="<?= $row_package['airline_id']?>"><?= $row_package['airline']?>
+                            </option>
+                            <?php
+                                }
+                            ?>
+                            <option disabled>-----Airline-----</option>
+                            <?php
+                            if($query_airline){
+                                    while($row_airline = mysqli_fetch_array($query_airline)){
+                            ?>
+                            <option value="<?= $row_airline['id']?>"><?= $row_airline['airline']?>
+                            </option>
+                            <?php
+                                    }
+                                }
+                            ?>
+                        </select>
+                        <label for="txt-country">Country *</label>
+                        <select class="form-control input-width-2" name="txt-country" id="txt-country">
+                            <option disabled>-----Your Selection-----</option>
+                            <?php
+                                if($row_package['country_id'] == '0'){
+                            ?>
+                            <option selected>Null</option>
+                            <?php
+                                }else{
+                            ?>
+                            <option selected value="<?= $row_package['country_id']?>"><?= $row_package['country_name']?>
+                            </option>
+                            <?php
+                                }
+                            ?>
+                            <option disabled>-----Country-----</option>
+                            <?php
+                            if($query_country){
+                                    while($row_country = mysqli_fetch_array($query_country)){
+                            ?>
+                            <option value="<?= $row_country['id']?>"><?= $row_country['country_name']?>
+                            </option>
+                            <?php
+                                    }
+                                }
+                            ?>
+                        </select>
+                        <label for="txt-country">Terms and Conditions *</label>
+                        <textarea class="form-control" rows="10" name="txt-terms-and-conditions" id="txt-terms-and-conditions" data-validation="required"><?= $row_package['terms'];?></textarea>
+                    </div>
+
                     
 
                     <label for="txt-packageTitle">Package Title *</label>
@@ -118,4 +182,9 @@
         </div>
     </form>    
 </main>
+<!-- Custom JS Travel Package -->
+<?php
+  $custom_travel	        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/pages/custom-update-travel.js';
+?>
+<script src="<?= $custom_travel; ?>"></script>
 <?php require('../../../common/dashboard-common/footer.php'); ?>

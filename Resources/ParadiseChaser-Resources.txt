@@ -17,14 +17,19 @@ Plugins Used for Paradise Chaser Development
 Balloon pop up
 https://kazzkiq.github.io/balloon.css/
 
-Resource for car image
-https://www.arnoldclark.com/alfa-romeo
 
 Resource for multiple image upload
 http://talkerscode.com/webtricks/upload-multiple-images-with-image-preview-using-jquery-ajax-php.php
 
 Resource for Date Picker
 https://flatpickr.js.org/examples/#basic
+
+Resource for Travel images
+https://www.shamaltravels.com/packages.html
+
+Resource for CSS Animation
+https://codepen.io/jjperezaguinaga/pen/yuBdq
+
 
 ------------
 Credentials:

@@ -11,6 +11,9 @@
     $sql_country   = "SELECT * FROM tbl_country";
     $query_country = mysqli_query($dbc,$sql_country);
 
+    // Fetch Airline
+    $sql_airline   = "SELECT * FROM tbl_airlines";
+    $query_airline = mysqli_query($dbc,$sql_airline);
 
     if(isset($_POST['btn-save-package'])){
         $package            = $_POST['txt-packageTitle'];
@@ -23,49 +26,104 @@
         $packageDetails     = $_POST['txt-PackageDetails'];
         $getImage           = $_FILES['uploadImg']['name'];
 
-        // Insert into table package
-        $sql_package      = "INSERT INTO tbl_package(packageTitle, price,dateFrom, dateTo, purchaseInclude, packageDetails, discount_id, cover_image, package_type_id) VALUES ('$package', '$price', '$dateFrom', '$dateTo', '$purchaseInclude', '$packageDetails', '$discount', '$getImage', '$packageType')";
-        $query_package    = mysqli_query($dbc,$sql_package);
+        // Travel Section
+        $country        = $_POST['txt-country'];
+        $terms          = $_POST['txt-terms-and-conditions'];
+        $airline        = $_POST['txt-airline'];
 
-        $target       = "../../uploadImages/".basename($getImage);
-        $moveFile     = move_uploaded_file($_FILES['uploadImg']['tmp_name'], $target);
+        if($packageType == '3'){
+    
+            // Insert into table package
+            $sql_package      = "INSERT INTO tbl_package(packageTitle, price,dateFrom, dateTo, purchaseInclude, packageDetails, discount_id, cover_image, package_type_id, country_id , terms, airline_id) VALUES ('$package', '$price', '$dateFrom', '$dateTo', '$purchaseInclude', '$packageDetails', '$discount', '$getImage', '$packageType', '$country' , '$terms', '$airline')";
+            $query_package    = mysqli_query($dbc,$sql_package);
 
-        // Get Last Inserted ID
-        if($query_package){
-          // echo "Success";
-          $last_id = mysqli_insert_id($dbc);
-        }else{
-          echo "Failed". mysqli_error($dbc);
-        }
+            $target       = "../../uploadImages/".basename($getImage);
+            $moveFile     = move_uploaded_file($_FILES['uploadImg']['tmp_name'], $target);
 
-        // Insert into Gallery
-        for($i=0; $i<count($_FILES["upload_file"]["name"]); $i++){
-            $filetmp     = $_FILES["upload_file"]["tmp_name"][$i];
-            $filename    = $_FILES["upload_file"]["name"][$i];
-            $filepath    = "../../uploadImages/".$filename;
-            move_uploaded_file($filetmp, $filepath);
-            // echo $filename;
-            $sql    = "INSERT INTO tbl_gallery(imagePath) VALUES ('$filename')";
-            $query  = mysqli_query($dbc, $sql);
-            if($query){
-                $last_gallery_id = mysqli_insert_id($dbc);
-                // Insert into Package + Gallery
-                // Get Last ID
-                $sql_packageGallery   = "INSERT INTO tbl_package_gallery(gallery_id,package_id) VALUES ('$last_gallery_id','$last_id')";
-                $query_packageGallery = mysqli_query($dbc,$sql_packageGallery);
-                if($query_packageGallery){
-                    // echo "Success";
-                }else{
-                    echo "Failed";
+            // Get Last Inserted ID
+            if($query_package){
+            // echo "Success";
+            $last_id = mysqli_insert_id($dbc);
+            }else{
+            echo "Failed". mysqli_error($dbc);
+            }
+
+            // Insert into Gallery
+            for($i=0; $i<count($_FILES["upload_file"]["name"]); $i++){
+                $filetmp     = $_FILES["upload_file"]["tmp_name"][$i];
+                $filename    = $_FILES["upload_file"]["name"][$i];
+                $filepath    = "../../uploadImages/".$filename;
+                move_uploaded_file($filetmp, $filepath);
+                // echo $filename;
+                $sql    = "INSERT INTO tbl_gallery(imagePath) VALUES ('$filename')";
+                $query  = mysqli_query($dbc, $sql);
+                if($query){
+                    $last_gallery_id = mysqli_insert_id($dbc);
+                    // Insert into Package + Gallery
+                    // Get Last ID
+                    $sql_packageGallery   = "INSERT INTO tbl_package_gallery(gallery_id,package_id) VALUES ('$last_gallery_id','$last_id')";
+                    $query_packageGallery = mysqli_query($dbc,$sql_packageGallery);
+                    if($query_packageGallery){
+                        // echo "Success";
+                    }else{
+                        echo "Failed";
+                    }
+                    echo "
+                    <script>
+                        $(document).ready(function(){
+                        $('#alertBox').show();
+                        });
+                    </script>
+                    ";
+                    echo "<meta http-equiv='refresh' content='3;url=list-of-package.php'>";
                 }
-                echo "
-                <script>
-                    $(document).ready(function(){
-                    $('#alertBox').show();
-                    });
-                </script>
-                ";
-                echo "<meta http-equiv='refresh' content='3;url=list-of-package.php'>";
+            }
+        }else{
+                
+            // Insert into table package
+            $sql_package      = "INSERT INTO tbl_package(packageTitle, price,dateFrom, dateTo, purchaseInclude, packageDetails, discount_id, cover_image, package_type_id, country_id, terms, airline_id ) VALUES ('$package', '$price', '$dateFrom', '$dateTo', '$purchaseInclude', '$packageDetails', '$discount', '$getImage', '$packageType', '247' , '$terms', '8')";
+            $query_package    = mysqli_query($dbc,$sql_package);
+
+            $target       = "../../uploadImages/".basename($getImage);
+            $moveFile     = move_uploaded_file($_FILES['uploadImg']['tmp_name'], $target);
+
+            // Get Last Inserted ID
+            if($query_package){
+            // echo "Success";
+            $last_id = mysqli_insert_id($dbc);
+            }else{
+            echo "Failed". mysqli_error($dbc);
+            }
+
+            // Insert into Gallery
+            for($i=0; $i<count($_FILES["upload_file"]["name"]); $i++){
+                $filetmp     = $_FILES["upload_file"]["tmp_name"][$i];
+                $filename    = $_FILES["upload_file"]["name"][$i];
+                $filepath    = "../../uploadImages/".$filename;
+                move_uploaded_file($filetmp, $filepath);
+                // echo $filename;
+                $sql    = "INSERT INTO tbl_gallery(imagePath) VALUES ('$filename')";
+                $query  = mysqli_query($dbc, $sql);
+                if($query){
+                    $last_gallery_id = mysqli_insert_id($dbc);
+                    // Insert into Package + Gallery
+                    // Get Last ID
+                    $sql_packageGallery   = "INSERT INTO tbl_package_gallery(gallery_id,package_id) VALUES ('$last_gallery_id','$last_id')";
+                    $query_packageGallery = mysqli_query($dbc,$sql_packageGallery);
+                    if($query_packageGallery){
+                        // echo "Success";
+                    }else{
+                        echo "Failed";
+                    }
+                    echo "
+                    <script>
+                        $(document).ready(function(){
+                        $('#alertBox').show();
+                        });
+                    </script>
+                    ";
+                    echo "<meta http-equiv='refresh' content='3;url=list-of-package.php'>";
+                }
             }
         }
     }

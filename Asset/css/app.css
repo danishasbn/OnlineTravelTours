@@ -448,6 +448,7 @@ ul {
   border-radius: 0px;
   color: #fff;
   background-color: #339c95;
+  margin-top: 25px;
 }
 
 .login-button:hover {
@@ -815,4 +816,13 @@ input[type=checkbox]:checked+label {
 .travel-section {
   padding: 50px;
   border: 1px solid #339C95;
+  border-radius: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* ----------------------------- View Packages ---------------------------------------------------------- */
+
+.airline-box {
+  background-color: #000;
 }

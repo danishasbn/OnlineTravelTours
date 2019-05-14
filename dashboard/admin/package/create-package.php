@@ -27,13 +27,28 @@
                             }
                         ?>
                     </select>
+
                     
                     <div class="travel-section">
                         <strong><h5 class="text-info">Travel Section </h5></strong>
-                        <label>Departing From SSR Airport</label>
+                        <strong><label>Departing From SSR Airport</label></strong>
                         <br>
+                        <label for="txt-airline">Travel Airlines</label>
+                        <select class="form-control input-width-2" name="txt-airline" id="txt-airline" data-validation="required">
+                            <option selected disabled>Select Airline...</option>
+                            <?php
+                                if($query_airline){
+                                    while($row_airline = mysqli_fetch_array($query_airline)){
+                                        $airline = $row_airline['airline'];
+                                        ?>
+                                            <option data-value = "<?= $row_airline['airline']?>" value="<?= $row_airline['id']?>"><?= $row_airline['airline']?></option>
+                                        <?php
+                                    }
+                                }
+                            ?>
+                        </select>
                         <label for="txt-country">Country *</label>
-                        <select class="form-control input-width-2" name="txt-country" id="txt-country" data-validation="required">
+                        <select class="form-control input-width-2" id="txt-country">
                             <option selected disabled>Select Country</option>
                             <?php
                                 if($query_country){
@@ -46,8 +61,7 @@
                             ?>
                         </select>     
                         <label for="txt-country">Terms and Conditions *</label>
-                                           
-                        
+                        <textarea class="form-control" rows="10" id="txt-terms-and-conditions" ></textarea>
                     </div>
 
 

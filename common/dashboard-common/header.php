@@ -158,6 +158,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/OnlineTravelTours/common/database/dbconnect.
                 <a class="dropdown-item" href="<?= $createOccupacy; ?>">Create New Occupacy</a>
                 <a class="dropdown-item" href="<?= $createRoomType; ?>">Create New Room Type</a>
                 <a class="dropdown-item" href="<?= $createMealType; ?>">Create New Meal Type</a>
+                <a class="dropdown-item" href="<?= $createAirlines; ?>">Create New Airline</a>
               </div>
             </li>
 

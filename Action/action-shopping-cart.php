@@ -71,6 +71,79 @@
 
             $qry_displayPackagesCar = mysqli_query($dbc,$sql_displayPackagesCar);
 
+            // Packages - Travel
+            $sql_displayPackagesTravel = "SELECT *, op.id as orderID
+                                        FROM tbl_cart c, 
+                                            tbl_orderpackage op, 
+                                            tbl_cart_order co, 
+                                            tbl_package p, 
+                                            tbl_package_type pt
+                                            
+                                        WHERE c.user  = '$user'
+                                        AND   c.id    = co.cart_id
+                                        AND   op.id   = co.order_id
+                                        AND   p.id    = op.package_id
+                                        AND   pt.id   = op.package_type_id
+                                        AND   pt.id = '3'";
+
+            $qry_displayPackagesTravel = mysqli_query($dbc,$sql_displayPackagesTravel);
+
+            $sqlCheck = "SELECT * FROM tbl_cart WHERE user = '$user'";
+            $qryCheck = mysqli_query($dbc,$sqlCheck);
+
+            if($qryCheck){
+                while($rowCheck = mysqli_fetch_array($qryCheck)){
+                    $cartID = $rowCheck['id'];
+                }
+            }
+
+            // Get Sum of all data tables
+
+            //Car Rental
+            $getCarSum = "SELECT *, SUM(total_price) as FinalCarTotal 
+                          FROM tbl_ordercarrental ocr, tbl_cart_order co, tbl_cart c 
+                          WHERE ocr.id = co.order_id 
+                          AND c.id = co.cart_id 
+                          AND co.cart_id = '$cartID'";
+            $qryCarSum = mysqli_query($dbc,$getCarSum);
+       
+            // Hotel
+            $getHotelSum = "SELECT *, SUM(total_price) as FinalHotelTotal 
+                          FROM tbl_orderhotel oh, tbl_cart_order co, tbl_cart c 
+                          WHERE oh.id = co.order_id 
+                          AND c.id = co.cart_id 
+                          AND co.cart_id = '$cartID'";
+            $qryHotelSum = mysqli_query($dbc,$getHotelSum);
+
+
+            // Package -- Hotel
+            $getPackageHotelSum = "SELECT *, SUM(total_price) as FinalPackageHotelTotal 
+                          FROM tbl_orderpackage op, tbl_cart_order co, tbl_cart c 
+                          WHERE op.id = co.order_id 
+                          AND  c.id = co.cart_id 
+                          AND co.cart_id = '$cartID'
+                          AND op.package_type_id = '1' ";
+            $qryPackageHotelSum = mysqli_query($dbc,$getPackageHotelSum);
+            
+            // Package -- Car Rent
+            $getPackageCarSum = "SELECT *, SUM(total_price) as FinalPackageCarTotal 
+                          FROM tbl_orderpackage op, tbl_cart_order co, tbl_cart c 
+                          WHERE op.id = co.order_id 
+                          AND  c.id = co.cart_id 
+                          AND co.cart_id = '$cartID'
+                          AND op.package_type_id = '2' ";
+            $qryPackageCarSum = mysqli_query($dbc,$getPackageCarSum);
+                
+            // Package -- Travel
+            $getPackageTravelSum = "SELECT *, SUM(total_price) as FinalPackageTravelTotal 
+                          FROM tbl_orderpackage op, tbl_cart_order co, tbl_cart c 
+                          WHERE op.id = co.order_id 
+                          AND  c.id = co.cart_id 
+                          AND co.cart_id = '$cartID'
+                          AND op.package_type_id = '3' ";
+            $qryPackageTravelSum = mysqli_query($dbc,$getPackageTravelSum);            
+
+
         }else{
             $sql_insert     = "INSERT INTO tbl_cart(user)VALUES('$user')";
             $query_insert   = mysqli_query($dbc,$sql_insert);
@@ -79,10 +152,5 @@
         echo "Failed". mysqli_error($dbc);
         echo "<meta http-equiv='refresh' content='0;url=../500.php'>";
     }
-
-
-
-
-   
 
 ?>

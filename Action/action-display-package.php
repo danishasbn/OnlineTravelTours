@@ -1,8 +1,10 @@
 <?php
 
     $sql= "SELECT *, p.id as packageID 
-            FROM tbl_package p, tbl_discount d, tbl_package_type pt
+            FROM tbl_package p, tbl_discount d, tbl_package_type pt, tbl_country c, tbl_airlines a
             WHERE d.id = p.discount_id 
+            AND   c.id = p.country_id
+            AND   a.id = p.airline_id
             AND   pt.id = p.package_type_id ";
     $query  = mysqli_query($dbc,$sql);
 
@@ -15,7 +17,6 @@
     // Fetch days
     $sql_days   = "SELECT * FROM tbl_days";
     $query_days =  mysqli_query($dbc,$sql_days);
-
 
     // Fetch room
     $sql_room   = "SELECT * FROM tbl_room_type";
@@ -32,8 +33,10 @@
     if(isset($_GET['id'])){
         $id = $_GET['id'];
         $sql_fetch = "SELECT *, p.id as packageID 
-                FROM tbl_package p, tbl_discount d, tbl_package_type pt
+                FROM tbl_package p, tbl_discount d, tbl_package_type pt, tbl_country c, tbl_airlines a
                 WHERE d.id = p.discount_id
+                AND   c.id = p.country_id
+                AND   a.id = p.airline_id
                 AND   pt.id = p.package_type_id
                 AND   p.id = '$id'";
         $query_fetch = mysqli_query($dbc, $sql_fetch);
