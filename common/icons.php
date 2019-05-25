@@ -32,6 +32,15 @@ $car          = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/
 $discount     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/discount.png';
 $pickup       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/icon-pickup.png';
 $carCompany   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/icon-car-company.png';
+
+$gallery      = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/icon-gallery.png';
+
+$meal         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/icon-meal.png';
+$group        = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/icon-group.png';
+$flight       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/icon-flight.png';
+$calendar     = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/icon-calendar.png';
+
+
 // Edit | Remove icon
 $edit         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/edit.png';
 $remove       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/dashboard/remove.png';
@@ -45,5 +54,6 @@ $imageFormat  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/
 // Shopping cart
 $shoppingCart       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/shopping-cart.png';
 $shoppingCartWhite  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/images/icons/shopping-cart-2.png';
+
 
 ?>

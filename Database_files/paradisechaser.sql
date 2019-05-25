@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2019 at 03:20 AM
+-- Generation Time: May 25, 2019 at 08:08 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -51,6 +51,98 @@ INSERT INTO `tbl_airlines` (`id`, `airline`, `image_path`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_booking_car_cart`
+--
+
+CREATE TABLE `tbl_booking_car_cart` (
+  `id` int(11) NOT NULL,
+  `booking_id` int(11) NOT NULL,
+  `cart_id` int(11) NOT NULL,
+  `booking_car_rental_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_booking_car_rental`
+--
+
+CREATE TABLE `tbl_booking_car_rental` (
+  `id` int(11) NOT NULL,
+  `orderReference` varchar(200) NOT NULL,
+  `dateBooked` varchar(200) NOT NULL,
+  `total` varchar(200) NOT NULL,
+  `payment_option` varchar(200) NOT NULL,
+  `payment_status` varchar(200) NOT NULL,
+  `booking_voucher` varchar(200) NOT NULL,
+  `pickup_place_id` int(11) NOT NULL,
+  `time` varchar(200) NOT NULL,
+  `pickup_date` varchar(200) NOT NULL,
+  `return_date` varchar(200) NOT NULL,
+  `pdf` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_booking_hotel`
+--
+
+CREATE TABLE `tbl_booking_hotel` (
+  `id` int(11) NOT NULL,
+  `orderReference` varchar(200) NOT NULL,
+  `dateBooked` varchar(200) NOT NULL,
+  `total` int(11) NOT NULL,
+  `payment_option` varchar(200) NOT NULL,
+  `payment_status` varchar(200) NOT NULL,
+  `booking_voucher` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_booking_hotel_cart`
+--
+
+CREATE TABLE `tbl_booking_hotel_cart` (
+  `id` int(11) NOT NULL,
+  `booking_id` int(11) NOT NULL,
+  `cart_id` int(11) NOT NULL,
+  `booking_hotel_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_booking_package`
+--
+
+CREATE TABLE `tbl_booking_package` (
+  `id` int(11) NOT NULL,
+  `orderReference` varchar(200) NOT NULL,
+  `dateBooked` varchar(200) NOT NULL,
+  `total` int(11) NOT NULL,
+  `payment_option` varchar(200) NOT NULL,
+  `payment_status` varchar(200) NOT NULL,
+  `booking_voucher` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_booking_package_cart`
+--
+
+CREATE TABLE `tbl_booking_package_cart` (
+  `id` int(11) NOT NULL,
+  `booking_id` int(11) NOT NULL,
+  `cart_id` int(11) NOT NULL,
+  `booking_package_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_carrental_company`
 --
 
@@ -81,16 +173,6 @@ CREATE TABLE `tbl_cart` (
   `user` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `tbl_cart`
---
-
-INSERT INTO `tbl_cart` (`id`, `user`) VALUES
-(14, 'zazu@mailinator.com'),
-(15, 'cypiza@mailinator.com'),
-(16, 'zazu@mailinator.com'),
-(17, '');
-
 -- --------------------------------------------------------
 
 --
@@ -102,22 +184,6 @@ CREATE TABLE `tbl_cart_order` (
   `cart_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_cart_order`
---
-
-INSERT INTO `tbl_cart_order` (`id`, `cart_id`, `order_id`) VALUES
-(1, 15, 17),
-(2, 15, 20),
-(3, 16, 18),
-(4, 16, 21),
-(5, 16, 19),
-(6, 16, 20),
-(7, 16, 9),
-(8, 16, 21),
-(9, 16, 22),
-(10, 16, 23);
 
 -- --------------------------------------------------------
 
@@ -620,15 +686,6 @@ CREATE TABLE `tbl_ordercarrental` (
   `order_category` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `tbl_ordercarrental`
---
-
-INSERT INTO `tbl_ordercarrental` (`id`, `car_rental_id`, `no_of_days`, `total_price`, `order_category`) VALUES
-(17, 20, '3', 3000, 'car rental'),
-(20, 20, '11', 11000, 'car rental'),
-(21, 20, '8', 8000, 'car rental');
-
 -- --------------------------------------------------------
 
 --
@@ -647,15 +704,6 @@ CREATE TABLE `tbl_orderhotel` (
   `order_category` varchar(150) NOT NULL,
   `total_price` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_orderhotel`
---
-
-INSERT INTO `tbl_orderhotel` (`id`, `hotel_id`, `room_type_id`, `occupacy_id`, `meal_type_id`, `check_in`, `check_out`, `nights`, `order_category`, `total_price`) VALUES
-(7, 2, 1, 1, 1, '14-05-2019', '15-05-2019', 1, 'hotel', 1500),
-(8, 3, 2, 5, 1, '15-05-2019', '16-05-2019', 1, 'hotel', 5000),
-(9, 3, 1, 2, 2, '22-05-2019', '23-05-2019', 1, 'hotel', 4000);
 
 -- --------------------------------------------------------
 
@@ -682,25 +730,6 @@ CREATE TABLE `tbl_orderpackage` (
   `pax_child` int(11) NOT NULL,
   `pax_infant` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_orderpackage`
---
-
-INSERT INTO `tbl_orderpackage` (`id`, `package_type_id`, `total_price`, `checkin`, `package_id`, `order_category`, `room_type_id`, `meal_type_id`, `occupacy_id`, `full_name`, `mobile_number`, `departure_date`, `return_date`, `pax_adult`, `pax_teen`, `pax_child`, `pax_infant`) VALUES
-(11, 1, 8100, '08/05/2019', 1, 'package', 2, 2, 3, '', 0, '', '', 0, 0, 0, 0),
-(12, 2, 5000, '', 2, 'package', 0, 0, 0, '', 0, '', '', 0, 0, 0, 0),
-(13, 3, 2703, '', 3, 'package', 0, 0, 0, 'Lars Higgins', 12345678, '01/06/2019', '10/10/2019', 10, 8, 6, 2),
-(14, 1, 3400, '17/05/2019', 1, 'package', 1, 2, 4, '', 0, '', '', 0, 0, 0, 0),
-(15, 1, 3400, '17/05/2019', 1, 'package', 1, 2, 4, '', 0, '', '', 0, 0, 0, 0),
-(16, 1, 6600, '25/05/2019', 1, 'package', 1, 3, 3, '', 0, '', '', 0, 0, 0, 0),
-(17, 2, 5000, '', 2, 'package', 0, 0, 0, '', 0, '', '', 0, 0, 0, 0),
-(18, 3, 1524, '', 3, 'package', 0, 0, 0, 'Bruce Richards', 34534545, '01/06/2019', '10/10/2019', 1, 5, 3, 10),
-(19, 1, 5800, '09/05/2019', 1, 'package', 3, 2, 4, '', 0, '', '', 0, 0, 0, 0),
-(20, 1, 1700, '25/05/2019', 1, 'package', 1, 2, 1, '', 0, '', '', 0, 0, 0, 0),
-(21, 2, 5000, '', 2, 'package', 0, 0, 0, '', 0, '', '', 0, 0, 0, 0),
-(22, 2, 5000, '', 2, 'package', 0, 0, 0, '', 0, '', '', 0, 0, 0, 0),
-(23, 3, 54952640, '', 5, 'package', 0, 0, 0, 'Ila Grimes', 46564546, '13/05/2019', '08/06/2019', 1, 6, 8, 6);
 
 -- --------------------------------------------------------
 
@@ -841,19 +870,21 @@ CREATE TABLE `tbl_user` (
   `country` varchar(50) NOT NULL,
   `phone` int(10) NOT NULL,
   `role_type` varchar(10) NOT NULL,
-  `status` tinyint(1) NOT NULL
+  `status` tinyint(1) NOT NULL,
+  `desactivate_account` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`id`, `firstname`, `lastname`, `email`, `password`, `address`, `gender`, `country`, `phone`, `role_type`, `status`) VALUES
-(1, 'Tom', 'Nasha', 'cypiza@mailinator.com', 'f3ed11bbdb94fd9ebdefbaf646ab94d3', 'Sunt qui consectetur amet dele', 'Female', 'Mauritius', 12345, 'Customer', 1),
-(2, 'Justine', 'Cummings', 'siramavyfo@mailinator.com', 'f3ed11bbdb94fd9ebdefbaf646ab94d3', 'Sunt qui consectetur amet dele', 'Female', 'Mauritius', 11111111, 'Customer', 1),
-(3, 'Mercedes', 'Simpson', 'nysymeb@mailinator.com', 'f3ed11bbdb94fd9ebdefbaf646ab94d3', 'Sunt qui consectetur amet dele', 'Female', 'Mauritius', 51234567, 'Customer', 0),
-(5, 'admin', 'admin', 'paradisechaser2019@gmail.com', 'f3ed11bbdb94fd9ebdefbaf646ab94d3', '', '', '', 0, 'Admin', 1),
-(6, 'Tarik', 'Nunez', 'zazu@mailinator.com', 'f3ed11bbdb94fd9ebdefbaf646ab94d3', 'Recusandae Qui minima irure ut rerum voluptatem aut nulla laborum', 'Male', 'Mauritius', 11111111, 'Customer', 1);
+INSERT INTO `tbl_user` (`id`, `firstname`, `lastname`, `email`, `password`, `address`, `gender`, `country`, `phone`, `role_type`, `status`, `desactivate_account`) VALUES
+(1, 'Tom', 'Nasha', 'cypiza@mailinator.com', 'f3ed11bbdb94fd9ebdefbaf646ab94d3', 'Sunt qui consectetur amet dele', 'Female', 'Mauritius', 12345, 'Customer', 1, 0),
+(2, 'Justine', 'Cummings', 'siramavyfo@mailinator.com', 'f3ed11bbdb94fd9ebdefbaf646ab94d3', 'Sunt qui consectetur amet dele', 'Female', 'Mauritius', 11111111, 'Customer', 1, 0),
+(3, 'Mercedes', 'Simpson', 'nysymeb@mailinator.com', 'f3ed11bbdb94fd9ebdefbaf646ab94d3', 'Sunt qui consectetur amet dele', 'Female', 'Mauritius', 51234567, 'Customer', 0, 0),
+(5, 'admin', 'admin', 'paradisechaser2019@gmail.com', 'f3ed11bbdb94fd9ebdefbaf646ab94d3', '', '', '', 0, 'Admin', 1, 0),
+(6, 'Tarik', 'Nunez', 'zazu@mailinator.com', 'f3ed11bbdb94fd9ebdefbaf646ab94d3', 'Recusandae Qui minima irure ut rerum voluptatem aut nulla laborum', 'Male', 'Mauritius', 11111111, 'Customer', 1, 0),
+(7, 'Ulysses', 'Wilder', 'pekaki@mailinator.com', 'f3ed11bbdb94fd9ebdefbaf646ab94d3', 'Non aspernatur in at officiis ad cupidatat quae et illo dolor nulla consectetur architecto similique veniam', 'Female', 'Mauritius', 23432423, 'Customer', 1, 0);
 
 --
 -- Indexes for dumped tables
@@ -863,6 +894,42 @@ INSERT INTO `tbl_user` (`id`, `firstname`, `lastname`, `email`, `password`, `add
 -- Indexes for table `tbl_airlines`
 --
 ALTER TABLE `tbl_airlines`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_booking_car_cart`
+--
+ALTER TABLE `tbl_booking_car_cart`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_booking_car_rental`
+--
+ALTER TABLE `tbl_booking_car_rental`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_booking_hotel`
+--
+ALTER TABLE `tbl_booking_hotel`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_booking_hotel_cart`
+--
+ALTER TABLE `tbl_booking_hotel_cart`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_booking_package`
+--
+ALTER TABLE `tbl_booking_package`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_booking_package_cart`
+--
+ALTER TABLE `tbl_booking_package_cart`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1011,6 +1078,42 @@ ALTER TABLE `tbl_airlines`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT for table `tbl_booking_car_cart`
+--
+ALTER TABLE `tbl_booking_car_cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+
+--
+-- AUTO_INCREMENT for table `tbl_booking_car_rental`
+--
+ALTER TABLE `tbl_booking_car_rental`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+
+--
+-- AUTO_INCREMENT for table `tbl_booking_hotel`
+--
+ALTER TABLE `tbl_booking_hotel`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `tbl_booking_hotel_cart`
+--
+ALTER TABLE `tbl_booking_hotel_cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `tbl_booking_package`
+--
+ALTER TABLE `tbl_booking_package`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_booking_package_cart`
+--
+ALTER TABLE `tbl_booking_package_cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tbl_carrental_company`
 --
 ALTER TABLE `tbl_carrental_company`
@@ -1020,13 +1123,13 @@ ALTER TABLE `tbl_carrental_company`
 -- AUTO_INCREMENT for table `tbl_cart`
 --
 ALTER TABLE `tbl_cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tbl_cart_order`
 --
 ALTER TABLE `tbl_cart_order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `tbl_car_rental`
@@ -1080,19 +1183,19 @@ ALTER TABLE `tbl_occupacy`
 -- AUTO_INCREMENT for table `tbl_ordercarrental`
 --
 ALTER TABLE `tbl_ordercarrental`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `tbl_orderhotel`
 --
 ALTER TABLE `tbl_orderhotel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_orderpackage`
 --
 ALTER TABLE `tbl_orderpackage`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_package`
@@ -1122,7 +1225,7 @@ ALTER TABLE `tbl_room_type`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables

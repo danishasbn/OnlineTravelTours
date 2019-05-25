@@ -35,7 +35,7 @@ include('database/dbconnect.php');
           <div class="collapse navbar-collapse" id="toggleNav">
             <div class="col-8">
               <!-- Search Form -->
-              <form>
+              <form method="get" action="<?= $searchPath; ?>">
                 <div class="input-group">
                   <div class="input-group-prepend ">
                     <span class="input-group-text search-icon">

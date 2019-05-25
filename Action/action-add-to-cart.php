@@ -40,7 +40,7 @@
                             Swal.fire({
                                 position: 'top-end',
                                 type: 'success',
-                                title: 'Sucessfully Submitted',
+                                title: 'Item added to cart',
                                 showConfirmButton: false,
                                 timer: 1500
                             })
@@ -92,7 +92,7 @@
                             Swal.fire({
                                 position: 'top-end',
                                 type: 'success',
-                                title: 'Sucessfully Submitted',
+                                title: 'Item added to cart',
                                 showConfirmButton: false,
                                 timer: 1500
                             })
@@ -157,7 +157,7 @@
                                 Swal.fire({
                                     position: 'top-end',
                                     type: 'success',
-                                    title: 'Sucessfully Submitted',
+                                    title: 'Item added to cart',
                                     showConfirmButton: false,
                                     timer: 1500
                                 })
@@ -213,7 +213,7 @@
                                 Swal.fire({
                                     position: 'top-end',
                                     type: 'success',
-                                    title: 'Sucessfully Submitted',
+                                    title: 'Item added to cart',
                                     showConfirmButton: false,
                                     timer: 1500
                                 })
@@ -281,7 +281,7 @@
                                 Swal.fire({
                                     position: 'top-end',
                                     type: 'success',
-                                    title: 'Sucessfully Submitted',
+                                    title: 'Item added to cart',
                                     showConfirmButton: false,
                                     timer: 1500
                                 })

@@ -9,6 +9,7 @@ $activityPackages         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/Online
 $carRental                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/car-rental/carrent.php';
 $about                    = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/about-us.php';
 $restaurantPackages       = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/restaurant/restaurant.php';
+$searchPath               = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/search-results.php';
 
 // Database Connection
 // $dbconnect                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/database/dbconnect.php';
@@ -19,6 +20,16 @@ $loginPath                = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/Online
 $logoutPath               = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/logout.php';
 $myDataPath               = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/user/myData.php';
 $myShoppingCart           = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/shopping-cart.php';
+
+
+// Booking
+$bookingSelection         = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/booking/booking-selection.php';
+$internetBanking          = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/booking/booking-internetBanking.php';
+$payAtShowroom            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/booking/booking-showroom.php';
+
+$travelAnimation          = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/views/booking/travel-animation.php';
+
+
 
 // Dashboard Nav-Links
 
@@ -56,6 +67,9 @@ $createRoomType            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/Onlin
 $createMealType            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/crud-operations/mealType/create-mealType.php';
 $createAirlines            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/crud-operations/airline/create-airlines.php';
 
-
+// Bookings
+$listOfBookings            = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/booking/list-of-bookings.php';
+$listOfCancelledBookings   = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/booking/cancelled-booking.php';
+$listOfApprovedBookings    = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/dashboard/admin/booking/approved-booking.php';
 
 ?>

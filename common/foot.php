@@ -30,6 +30,10 @@ $BSDatePicker	= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/
 // Sweet Alert
 $sweetAlertJS	= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/sweetalert2.min.js';
 
+// PDF
+$pdf		    = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/pdfFromHTML.js';
+$pdfJS		    = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/Asset/js/jspdf.js';
+
 ?>
 <!-- Bootstrap Main Scripts -->
 <script src="<?= $BS_jquery; ?>"></script>
@@ -64,6 +68,14 @@ $sweetAlertJS	= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTours/
 
 <!-- Sweet Alert  -->
 <script src="<?= $sweetAlertJS; ?>"></script>
+
+<!-- HTML TO PDF  -->
+<script src="<?= $pdf; ?>"></script>
+<script src="<?= $pdfJS; ?>"></script>
+
+
+
+
 <script>
 	// JQuery Validation
 	$.validate();

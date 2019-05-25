@@ -54,6 +54,28 @@ require($_SERVER['DOCUMENT_ROOT'].'/OnlineTravelTours/common/database/dbconnect.
               <a class="nav-link nav-dash pl-0 nav-dash dropdown-toggle" href="<?= $dashboard; ?>"
                 id="userDrop" data-toggle="dropdown">
                 <img src="<?= $userDash;?>" class="icon">
+                <span class="d-none d-md-inline">Customer Bookings</span> 
+                <!-- <span class="badge badge-primary">2</span> -->
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="userDrop">
+                <a class="dropdown-item" href="<?= $listOfBookings; ?>">List of Bookings
+                <!-- <span class="badge badge-danger">2</span></a> -->
+                <div class="dropdown-divider"></div>
+
+                <a class="dropdown-item" href="<?= $listOfApprovedBookings ?>">Approved Bookings 
+                <!-- <span class="badge badge-danger">2</span></a> -->
+                <div class="dropdown-divider"></div>
+
+                <a class="dropdown-item" href="<?= $listOfCancelledBookings ?>">Cancelled Bookings</a>
+              </div>
+            </li>
+
+            <li class="nav-item  nav-dash pl-0 dropdown">
+
+              <a class="nav-link nav-dash pl-0 nav-dash dropdown-toggle" href="<?= $dashboard; ?>"
+                id="userDrop" data-toggle="dropdown">
+                <img src="<?= $userDash;?>" class="icon">
                 <span class="d-none d-md-inline">User</span> 
                 <!-- <span class="badge badge-primary">2</span> -->
               </a>

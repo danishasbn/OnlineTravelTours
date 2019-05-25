@@ -49,5 +49,5 @@ password: Pa$$w0rd!
 https://docs.google.com/spreadsheets/d/1BQBMse1vQD3MGCwsqH9x36h89Lk5Hv8xCgAwHpSIW80/edit#gid=0
 
 Email: paradisechaser2019@gmail.com
-Password: Securitycode2019
+Password: Pa$$w0rd2019
 

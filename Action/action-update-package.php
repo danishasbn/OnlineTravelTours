@@ -120,10 +120,5 @@
                 echo "Failed".mysqli_error($dbc);
             }
         }
-
-        
-        
-
-
     }
 ?>

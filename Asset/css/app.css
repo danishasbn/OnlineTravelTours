@@ -826,3 +826,30 @@ input[type=checkbox]:checked+label {
 .airline-box {
   background-color: #000;
 }
+
+/* -----------------------------------Booking------------------------------------------------------ */
+
+.drp-selection, .payment-image {
+  margin-top: 50px;
+}
+
+.menu-selection {
+  width: 100%;
+}
+
+.menu-selection a {
+  font-size: 16px;
+  text-align: center;
+}
+
+.pre-booking, .option1, .option2 {
+  padding: 25px;
+}
+
+.pre-booking-img {
+  background-color: rgba(0, 131, 122, 0.5);
+}
+
+.download {
+  text-decoration: none !important;
+}

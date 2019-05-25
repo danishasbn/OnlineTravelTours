@@ -40,7 +40,7 @@ $sweetAlertCSS  = 'http://localhost:'.$_SERVER['SERVER_PORT'].'/OnlineTravelTour
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Title tab  -->
 <title>Paradise Chaser</title>
-<!-- Title tab icon -->
+<!-- Favicon -->
 <link href="<?= $titleTabIcon; ?>" rel="icon"/>
 <!-- Bootstrap 4.0.0 Main CSS  -->
 <link href="<?= $bootstrapCssPath; ?>" rel="stylesheet" type="text/css"/>

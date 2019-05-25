@@ -1,10 +1,24 @@
 $(document).ready(function() {
+  // Verify previous date
+  var date = new Date();
+  date.setDate(date.getDate());
+
+  $(".checkIn").datepicker({
+    startDate: date
+  });
+  $(".checkOut").datepicker({
+    startDate: date
+  });
+
   // Check in and Check out
   $(".checkIn")
     .datepicker({
       format: "dd-mm-yyyy",
       todayBtn: true,
       autoclose: true,
+      setDate: new Date(),
+      todayHighlight: true,
+
       // startDate: new Date()
       startDate: $("#checkin").val()
     })
@@ -20,6 +34,8 @@ $(document).ready(function() {
     format: "dd-mm-yyyy",
     todayBtn: true,
     autoclose: true,
+    setDate: new Date(),
+    todayHighlight: true,
     endDate: $("#checkout").val()
   });
 
