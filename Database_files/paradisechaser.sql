@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2019 at 08:08 PM
+-- Generation Time: May 27, 2019 at 04:00 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -75,11 +75,9 @@ CREATE TABLE `tbl_booking_car_rental` (
   `payment_option` varchar(200) NOT NULL,
   `payment_status` varchar(200) NOT NULL,
   `booking_voucher` varchar(200) NOT NULL,
-  `pickup_place_id` int(11) NOT NULL,
-  `time` varchar(200) NOT NULL,
+  `pickup_time` varchar(200) NOT NULL,
   `pickup_date` varchar(200) NOT NULL,
-  `return_date` varchar(200) NOT NULL,
-  `pdf` varchar(200) NOT NULL
+  `return_date` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -173,6 +171,14 @@ CREATE TABLE `tbl_cart` (
   `user` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_cart`
+--
+
+INSERT INTO `tbl_cart` (`id`, `user`) VALUES
+(19, 'zazu@mailinator.com'),
+(20, 'cypiza@mailinator.com');
+
 -- --------------------------------------------------------
 
 --
@@ -184,6 +190,13 @@ CREATE TABLE `tbl_cart_order` (
   `cart_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_cart_order`
+--
+
+INSERT INTO `tbl_cart_order` (`id`, `cart_id`, `order_id`) VALUES
+(49, 19, 43);
 
 -- --------------------------------------------------------
 
@@ -1081,25 +1094,25 @@ ALTER TABLE `tbl_airlines`
 -- AUTO_INCREMENT for table `tbl_booking_car_cart`
 --
 ALTER TABLE `tbl_booking_car_cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT for table `tbl_booking_car_rental`
 --
 ALTER TABLE `tbl_booking_car_rental`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `tbl_booking_hotel`
 --
 ALTER TABLE `tbl_booking_hotel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_booking_hotel_cart`
 --
 ALTER TABLE `tbl_booking_hotel_cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_booking_package`
@@ -1123,13 +1136,13 @@ ALTER TABLE `tbl_carrental_company`
 -- AUTO_INCREMENT for table `tbl_cart`
 --
 ALTER TABLE `tbl_cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `tbl_cart_order`
 --
 ALTER TABLE `tbl_cart_order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `tbl_car_rental`
@@ -1183,19 +1196,19 @@ ALTER TABLE `tbl_occupacy`
 -- AUTO_INCREMENT for table `tbl_ordercarrental`
 --
 ALTER TABLE `tbl_ordercarrental`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `tbl_orderhotel`
 --
 ALTER TABLE `tbl_orderhotel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_orderpackage`
 --
 ALTER TABLE `tbl_orderpackage`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_package`
