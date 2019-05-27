@@ -5,9 +5,9 @@
     <br>
     <form method="post" action="<?=$_SERVER['PHP_SELF'];?>" autocomplete="off" class="text-center" enctype="multipart/form-data">
         <?php
-            if(isset($_GET['id'])){
-                $getID = $_GET['id'];
-                echo "<input type='text' name='getID' value='$getID' />";
+            if(isset($_GET['carRentalid'])){
+                $getID = $_GET['carRentalid'];
+                echo "<input type='hidden' name='getID' value='$getID' />";
             }
         ?>
         <button type="button" class="btn btn-save" data-toggle="modal" data-target="#exampleModal">

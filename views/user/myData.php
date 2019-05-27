@@ -1,5 +1,7 @@
 <?php require('../../common/header.php');?>
 <?php include('../../Action/action-myData.php') ?>
+<?php include('../../Action/action-list-of-bookings.php') ?>
+
 
 <div class="container">
     <div class="row justify-content-center" >
@@ -20,7 +22,52 @@
                 <h3 class="panel-title text-white text-center" id="my-orders">My Orders</h3>
             </div>
             <div class="panel-body container">
-                Data Table
+            <form method="post" action="<?=$_SERVER['PHP_SELF'];?>" autocomplete="off" >
+                <table id="list-of-bookings" class="table table-striped table-responsive table-bordered" >
+                    <thead>
+                        <th>Booking No.</th>
+                        <th>Order Reference</th>
+                        <th>Date Booked</th>
+                        <th>Total Price</th>
+                        <th>Payment Option</th>
+                        <th>Payment Status</th>
+                        <th>Voucher</th>
+                    </thead>
+                    <tbody>
+                        <?php           
+                            if($qryUser){
+                                while($row = mysqli_fetch_array($qryUser)){
+                                    ?>
+                                        <tr>
+                                            <td><?= $row['BookingNo'];?></td>
+                                            <td><?= $row['orderReference'];?></td>
+                                            <td><?= $row['dateBooked'];?></td>
+                                            <td><?= $row['total'];?></td>
+                                            <td><?= $row['payment_option'];?></td>
+                                            <td><?= $row['payment_status'];?></td>
+                                            <td><?= $row['booking_voucher'];?></td>
+                                                                                  
+                                        </tr>
+                                    <?php
+                                }
+                            }
+                            else{
+                                
+                            }
+                        ?>
+                    </tbody>
+                </table>
+            
+            </form>
+
+        <script>    
+            $(document).ready(function() {
+                $('#list-of-bookings').DataTable({
+                    responsive: true
+                });
+            } );
+        </script>
+
                 
             </div>
         </div>

@@ -25,6 +25,30 @@
                <a class="dropdown-item"  href="booking-selection.php?hotelID=<?= $hotelBookingID; ?>&option2=Pay at Showroom" > Pay at Showroom </a>
               <?php
             }
+            // Package -- Hotel
+            else if(isset($_GET['packageHotelID'])){
+              $packageHotelBookingID = $_GET['packageHotelID'];
+              ?>
+              <a class="dropdown-item"  href="booking-selection.php?packageHotelID=<?= $packageHotelBookingID; ?>&option1=Internet Banking" > Internet Banking </a>
+               <a class="dropdown-item"  href="booking-selection.php?packageHotelID=<?= $packageHotelBookingID; ?>&option2=Pay at Showroom" > Pay at Showroom </a>
+              <?php
+            }
+            // Package -- Car Rental
+            else if(isset($_GET['packageCarID'])){
+              $packageCarBookingID = $_GET['packageCarID'];
+              ?>
+              <a class="dropdown-item"  href="booking-selection.php?packageCarID=<?= $packageCarBookingID; ?>&option1=Internet Banking" > Internet Banking </a>
+               <a class="dropdown-item"  href="booking-selection.php?packageCarID=<?= $packageCarBookingID; ?>&option2=Pay at Showroom" > Pay at Showroom </a>
+              <?php
+            }
+            // Package -- Travel
+            else if(isset($_GET['packageTravelID'])){
+              $packageTravelBookingID = $_GET['packageTravelID'];
+              ?>
+              <a class="dropdown-item"  href="booking-selection.php?packageTravelID=<?= $packageTravelBookingID; ?>&option1=Internet Banking" > Internet Banking </a>
+               <a class="dropdown-item"  href="booking-selection.php?packageTravelID=<?= $packageTravelBookingID; ?>&option2=Pay at Showroom" > Pay at Showroom </a>
+              <?php
+            }
           
           ?>
 

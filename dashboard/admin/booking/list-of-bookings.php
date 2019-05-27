@@ -9,12 +9,10 @@
         <table id="list-of-bookings" class="table table-striped table-responsive table-bordered" >
             <thead>
                 <th>Booking No.</th>
-                <th>Customer Name</th>
-                <th>Email</th>
                 <th>Order Reference</th>
                 <th>Date Booked</th>
                 <th>Total Price</th>
-                <th>Paid By</th>
+                <th>Payment Option</th>
                 <th>Payment Status</th>
                 <th>Voucher</th>
                 <th>Action</th>
@@ -26,8 +24,6 @@
                             ?>
                                 <tr>
                                     <td><?= $row['BookingNo'];?></td>
-                                    <td><?= $row['firstname'];?> <?= $row['lastname'];?></td>
-                                    <td><?= $row['email'];?></td>
                                     <td><?= $row['orderReference'];?></td>
                                     <td><?= $row['dateBooked'];?></td>
                                     <td><?= $row['total'];?></td>
@@ -35,9 +31,9 @@
                                     <td><?= $row['payment_status'];?></td>
                                     <td><?= $row['booking_voucher'];?></td>
                                     <td>
-                                        <a href="approved-booking.php?id=<?= $row['BookingNo'];?>&user=<?= $row['email'];?>" class="badge badge-success" > Approve </a> |
+                                        <a href="approved-booking.php?carRentalid=<?= $row['BookingNo'];?>&user=<?= $row['email'];?>" class="badge badge-success" > Approve </a> |
+                                        <a href="upload-pdf.php?carRentalid=<?= $row['BookingNo'];?>&user=<?= $row['email'];?>" class="badge badge-warning"> Upload </a> |
                                         <a href="" class="badge badge-danger"> Cancelled </a> |
-                                        <a href="upload-pdf.php?id=<?= $row['BookingNo'];?>&user=<?= $row['email'];?>" class="badge badge-warning"> Upload </a> |
                                         <a href="" class="badge badge-info"> View Order</a> |
                                     </td>
                                 

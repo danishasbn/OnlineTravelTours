@@ -2,30 +2,36 @@
 
 if (isset($_POST['btn-uploadPDF'])) {
     @$id = $_POST['getID'];
-    $folder_path = 'pdf/';
+    
+    $getImage     = $_FILES['upload-pdf']['name'];
+    $target       = "../dashboard/admin/booking/pdf/".basename($getImage);
 
-    $filename = basename($_FILES['upload-pdf']['name']);
-    $newname = $folder_path . $filename;
+    $FileType = pathinfo($target,PATHINFO_EXTENSION);
 
-    echo $filename;
 
-    if ($_FILES['upload-pdf']['type'] == "application/pdf"){
-        if (move_uploaded_file($_FILES['upload-pdf']['tmp_name'], $newname)){
-            $filesql = "UPDATE tbl_booking_car_rental SET pdf = $filename WHERE id = $id";
-            $fileresult = mysqli_query($dbc,$filesql);
-        }else{
-            echo "<p>Upload Failed.</p>";
+    $sql = "UPDATE tbl_booking_car_rental 
+            SET    booking_voucher = '$getImage',
+                   payment_status  = 'Completed'
+            WHERE  id = '$id'";
+    $qry = mysqli_query($dbc,$sql);
+
+    if($qry){
+        echo "<meta http-equiv='refresh' content='3;url=list-of-bookings.php'>";
+        if($FileType == "pdf"){
+            if (move_uploaded_file($_FILES['upload-pdf']['tmp_name'], $target)) {
+                // echo "Sucessfully uploaded";
+            }else{
+                // echo "Failed to upload image".mysqli_error($dbc);
+            }
         }
-
-        if (isset($fileresult)){
-            echo 'Success';
-        } else{
-            echo 'fail';
-        }
-    }
-    else {
-        echo "<p>Class notes must be uploaded in PDF format.</p>";
-    }
+    }else{
+        echo "failed".mysqli_error($dbc);
+    }  
 
 }
+
+
+
+
+
 ?>

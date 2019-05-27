@@ -1,7 +1,7 @@
 <?php
     if(isset($_GET['delCar'])){
         $delCar = $_GET['delCar'];
-        $sql = "DELETE FROM tbl_ordercarrental WHERE id = '$delCar'";
+        $sql = "DELETE FROM tbl_ordercarrental  WHERE id = '$delCar'";
         $qry = mysqli_query($dbc,$sql);
         if($qry){
             echo "

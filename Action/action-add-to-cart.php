@@ -26,7 +26,7 @@
                 $query_cart = mysqli_query($dbc,$sql_cart);
                 if($query_cart){
                     while($row_cart = mysqli_fetch_array($query_cart)){
-                        $getCartID = $row_cart['id'];
+                        @$getCartID = $row_cart['id'];
                         // echo $getCartID;
                     }
                 }

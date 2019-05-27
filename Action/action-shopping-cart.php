@@ -160,18 +160,41 @@
                               AND op.package_type_id = '3' ";
                 $qryPackageTravelSum = mysqli_query($dbc,$getPackageTravelSum);            
                 
-                //Package - ORDER
+                //Package - ORDER -- Hotel
                 $getPackageOrder = "SELECT *, op.id as orderID
                               FROM tbl_orderpackage op, tbl_cart_order co, tbl_cart c 
                               WHERE op.id = co.order_id 
                               AND c.id = co.cart_id 
-                              AND co.cart_id = '$cartID'";
+                              AND co.cart_id = '$cartID'
+                              AND op.package_type_id = 1 ";
                 $qryPackageOrder = mysqli_query($dbc,$getPackageOrder);
     
+
+                //Package - ORDER -- Car
+                $getPackageOrderC = "SELECT *, op.id as orderID
+                              FROM tbl_orderpackage op, tbl_cart_order co, tbl_cart c 
+                              WHERE op.id = co.order_id 
+                              AND c.id = co.cart_id 
+                              AND co.cart_id = '$cartID'
+                              AND op.package_type_id = 2 ";
+                $qryPackageOrderC = mysqli_query($dbc,$getPackageOrderC);
+
+
+                //Package - ORDER -- Travel
+                $getPackageOrderT = "SELECT *, op.id as orderID
+                              FROM tbl_orderpackage op, tbl_cart_order co, tbl_cart c 
+                              WHERE op.id = co.order_id 
+                              AND c.id = co.cart_id 
+                              AND co.cart_id = '$cartID'
+                              AND op.package_type_id = 3 ";
+                $qryPackageOrderT = mysqli_query($dbc,$getPackageOrderT);
     
             }else{
                 $sql_insert     = "INSERT INTO tbl_cart(user)VALUES('$user')";
                 $query_insert   = mysqli_query($dbc,$sql_insert);
+                if($query_insert){
+                    echo "<div class='row justify-content-center'><span class=' text-center badge badge-success'> Shopping Cart is Empty </span></div>";
+                }
             }
         }else{
             echo "Failed". mysqli_error($dbc);

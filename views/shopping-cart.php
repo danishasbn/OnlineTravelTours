@@ -179,11 +179,11 @@
               <?php
             }
             ?>  <tr>
-              <td><button class=" btn-info">Proceed to checkout</button></td>
+              <td><button class="btn-info" name="btn-checkout-packageHotel">Proceed to checkout</button></td>
             </tr>
                 </tbody>
                 </table>
-                <input type="text" id="fieldPackageHotel" name="fieldPackageHotel" />
+                <input type="hidden" id="fieldPackageHotel" name="fieldPackageHotel" />
             <?php
           }
 
@@ -192,9 +192,9 @@
       <?php            
         if(@$qryPackageHotelSum){
           while($rowPackageHotelSum = mysqli_fetch_array($qryPackageHotelSum)){
-              // echo " <p class='text-danger'>" . $rowPackageHotelSum['FinalPackageHotelTotal'] . "</p>";
+              // echo " <p class='text-danger'>" . $rowPackageHotelSum['FinalPackageHotelTotal']."</p>";
               ?>
-              <input type="text" name="txt-total-packageHotel" value="<?= $rowPackageHotelSum['FinalPackageHotelTotal']; ?>"/>
+              <input type="hidden" name="txt-total-packageHotel" value="<?= $rowPackageHotelSum['FinalPackageHotelTotal']; ?>"/>
               <?php
           }
           
@@ -202,7 +202,7 @@
         if(@$qryPackageOrder){
           while($rowPackageHotelOrder = mysqli_fetch_array($qryPackageOrder)){
             ?>
-            <input type="text" name="txt-packagehotelOrderID[]" value="<?= $rowPackageHotelOrder['orderID']; ?> " />
+            <input type="hidden" name="txt-packagehotelOrderID[]" value="<?= $rowPackageHotelOrder['orderID']; ?> " />
             <?php
         }
       }
@@ -240,7 +240,7 @@
           ?>  
               </tbody>
               </table>
-                <input type="text" id="fieldPackageCarRental" name="fieldPackageCarRental" />
+                <input type="hidden" id="fieldPackageCarRental" name="fieldPackageCarRental" />
           <?php
         }
       ?>
@@ -254,8 +254,17 @@
               <?php
           }
         }
+
+      if(@$qryPackageOrderC){
+          while($rowPackageCarOrder = mysqli_fetch_array($qryPackageOrderC)){
+            ?>
+            <input type="hidden" name="txt-packagecarOrderID[]" value="<?= $rowPackageCarOrder['orderID']; ?> " />
+            <?php
+        }
+
+      }
     ?>
-    <button class=" btn-info">Proceed to checkout</button>
+    <button name="btn-checkout-packageCar" class="btn-info">Proceed to checkout</button>
     <br>
 
     <h6 class="text-center text-teal alert alert-warning"> Travel Packages</h6>
@@ -304,7 +313,7 @@
           ?>  
               </tbody>
               </table>
-              <input type="text" id="fieldPackageTravel" name="fieldPackageTravel" />
+              <input type="hidden" id="fieldPackageTravel" name="fieldPackageTravel" />
           <?php
         }
         ?>
@@ -318,8 +327,16 @@
             <?php
         }
       }
+      if(@$qryPackageOrderT){
+          while($rowPackageTravelOrder = mysqli_fetch_array($qryPackageOrderT)){
+            ?>
+            <input type="hidden" name="txt-packagetravelOrderID[]" value="<?= $rowPackageTravelOrder['orderID']; ?> " />
+            <?php
+        }
+
+      }      
     ?>
-    <button class=" btn-info">Proceed to checkout</button>
+    <button name="btn-checkout-packageTravel" class="btn-info">Proceed to checkout</button>
     <br>
   </form>
 </div>

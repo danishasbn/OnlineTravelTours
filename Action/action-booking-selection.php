@@ -71,6 +71,111 @@
             }
         }
 
+
+        // Package -- Hotel
+        // Update payment status
+        if(isset($_GET['packageHotelID']) && isset($_GET['option1'])){
+            $getID = $_GET['packageHotelID'];
+            $option1    = $_GET['option1'];
+        
+            $sql_update = "UPDATE tbl_booking_package SET payment_option = '$option1' WHERE id = '$getID'";
+            $qry_update = mysqli_query($dbc,$sql_update);
+            
+            if($qry_update){
+                echo "<meta http-equiv='refresh' content='0;url=$travelAnimation?option1&packageHotelID=$getID'>";
+            }else{
+                echo "<meta http-equiv='refresh' content='0;url=../../500.php'>";
+            }
+        }
+        // Update payment status
+        if(isset($_GET['packageHotelID']) && isset($_GET['option2'])){
+            $getID = $_GET['packageHotelID'];
+            $option2    = $_GET['option2'];    
+            $sql_update = "UPDATE tbl_booking_package SET payment_option = '$option2' WHERE id = '$getID'";
+            $qry_update = mysqli_query($dbc,$sql_update);
+            if($qry_update){
+                echo "<meta http-equiv='refresh' content='0;url=$travelAnimation?option2&packageHotelID=$getID'>";
+            }else{
+                echo "<meta http-equiv='refresh' content='0;url=../../500.php'>";
+            }
+        }
+
+
+        // Package -- Car Rental
+        // Update payment status
+        if(isset($_GET['packageCarID']) && isset($_GET['option1'])){
+            $getID = $_GET['packageCarID'];
+            $option1    = $_GET['option1'];
+        
+            $sql_update = "UPDATE tbl_booking_package SET payment_option = '$option1' WHERE id = '$getID'";
+            $qry_update = mysqli_query($dbc,$sql_update);
+            
+            if($qry_update){
+                echo "<meta http-equiv='refresh' content='0;url=$travelAnimation?option1&packageCarID=$getID'>";
+            }else{
+                echo "<meta http-equiv='refresh' content='0;url=../../500.php'>";
+            }
+        }
+        // Update payment status
+        if(isset($_GET['packageCarID']) && isset($_GET['option2'])){
+            $getID = $_GET['packageCarID'];
+            $option2    = $_GET['option2'];    
+            $sql_update = "UPDATE tbl_booking_package SET payment_option = '$option2' WHERE id = '$getID'";
+            $qry_update = mysqli_query($dbc,$sql_update);
+            if($qry_update){
+                echo "<meta http-equiv='refresh' content='0;url=$travelAnimation?option2&packageCarID=$getID'>";
+            }else{
+                echo "<meta http-equiv='refresh' content='0;url=../../500.php'>";
+            }
+        }
+
+
+
+        // Package -- Travel
+        // Update payment status
+        if(isset($_GET['packageTravelID']) && isset($_GET['option1'])){
+            $getID = $_GET['packageTravelID'];
+            $option1    = $_GET['option1'];
+        
+            $sql_update = "UPDATE tbl_booking_package SET payment_option = '$option1' WHERE id = '$getID'";
+            $qry_update = mysqli_query($dbc,$sql_update);
+            
+            if($qry_update){
+                echo "<meta http-equiv='refresh' content='0;url=$travelAnimation?option1&packageTravelID=$getID'>";
+            }else{
+                echo "<meta http-equiv='refresh' content='0;url=../../500.php'>";
+            }
+        }
+        // Update payment status
+        if(isset($_GET['packageTravelID']) && isset($_GET['option2'])){
+            $getID = $_GET['packageTravelID'];
+            $option2    = $_GET['option2'];    
+            $sql_update = "UPDATE tbl_booking_package SET payment_option = '$option2' WHERE id = '$getID'";
+            $qry_update = mysqli_query($dbc,$sql_update);
+            if($qry_update){
+                echo "<meta http-equiv='refresh' content='0;url=$travelAnimation?option2&packageTravelID=$getID'>";
+            }else{
+                echo "<meta http-equiv='refresh' content='0;url=../../500.php'>";
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
     else{
         echo "<meta http-equiv='refresh' content='0;url=../../500.php'>";

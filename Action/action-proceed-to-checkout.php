@@ -78,11 +78,7 @@
                 $orderID    = $_POST['txt-hotelOrderID'];
                 for($i=0; $i <  count($orderID); $i++){
                     $getOrderId =  $orderID[$i];
-                    // echo $getOrderId;
-                    // echo "<br>";
-                    // echo $cartID;
-                    // echo "<br>";
-                    // Insert into tbl_Booking_Car_Cart
+                    // Insert into tbl_Booking_Hotel_Cart
                     $sql_bhc = "INSERT INTO tbl_booking_hotel_cart(booking_id,cart_id,booking_hotel_id)VALUES('$getOrderId','$cartID','$last_id')";
                     $qry_bhc = mysqli_query($dbc,$sql_bhc);
                 }
@@ -99,6 +95,112 @@
 
 
 
+        // Checkout Package -- Hotel
+        if(isset($_POST['btn-checkout-packageHotel'])){
+            // echo "check";
+            $totalPrice     = $_POST['txt-total-packageHotel'];
+            $orderReference = $_POST['fieldPackageHotel'];
+            $todaysDate     = date('d/m/Y');
+      
+            // Insert Package Booking
+            $sqlPackageBooking = "INSERT INTO tbl_booking_package(orderReference,dateBooked,total,payment_option,payment_status,booking_voucher) VALUES('$orderReference','$todaysDate','$totalPrice','Pending','Pending','No Voucher') ";
+            $qryPackageBooking = mysqli_query($dbc,$sqlPackageBooking);
+
+            // Get Last Inserted ID
+            if($qryPackageBooking){
+                $last_id = mysqli_insert_id($dbc);
+
+                $orderID    = $_POST['txt-packagehotelOrderID'];
+                for($i=0; $i <  count($orderID); $i++){
+                    $getOrderId =  $orderID[$i];                    
+                    
+                    // Insert into tbl_Booking_Package_Cart
+                    $sql_bhc = "INSERT INTO tbl_booking_package_cart(booking_id,cart_id,booking_package_id)VALUES('$getOrderId','$cartID','$last_id')";
+                    $qry_bhc = mysqli_query($dbc,$sql_bhc);
+                }
+                echo "<meta http-equiv='refresh' content='0;url=booking/booking-selection.php?packageHotelID=$last_id'>";
+
+            }else{
+                echo "Failed". mysqli_error($dbc);
+            }
+        
+
+        }else{
+            // echo "wrongg";
+        }
+
+
+        // Checkout Package -- Car
+        if(isset($_POST['btn-checkout-packageCar'])){
+            // echo "check";
+            $totalPrice     = $_POST['txt-total-packageCar'];
+            $orderReference = $_POST['fieldPackageCarRental'];
+            $todaysDate     = date('d/m/Y');
+            
+      
+            // Insert Package Booking
+            $sqlPackageBooking = "INSERT INTO tbl_booking_package(orderReference,dateBooked,total,payment_option,payment_status,booking_voucher) VALUES('$orderReference','$todaysDate','$totalPrice','Pending','Pending','No Voucher') ";
+            $qryPackageBooking = mysqli_query($dbc,$sqlPackageBooking);
+
+            // Get Last Inserted ID
+            if($qryPackageBooking){
+                $last_id = mysqli_insert_id($dbc);
+
+                $orderID    = $_POST['txt-packagecarOrderID'];
+                for($i=0; $i <  count($orderID); $i++){
+                    $getOrderId =  $orderID[$i];
+                    
+                    // Insert into tbl_Booking_Package_Cart
+                    $sql_bhc = "INSERT INTO tbl_booking_package_cart(booking_id,cart_id,booking_package_id)VALUES('$getOrderId','$cartID','$last_id')";
+                    $qry_bhc = mysqli_query($dbc,$sql_bhc);
+                }
+                echo "<meta http-equiv='refresh' content='0;url=booking/booking-selection.php?packageCarID=$last_id'>";
+
+            }else{
+                echo "Failed". mysqli_error($dbc);
+            }
+        
+
+        }else{
+            // echo "wrongg";
+        }
+
+
+
+        // Checkout Package -- Travel
+        if(isset($_POST['btn-checkout-packageTravel'])){
+            // echo "check";
+            $totalPrice     = $_POST['txt-total-packageTravel'];
+            $orderReference = $_POST['fieldPackageTravel'];
+            $todaysDate     = date('d/m/Y');
+            
+      
+            // Insert Package Booking
+            $sqlPackageBooking = "INSERT INTO tbl_booking_package(orderReference,dateBooked,total,payment_option,payment_status,booking_voucher) VALUES('$orderReference','$todaysDate','$totalPrice','Pending','Pending','No Voucher') ";
+            $qryPackageBooking = mysqli_query($dbc,$sqlPackageBooking);
+
+            // Get Last Inserted ID
+            if($qryPackageBooking){
+                $last_id = mysqli_insert_id($dbc);
+
+                $orderID    = $_POST['txt-packagetravelOrderID'];
+                for($i=0; $i <  count($orderID); $i++){
+                    $getOrderId =  $orderID[$i];
+                    
+                    // Insert into tbl_Booking_Package_Cart
+                    $sql_bhc = "INSERT INTO tbl_booking_package_cart(booking_id,cart_id,booking_package_id)VALUES('$getOrderId','$cartID','$last_id')";
+                    $qry_bhc = mysqli_query($dbc,$sql_bhc);
+                }
+                echo "<meta http-equiv='refresh' content='0;url=booking/booking-selection.php?packageTravelID=$last_id'>";
+
+            }else{
+                echo "Failed". mysqli_error($dbc);
+            }
+        
+
+        }else{
+            // echo "wrongg";
+        }
 
 
 

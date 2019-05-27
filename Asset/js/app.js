@@ -22,6 +22,12 @@ $(document).ready(function() {
     minDate: "today"
   });
 
+  $(".time").flatpickr({
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "H:i"
+  });
+
   // ------------------------------------------------------- Dashboard -> Update Hotel---------------------------------------------------------
   // Show/Hide Panel on check
   // Disable input

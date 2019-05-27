@@ -50,6 +50,47 @@
                           echo "failed".mysqli_error($dbc);
                         }
 
+            }else if(isset($_GET['packageHotelID'])){
+                 if($qry_BookingHeading_PackageH){              
+                          while($rowBookingHeading = mysqli_fetch_array($qry_BookingHeading_PackageH)){
+                            $orderNo =  $rowBookingHeading['orderReference'];
+                            $total = $rowBookingHeading['total'];
+                          }
+                          ?>
+                          <h5>Your order: <span class="text-teal"> <?= $orderNo; ?> </span></h5>
+                          <h5>Total:<span class="text-danger"> Rs.<?= $total; ?></span> </h5>
+                          <?php
+                        }else{
+                          echo "failed".mysqli_error($dbc);
+                        }
+
+            }else if(isset($_GET['packageCarID'])){
+                 if($qry_BookingHeading_PackageC){              
+                          while($rowBookingHeading = mysqli_fetch_array($qry_BookingHeading_PackageC)){
+                            $orderNo =  $rowBookingHeading['orderReference'];
+                            $total = $rowBookingHeading['total'];
+                          }
+                          ?>
+                          <h5>Your order: <span class="text-teal"> <?= $orderNo; ?> </span></h5>
+                          <h5>Total:<span class="text-danger"> Rs.<?= $total; ?></span> </h5>
+                          <?php
+                        }else{
+                          echo "failed".mysqli_error($dbc);
+                        }
+            }else if(isset($_GET['packageTravelID'])){
+                 if($qry_BookingHeading_PackageT){              
+                          while($rowBookingHeading = mysqli_fetch_array($qry_BookingHeading_PackageT)){
+                            $orderNo =  $rowBookingHeading['orderReference'];
+                            $total = $rowBookingHeading['total'];
+                          }
+                          ?>
+                          <h5>Your order: <span class="text-teal"> <?= $orderNo; ?> </span></h5>
+                          <h5>Total:<span class="text-danger"> Rs.<?= $total; ?></span> </h5>
+                          <?php
+                        }else{
+                          echo "failed".mysqli_error($dbc);
+                        }
+
             }
         
           ?>
@@ -128,6 +169,78 @@
                     <td><?= $rowBooking['room_type']; ?></td>
                     <td><?= $rowBooking['occupacy']; ?></td>
                     <td> <?= $rowBooking['meal_type']; ?></td>
+                  </tr>
+                  <?php
+                }
+                ?>
+                <?php
+              }
+            }else{
+              echo "failed".mysqli_error($dbc);
+            }
+          }else if(isset($_GET['packageHotelID'])){
+            ?>
+            <thead>
+              <th>Package Title</th>
+              
+            </thead>
+          <tbody>
+
+            <?php
+               if($qry_Booking_PackageH){
+              while($rowBooking = mysqli_fetch_array($qry_Booking_PackageH)){
+                if($rowBooking['order_category'] == 'package'){
+                  ?>
+                  <tr>
+                    <td><?= $rowBooking['packageTitle']; ?></td>
+                  </tr>
+                  <?php
+                }
+                ?>
+                <?php
+              }
+            }else{
+              echo "failed".mysqli_error($dbc);
+            }
+          }else if(isset($_GET['packageCarID'])){
+            ?>
+            <thead>
+              <th>Package Title</th>
+              
+            </thead>
+          <tbody>
+
+            <?php
+               if($qry_Booking_PackageC){
+              while($rowBooking = mysqli_fetch_array($qry_Booking_PackageC)){
+                if($rowBooking['order_category'] == 'package'){
+                  ?>
+                  <tr>
+                    <td><?= $rowBooking['packageTitle']; ?></td>
+                  </tr>
+                  <?php
+                }
+                ?>
+                <?php
+              }
+            }else{
+              echo "failed".mysqli_error($dbc);
+            }
+          }else if(isset($_GET['packageTravelID'])){
+            ?>
+            <thead>
+              <th>Package Title</th>
+              
+            </thead>
+          <tbody>
+
+            <?php
+               if($qry_Booking_PackageT){
+              while($rowBooking = mysqli_fetch_array($qry_Booking_PackageT)){
+                if($rowBooking['order_category'] == 'package'){
+                  ?>
+                  <tr>
+                    <td><?= $rowBooking['packageTitle']; ?></td>
                   </tr>
                   <?php
                 }

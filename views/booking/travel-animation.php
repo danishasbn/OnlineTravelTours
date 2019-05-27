@@ -23,9 +23,33 @@
     }
 
     // Packages -- Hotel
+    
+    if(isset($_GET['packageHotelID']) && isset($_GET['option1'])){
+        $id = $_GET['packageHotelID'];
+        echo "<meta http-equiv='refresh' content='3;url=$internetBanking?packageHotelID=$id'>";
+    }
+    if(isset($_GET['packageHotelID']) && isset($_GET['option2'])){
+        $id = $_GET['packageHotelID'];
+        echo "<meta http-equiv='refresh' content='3;url=$payAtShowroom?packageHotelID=$id'>";
+    }
     // Packages -- Car
+    if(isset($_GET['packageCarID']) && isset($_GET['option1'])){
+        $id = $_GET['packageCarID'];
+        echo "<meta http-equiv='refresh' content='3;url=$internetBanking?packageCarID=$id'>";
+    }
+    if(isset($_GET['packageCarID']) && isset($_GET['option2'])){
+        $id = $_GET['packageCarID'];
+        echo "<meta http-equiv='refresh' content='3;url=$payAtShowroom?packageCarID=$id'>";
+    }
     // Packages -- Travel
-
+    if(isset($_GET['packageTravelID']) && isset($_GET['option1'])){
+        $id = $_GET['packageTravelID'];
+        echo "<meta http-equiv='refresh' content='3;url=$internetBanking?packageTravelID=$id'>";
+    }
+    if(isset($_GET['packageTravelID']) && isset($_GET['option2'])){
+        $id = $_GET['packageTravelID'];
+        echo "<meta http-equiv='refresh' content='3;url=$payAtShowroom?packageTravelID=$id'>";
+    }
 
 
 ?>
