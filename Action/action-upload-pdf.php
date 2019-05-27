@@ -17,13 +17,13 @@ if (isset($_POST['btn-uploadPDF'])) {
 
     if($qry){
         echo "<meta http-equiv='refresh' content='3;url=list-of-bookings.php'>";
-        if($FileType == "pdf"){
-            if (move_uploaded_file($_FILES['upload-pdf']['tmp_name'], $target)) {
-                // echo "Sucessfully uploaded";
-            }else{
-                // echo "Failed to upload image".mysqli_error($dbc);
-            }
-        }
+        // if($FileType == "pdf"){
+        //     if (move_uploaded_file($_FILES['upload-pdf']['tmp_name'], $target)) {
+        //         // echo "Sucessfully uploaded";
+        //     }else{
+        //         // echo "Failed to upload image".mysqli_error($dbc);
+        //     }
+        // }
     }else{
         echo "failed".mysqli_error($dbc);
     }  

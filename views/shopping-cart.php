@@ -47,7 +47,7 @@
           ?>
             <tr>
             <td>
-              <button class=" btn-info"  name="btn-checkout-carrental">Proceed to checkout </button></td>
+              <button class="btn-info"  name="btn-checkout-carrental">Proceed to checkout </button></td>
             </tr>
             </tbody>
             </table>
@@ -116,9 +116,7 @@
               </tbody>
               </table>
               <input type="hidden" id="fieldHotel" name="fieldHotel" />
-              
           <?php
-        
         }
         ?>
     </div>
