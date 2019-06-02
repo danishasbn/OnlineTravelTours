@@ -1,0 +1,27 @@
+1) Local Application Setup
+
+(i). Importing Database 
+	     - Create a database named ->  paradisechaser <- in phpmyadmin.
+	     - Import the SQL file to the database created.
+
+(ii). Add the OnlineTravelTours folder to your C://xampp/htdocs folder
+
+(iii). Access the application by entering:
+          localhost:YOUR-PORT-NUMBER/OnlineTravelTours
+          For example: http://localhost:1234/OnlineTravelTours
+
+2) Login Credentials 
+
+-- User accounts  local 
+
+a) Customer 1
+	Username - cypiza@mailinator.com
+	Password - Pa$$w0rd!
+
+b) Customer 2 
+	Username -zazu@mailinator.com
+	Password -Pa$$w0rd!
+
+c) Admin account
+	Username - paradisechaser2019@gmail.com
+	Password -Pa$$w0rd!
